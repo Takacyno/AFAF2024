@@ -62,10 +62,10 @@
 ?>
 
 <main class="p-exhibitors">
-	<div class="c-title">
-		<h1>EXHIBITORS</h1>
-	</div>
 	<div class="c-area__content">
+		<div class="c-title">
+			<h1>EXHIBITORS</h1>
+		</div>
 		<!-- セクション区切りのborder -->
 		<!-- <div class="p-exhibitors__section js-fadein"> -->
 		<div class="p-exhibitors__section">

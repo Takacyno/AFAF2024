@@ -1168,30 +1168,25 @@ body h4 {
 }
 
 .c-title {
-  position: relative;
-  padding-top: 377px;
+  padding-top: 200px;
   width: 100%;
-  z-index: 0;
 }
 @media screen and (max-width: 768px) {
   .c-title {
-    padding-top: 242px;
+    padding-top: 100px;
   }
 }
 .c-title h1 {
-  position: absolute;
-  left: 72px;
-  bottom: -95px;
-  font-family: "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-size: 20.3rem;
+  font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-size: 10rem;
   line-height: 1;
   font-weight: 500;
+  width: fit-content;
+  border-bottom: 5px black solid;
 }
 @media screen and (max-width: 768px) {
   .c-title h1 {
-    left: 24px;
-    bottom: -51px;
-    font-size: 10.4rem;
+    font-size: 9rem;
   }
 }
 
@@ -2012,14 +2007,12 @@ body h4 {
 }
 
 .p-exhibitors__section {
-  padding-top: 40px;
+  padding-top: 68px;
   padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  position: relative;
-  min-height: 430px;
   gap: 68px
 }
 @media screen and (max-width: 768px) {
@@ -2230,14 +2223,16 @@ body h4 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 3rem;
+  border-bottom: 2px solid black;
+  overflow-x: auto;
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__section-tab {
     flex-direction: row;
     justify-content: flex-start;
     gap: 1.2rem;
-    flex-wrap: wrap;
   }
 }
 .p-exhibitors__section-tab li {
@@ -2245,18 +2240,19 @@ body h4 {
 }
 .p-exhibitors__section-tab button {
   cursor: pointer;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 500;
-  font-size: 3.2rem;
+  font-size: 5rem;
   line-height: 1;
   text-align: left;
+  text-transform: uppercase;
   color: #adadad;
   background-color: transparent;
   transition: all 300ms;
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__section-tab button {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     min-width: 0;
   }
 }
@@ -2265,6 +2261,7 @@ body h4 {
 }
 .p-exhibitors__section-tab button[aria-selected=true] {
   color: #000;
+  border-bottom: 4px solid black;
 }
 .p-exhibitors__section-tabpanel {
   position: relative;
