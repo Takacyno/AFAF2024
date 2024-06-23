@@ -3571,9 +3571,8 @@ body h4 {
 }
 
 .p-news__list {
-  border-top: 1px solid #000;
-  margin-top: 143px;
-  margin-bottom: 160px;
+  padding-top: 68px;
+  padding-bottom: 120px;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -3581,44 +3580,40 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-news__list {
-    margin-top: 91px;
+    padding-top: 32px;
+    padding-bottom: 60px;
   }
 }
 .p-news__list-date {
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.7;
-  color: #000;
+  color: #7e7e7e;
   min-width: 140px;
   flex: 0 0 auto;
 }
 @media screen and (max-width: 768px) {
   .p-news__list-date {
     font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-    font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     line-height: 1.5;
     min-width: 114px;
   }
 }
 .p-news__list li {
-  width: calc(757 / 1280 * 100vw);
+  width: 100%;
   border-bottom: 1px solid #adadad;
-}
-@media screen and (max-width: 768px) {
-  .p-news__list li {
-    width: 100%;
-  }
 }
 .p-news__list a {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  padding: 32px 0 40px;
+  padding: 24px 0px;
+  gap: 6px;
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1.4rem;
   line-height: 1.7;
   color: #2F2B2B;
@@ -3633,6 +3628,7 @@ body h4 {
     font-size: 1.2rem;
     line-height: 1.6;
     padding: 24px 0;
+    gap: 4px;
   }
 }
 .p-news__list a:hover {

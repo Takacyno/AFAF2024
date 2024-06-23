@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
 <main class="p-news">
-	<div class="c-title">
-		<h1>NEWS</h1>
-	</div>
 	<div class="c-area__content">
+		<div class="c-title">
+			<h1>NEWS</h1>
+		</div>
 		<?php
 			$term = get_queried_object();
 			$paged = get_query_var('paged') ?: 1;
