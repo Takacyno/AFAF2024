@@ -40,10 +40,7 @@
 		<div class="c-header__wrapper">
 			<div class="c-header__logo">
 				<a href="<?php echo home_url(); ?>">
-					<picture>
-						<source srcset="<?php echo $imagePath; ?>/logo-01.svg" media="(min-width: 1320px)">
-						<img src="<?php echo $imagePath; ?>/logo-03.svg" alt="ART FAIR ASIA FUKUKA 2023" decoding="async">
-					</picture>
+					<h1>AFAF 2024</h1>
 				</a>
 			</div>
 			<div class="c-header__contents">
