@@ -1087,13 +1087,7 @@ body h4 {
 }
 
 .c-title {
-  padding-top: 200px;
   width: 100%;
-}
-@media screen and (max-width: 768px) {
-  .c-title {
-    padding-top: 100px;
-  }
 }
 .c-title h1 {
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
@@ -2450,7 +2444,13 @@ body h4 {
 }
 .p-exhibitors__detail-main {
   margin-left: calc(320px + 24px);
-  width: 100%;
+  width: calc(100% - (320px + 24px));
+}
+@media screen and (max-width: 1320px) {
+  .p-exhibitors__detail-main {
+    margin-left: calc(280px + 24px);
+    width: calc(100% - (280px + 24px));
+  }
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__detail-main {
@@ -2491,6 +2491,11 @@ body h4 {
   img {
     aspect-ratio: 3 / 2;
     object-fit: cover;
+  }
+}
+@media screen and (max-width: 1320px) {
+  .p-exhibitors__detail-thumbnail {
+    max-width: 280px;
   }
 }
 .p-exhibitors__detail-content {
