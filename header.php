@@ -9,6 +9,7 @@
 	<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.png">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/slick/slick.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>?091901">
+	<link rel="stylesheet" href="https://use.typekit.net/yya4ezy.css">
 	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/script.js?082501" async></script>
 	<?php wp_head();?>
