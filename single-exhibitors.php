@@ -17,8 +17,8 @@
 
 <main class="p-exhibitors" data-news="detail">
 	<div class="c-area__content">
-		<div class="p-exhibitors__detail">
-			<div class="p-exhibitors__detail-side">
+		<div class="c-area__content-inner">
+			<div class="c-area__content-side">
 				<div class="p-exhibitors__detail-back">
 					<a href="<?php echo home_url('exhibitors'); ?>"><span>All Exhibitiors</span></a>
 				</div>
@@ -44,14 +44,6 @@
 						*/ ?>
 					</dl>
 					<p><?php echo $location; ?></p>
-					<?php
-						if ($curationFlag === true) :
-							if (has_post_thumbnail()):
-					?>
-						<div class="p-exhibitors__detail-thumbnail">
-							<?php the_post_thumbnail('full'); ?>
-						</div>
-					<?php endif; endif; ?>
 				</div>
 				<div class="p-exhibitors__detail-pager" data-pager="pc">
 					<?php
@@ -88,7 +80,7 @@
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="p-exhibitors__detail-main">
+			<div class="c-area__content-main">
 				<div class="p-exhibitors__detail-header">
 					<?php if ($currentLang != 'en_US') : ?>
 						<?php if ($enGallery) : ?>
@@ -102,6 +94,14 @@
 					<?php endif; ?>
 				</div>
 				<?php // header ここまで ?>
+				<?php
+						if ($curationFlag === true) :
+							if (has_post_thumbnail()):
+					?>
+						<div class="p-exhibitors__detail-thumbnail">
+							<?php the_post_thumbnail('full'); ?>
+						</div>
+					<?php endif; endif; ?>
 				<div class="p-exhibitors__detail-content">
 					<?php echo $contents; ?>
 				</div>
