@@ -6,6 +6,7 @@
 	$terms = get_terms('section');
 	$exhibitorsTermNames = [];
 	$exhibitorsTermSlugs = [];
+	$exhibitorsHideTermSlugs = ["curation", "master"];
 	$exhibitorsTermCounts = [];
 	$exhibitorsTermJaCounts = [];
 	$exhibitorsTermEnCounts = [];
@@ -63,14 +64,14 @@
 
 <main class="p-exhibitors">
 	<div class="c-area__content">
-		<div class="p-exhibitors__detail">
-		<div class="p-exhibitors__detail-side">
+		<div class="c-area__content-inner">
+			<div class="c-area__content-side">
 				<div class="p-exhibitors__detail-back">
 					<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
 				</div>
 			</div>
-			<div class="p-exhibitors__detail-main">
-				<div class="c-title">
+			<div class="c-area__content-main">
+			<div class="c-title">
 					<h1>EXHIBITORS</h1>
 				</div>
 				<!-- セクション区切りのborder -->
@@ -82,7 +83,9 @@
 							<?php
 								for ($i = 0; $i < $exhibitorsTermNum; $i++):
 							?>
-								<li><button type="button" aria-controls="<?php echo $exhibitorsTermSlugs[$i]; ?>" aria-selected="false"><?php echo $exhibitorsTermNames[$i]; ?></button></li>
+								<?php if (!in_array($exhibitorsTermSlugs[$i], $exhibitorsHideTermSlugs)): ?>
+									<li><button type="button" aria-controls="<?php echo $exhibitorsTermSlugs[$i]; ?>" aria-selected="false"><?php echo $exhibitorsTermNames[$i]; ?></button></li>
+								<?php endif; ?>
 							<?php endfor; ?>
 						</ul>
 					</div>
