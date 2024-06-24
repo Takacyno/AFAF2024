@@ -2125,7 +2125,6 @@ body h4 {
   }
 }
 .p-exhibitors__detail-back {
-  margin-bottom: 40px;
   line-height: 1;
 }
 .p-exhibitors__detail-back a {
@@ -4880,6 +4879,11 @@ body h4 {
 
 .c-area__content-side {
   min-width: 282px;
+}
+@media screen and (max-width: 768px) {
+  .c-area__content-side {
+    margin-bottom: 40px;
+  }
 }
 
 .c-area__content-main {

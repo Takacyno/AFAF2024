@@ -2,13 +2,13 @@
 
 <main class="p-news">
 	<div class="c-area__content">
-		<div class="p-news__detail">
-		<div class="p-news__detail-side">
+		<div class="c-area__content-inner">
+			<div class="c-area__content-side">
 				<div class="p-news__detail-back">
 					<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
 				</div>
 			</div>
-			<div class="p-news__detail-main">
+			<div class="c-area__content-main">
 				<div class="c-title">
 					<h1>NEWS</h1>
 				</div>
