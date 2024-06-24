@@ -2,8 +2,8 @@
 
 <main class="p-news" data-news="detail">
 	<div class="c-area__content">
-		<div class="p-news__detail">
-			<div class="p-news__detail-side">
+		<div class="c-area__content-inner">
+			<div class="c-area__content-side">
 				<div class="p-news__detail-back">
 					<a href="<?php echo home_url('news'); ?>"><span>ALL ARTICLES</span></a>
 				</div>
@@ -53,7 +53,7 @@
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="p-news__detail-main">
+			<div class="c-area__content-main">
 				<div class="p-news__detail-header">
 					<h1><?php the_title(); ?></h1>
 					<?php

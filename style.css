@@ -4878,7 +4878,11 @@ body h4 {
 }
 
 .c-area__content-side {
-  min-width: 282px;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
   .c-area__content-side {
