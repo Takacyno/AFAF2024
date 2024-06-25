@@ -50,7 +50,7 @@
 						<?php include('include/nav-global.php'); ?>
 						<?php if ($site_flow_value) : ?>
 						<div class="c-header__nav-ticket">
-							<a href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
@@ -73,7 +73,7 @@
 				</div>
 				<?php if ($site_flow_value) : ?>
 				<div class="c-header__ticket">
-					<a href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+					<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
 					<?php if ( $title ) : ?>
 					<span><?php echo $title; ?></span>
 					<?php endif; ?>
@@ -106,7 +106,7 @@
 						<?php include('include/nav-global.php'); ?>
 						<?php if ($site_flow_value) : ?>
 						<div class="c-header__nav-ticket">
-							<a href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+							<a class="c-link__ticket" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
