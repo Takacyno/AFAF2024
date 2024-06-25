@@ -69,7 +69,7 @@
 						</div>
 					<?php endif; endif; ?>
 				<div class="p-exhibitors__detail-content">
-					<?php echo $contents; ?>
+					<?php echo get_field('summary'); ?>
 				</div>
 				<div class="p-exhibitors__detail-information">
 					<?php
@@ -97,17 +97,12 @@
 					</div>
 					<dl>
 						<?php
-							if(have_rows('tel')):
+							if(!empty(get_field('tel'))):
 						?>
 							<div>
 								<dt>Tel</dt>
 								<dd>
-								<?php
-									while(have_rows('tel')): the_row();
-										$tel = get_sub_field('tel');
-								?>
-									<p><?php echo $tel; ?></p>
-								<?php endwhile; ?>
+								<?php echo get_field('tel'); ?>
 								</dd>
 							</div>
 						<?php
@@ -119,7 +114,7 @@
 								<dd>
 								<?php
 									while(have_rows('email')): the_row();
-										$email = get_sub_field('email');
+										$email = get_sub_field('email_address');
 								?>
 									<p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
 								<?php endwhile; ?>
@@ -127,17 +122,12 @@
 							</div>
 						<?php
 							endif;
-							if(have_rows('website')):
+							if(!empty(get_field('website'))):
 						?>
 							<div>
 								<dt>Website</dt>
 								<dd>
-								<?php
-									while(have_rows('website')): the_row();
-										$website = get_sub_field('website');
-								?>
-									<p><a href="<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a></p>
-								<?php endwhile; ?>
+								<a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a>
 								</dd>
 							</div>
 						<?php
