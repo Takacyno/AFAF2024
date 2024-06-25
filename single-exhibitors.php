@@ -45,40 +45,6 @@
 					</dl>
 					<p><?php echo $location; ?></p>
 				</div>
-				<div class="p-exhibitors__detail-pager" data-pager="pc">
-					<?php
-						$prevpost = get_previous_post();
-						$nextpost = get_next_post();
-						if ( $nextpost ):
-					?>
-						<a href="<?php echo the_permalink($nextpost->ID); ?>" data-link="prev">
-							<span>PREV</span>
-						</a>
-						<?php
-							$nextNextpost = get_next_post($nextpost->ID);
-							if ( $nextNextpost ):
-						?>
-						<a href="<?php echo the_permalink($nextNextpost->ID); ?>" data-link="prev">
-							<span>PREV</span>
-						</a>
-						<?php endif; ?>
-					<?php
-						endif;
-						if ( $prevpost ):
-					?>
-						<a href="<?php echo the_permalink($prevpost->ID); ?>" data-link="next">
-							<span>NEXT</span>
-						</a>
-						<?php
-							$prevPrevpost = get_previous_post($prevpost->ID);
-							if ( $prevPrevpost ):
-						?>
-							<a href="<?php echo the_permalink($prevPrevpost->ID); ?>" data-link="prev">
-								<span>PREV</span>
-							</a>
-						<?php endif; ?>
-					<?php endif; ?>
-				</div>
 			</div>
 			<div class="c-area__content-main">
 				<div class="p-exhibitors__detail-header">
