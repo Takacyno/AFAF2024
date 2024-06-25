@@ -6,6 +6,11 @@ Theme Name: afaf-2024
   font-family: "New Title";
   src: url("font/NewTitle-Variable.ttf") format("opentype");
 }
+
+:root {
+  --main-background-color: #ffffff
+}
+
 /* typeface en */
 /* 左右余白 */
 /* 下余白 */
@@ -65,7 +70,7 @@ body main {
   display: block;
   min-height: 90vh;
   padding-top: 0;
-  background-color: #e8e4e4;
+  background-color: var(--main-background-color);
 }
 body ul {
   list-style: none;
