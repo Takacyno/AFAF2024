@@ -23,6 +23,7 @@
 				<div class="c-area__content-back">
 					<a href="<?php echo home_url('exhibitors'); ?>"><span>All Exhibitiors</span></a>
 				</div>
+				<?php /*
 				<table class="p-exhibitors__detail-meta">
 					<tbody>
 						<tr>
@@ -31,6 +32,7 @@
 						</tr>
 					</tbody>
 				</table>
+				*/ ?>
 			</div>
 			<div class="c-area__content-main">
 				<div class="p-exhibitors__detail-header">
