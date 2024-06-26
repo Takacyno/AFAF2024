@@ -4,8 +4,8 @@
 	$imagePath = get_stylesheet_directory_uri() . '/image';
 
 	$terms = get_terms('section');
-	$exhibitorsTermNames = [];
-	$exhibitorsTermSlugs = [];
+	$exhibitorsTermNames = ["galleries", "collaboration"];
+	$exhibitorsTermSlugs = ["gallery", "collaboration"];
 	$exhibitorsHideTermSlugs = ["curation", "master"];
 	$exhibitorsTermCounts = [];
 	$exhibitorsTermJaCounts = [];
@@ -23,8 +23,8 @@
 		$exhibitorsTermIdsp = 'section_'.$exhibitorsTermId;
 		// $exhibitorsTermEnDescription = $term->term_id;
 		$exhibitorsTermDescription = $term->description;
-		$exhibitorsTermNames[] = $exhibitorsTermName;
-		$exhibitorsTermSlugs[] = $exhibitorsTermSlug;
+		// $exhibitorsTermNames[] = $exhibitorsTermName;
+		// $exhibitorsTermSlugs[] = $exhibitorsTermSlug;
 		$exhibitorsTermCounts[] = $exhibitorsTermCount;
 		$exhibitorsTermIds[] = $exhibitorsTermId;
 		$exhibitorsTermIdsps[] = $exhibitorsTermIdsp;
