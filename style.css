@@ -354,6 +354,11 @@ body h4 {
 .c-footer__links-social ul {
   gap: 24px;
 }
+.c-footer__links-social img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
 
 .c-footer__copyright {
   text-align: right;

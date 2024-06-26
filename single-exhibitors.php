@@ -156,7 +156,7 @@
 							<div class='p-exhibitors__detail-sns'>
 								<ul>
 									<?php if(get_sub_field('x_url')): ?>
-										<li><a href="<?php echo get_sub_field('x_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
+										<li><a href="<?php echo get_sub_field('x_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x.svg" alt="X"></a></li>
 									<?php endif; ?>
 									<?php if(get_sub_field('instagram_url')): ?>
 										<li><a href="<?php echo get_sub_field('instagram_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
