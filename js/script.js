@@ -246,8 +246,6 @@
 					// console.log(controls);
 					jQuery('#' + controls).attr('aria-hidden', 'false');
 					let target = jQuery('#' + controls);
-					let position = jQuery(target).offset().top - 200 + 'px';
-					jQuery('html,body').animate({scrollTop: position}, 400);
 					return false;
 				}
 			});
@@ -268,8 +266,6 @@
 					// console.log(controls);
 					jQuery('#' + controls).attr('aria-hidden', 'false');
 					let target = jQuery('#' + controls);
-					let position = jQuery(target).offset().top - 200 + 'px';
-					jQuery('html,body').animate({scrollTop: position}, 400);
 					return false;
 				}
 			});

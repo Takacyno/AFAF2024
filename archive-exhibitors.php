@@ -96,10 +96,11 @@
 									<?php
 										$args=array(
 											'post_type' => 'exhibitors', //カスタム投稿名
-											'order' => 'ASC',
-											'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
+											'posts_per_page'=> -1, //表示件数（-1で全ての記事を表示）
+											'orderby' => 'sort',
+											'order' => 'DESC',
 										);
-										query_posts( $args );
+										get_posts( $args );
 										if(have_posts()):
 											$i2 = 0;
 											while(have_posts()):the_post();
