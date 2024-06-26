@@ -71,71 +71,72 @@
 				<div class="p-exhibitors__detail-content">
 					<?php echo get_field('summary'); ?>
 				</div>
-				<div class="p-exhibitors__detail-information">
-					<?php
-						if(have_rows('address')):
-					?>
-					<div class="p-exhibitors__detail-address">
+				<table class="p-exhibitors__detail-information">
+					<tbody>
 						<?php
-							while(have_rows('address')): the_row();
-								$postal_code = get_sub_field('postal_code');
-								$house = get_sub_field('house');
+							if(have_rows('address')):
 						?>
-						<p>
-							<?php
-								if ( $postal_code ) {
-									echo '<span>' . $postal_code . '</span>';
-								}
-								if ( $house ) {
-									echo '<span>' . $house . '</span>';
-								}
-							?>
-						</p>
-						<?php
-							endwhile;
-						?>
-					</div>
-					<dl>
-						<?php
-							if(!empty(get_field('tel'))):
-						?>
-							<div>
-								<dt>Tel</dt>
-								<dd>
-								<?php echo get_field('tel'); ?>
-								</dd>
-							</div>
-						<?php
-							endif;
-							if(have_rows('email')):
-						?>
-							<div>
-								<dt>Email</dt>
-								<dd>
+							<tr class="p-exhibitors__detail-address">
+								<th>Address</th>
 								<?php
-									while(have_rows('email')): the_row();
-										$email = get_sub_field('email_address');
+									while(have_rows('address')): the_row();
+										$postal_code = get_sub_field('postal_code');
+										$house = get_sub_field('house');
 								?>
-									<p><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></p>
-								<?php endwhile; ?>
-								</dd>
-							</div>
-						<?php
-							endif;
-							if(!empty(get_field('website'))):
-						?>
-							<div>
-								<dt>Website</dt>
-								<dd>
-								<a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a>
-								</dd>
-							</div>
-						<?php
-							endif;
-						?>
-					</dl>
-					<?php endif; ?>
-				</div>
+								<td>
+									<?php
+										if ( $postal_code ) {
+											echo '<span>〒' . $postal_code . ' </span>';
+										}
+										if ( $house ) {
+											echo '<span>' . $house . '</span>';
+										}
+									?>
+								</td>
+								<?php
+									endwhile;
+								?>
+							</tr>
+							<?php
+								if(!empty(get_field('tel'))):
+							?>
+								<tr>
+									<th>Tel</th>
+									<td>
+										<?php echo get_field('tel'); ?>
+									</td>
+								</tr>
+							<?php
+								endif;
+								if(have_rows('email')):
+							?>
+								<tr>
+									<th>Email</th>
+									<td>
+										<?php
+											while(have_rows('email')): the_row();
+												$email = get_sub_field('email_address');
+										?>
+											<a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+										<?php endwhile; ?>
+									</td>
+								</tr>
+							<?php
+								endif;
+								if(!empty(get_field('website'))):
+							?>
+								<tr>
+									<th>Website</th>
+									<td>
+										<a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a>
+									</td>
+								</tr>
+							<?php
+								endif;
+							?>
+						<?php endif; ?>
+					</tbody>
+				</table>
 				<?php // ここからartist ?>
 				<?php /*
 					<div class="p-exhibitors__detail-artist">
