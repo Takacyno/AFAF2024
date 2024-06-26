@@ -12,17 +12,6 @@
 	// 'globalnav_on' カスタムフィールドの値を取得
 	$globalnav_on_value = get_post_meta($program_page_id, 'globalnav_on', true);
 ?>
-<?php if ($site_flow_value) : ?>
-<div class="c-footer__ticket">
-	<a href="<?php if ($url) { echo $url; } ?>" target="_blank">
-		<?php if ($currentLang != 'en_US') : ?>
-		<span>チケット好評発売中</span>
-		<?php else: ?>
-		<span>Tickets now on sale</span>
-		<?php endif; ?>
-	</a>
-</div>
-<?php endif; ?>
 <footer id="footer" class="c-footer" role="contentinfo">
 	<div class="c-footer__wrapper">
 		<div class="c-footer__section">
