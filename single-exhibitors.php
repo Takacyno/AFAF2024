@@ -5,6 +5,7 @@
 	$location = get_field( 'location' );
 	$enGallery = get_field( 'en-gallery' );
 	$currentLang = get_locale();
+	$imagePath = get_stylesheet_directory_uri() . '/image';
 
 	$section = get_the_terms($post -> ID, 'section');
 	foreach($section as $term) {
@@ -137,6 +138,25 @@
 						<?php endif; ?>
 					</tbody>
 				</table>
+					<?php
+						if(have_rows('sns')):
+					?>
+						<?php
+							while(have_rows('sns')): the_row();
+								$postal_code = get_sub_field('postal_code');
+								$house = get_sub_field('house');
+						?>
+							<div class='p-exhibitors__detail-sns'>
+								<ul>
+									<li><a href="<?php echo get_sub_field('x_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
+									<li><a href="<?php echo get_sub_field('instagram_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
+									<li><a href="<?php echo get_sub_field('facebook_url'); ?>" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
+								<ul>
+							</div>
+						<?php
+							endwhile;
+						?>
+					<?php endif; ?>
 				<?php // ここからartist ?>
 				<?php /*
 					<div class="p-exhibitors__detail-artist">
