@@ -62,14 +62,11 @@
 					</div>
 				</div>
 				<?php // header ここまで ?>
-				<?php
-						if ($curationFlag === true) :
-							if (has_post_thumbnail()):
-					?>
-						<div class="p-exhibitors__detail-thumbnail">
-							<?php the_post_thumbnail('full'); ?>
-						</div>
-					<?php endif; endif; ?>
+				<?php if (has_post_thumbnail()): ?>
+					<div class="p-exhibitors__detail-thumbnail">
+						<?php the_post_thumbnail('full'); ?>
+					</div>
+				<?php endif; ?>
 				<div class="p-exhibitors__detail-content">
 					<?php echo get_field('summary'); ?>
 				</div>

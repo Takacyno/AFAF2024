@@ -2225,7 +2225,7 @@ body h4 {
   font-weight: 500;
 }
 .p-exhibitors__detail-thumbnail {
-  margin-top: 64px;
+  width: 100%;
 
   img {
     aspect-ratio: 3 / 2;
