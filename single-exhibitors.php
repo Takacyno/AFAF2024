@@ -256,30 +256,6 @@
 						<?php endif; ?>
 					<?php wp_reset_postdata(); endif; ?>
 				*/ ?>
-				<?php
-					// 以下からLeading Asiaのみ
-					if(have_rows('profile_repeat')):
-				?>
-					<div class="p-exhibitors__detail-profile">
-						<h2>CURATOR PROFILE</h2>
-						<?php
-							while(have_rows('profile_repeat')): the_row();
-								$thumbnail = wp_get_attachment_image_src(get_sub_field('profile_thumbnail'), 'full');
-								$name = get_sub_field('profile_name');
-								$text = get_sub_field('profile_text');
-						?>
-						<div class="p-exhibitors__detail-profile-item">
-							<div class="p-exhibitors__detail-profile-thumbnail">
-								<img src="<?php echo $thumbnail[0]; ?>" alt="">
-							</div>
-							<div class="p-exhibitors__detail-profile-text">
-								<h3><?php echo $name; ?></h3>
-								<p><?php echo $text; ?></p>
-							</div>
-						</div>
-						<?php endwhile; ?>
-					</div>
-				<?php endif; ?>
 			</div>
 			<div class="p-exhibitors__detail-pager" data-pager="sp">
 				<?php
