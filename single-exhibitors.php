@@ -6,6 +6,7 @@
 	$enGallery = get_field( 'en-gallery' );
 	$currentLang = get_locale();
 	$imagePath = get_stylesheet_directory_uri() . '/image';
+	$isBooth = false;
 
 	$section = get_the_terms($post -> ID, 'section');
 	foreach($section as $term) {
@@ -36,6 +37,24 @@
 			</div>
 			<div class="c-area__content-main">
 				<div class="p-exhibitors__detail-header">
+					<div class="p-exhibitors__detail-section">
+						<dt>SECTION: </dt>
+						<dd>
+							<?php
+								$section = get_the_terms($post -> ID, 'section');
+								foreach($section as $term) {
+									$sectionName = $term->name;
+									echo $sectionName;
+								}
+							?>
+						</dd>
+						<?php if ($isBooth): ?>
+						<dt>BOOTH: </dt>
+						<dd>
+							<?php echo get_field('booth-number') ?>
+						</dd>
+						<?php endif; ?>
+					</div>
 					<div>
 						<?php if ($currentLang != 'en_US') : ?>
 							<?php if ($enGallery) : ?>
@@ -47,18 +66,6 @@
 						<?php else: ?>
 							<h1 lang="en"><?php the_title(); ?></h1>
 						<?php endif; ?>
-					</div>
-					<div class="p-exhibitors__detail-section">
-						<dt>SECTION</dt>
-						<dd>
-							<?php
-								$section = get_the_terms($post -> ID, 'section');
-								foreach($section as $term) {
-									$sectionName = $term->name;
-									echo $sectionName;
-								}
-							?>
-						</dd>
 					</div>
 				</div>
 				<?php // header ここまで ?>
@@ -75,26 +82,28 @@
 						<?php
 							if(have_rows('address')):
 						?>
-							<tr class="p-exhibitors__detail-address">
+							<tr>
 								<th>Address</th>
+								<td>
 								<?php
 									while(have_rows('address')): the_row();
 										$postal_code = get_sub_field('postal_code');
 										$house = get_sub_field('house');
 								?>
-								<td>
-									<?php
-										if ( $postal_code ) {
-											echo '<span>〒' . $postal_code . ' </span>';
-										}
-										if ( $house ) {
-											echo '<span>' . $house . '</span>';
-										}
-									?>
-								</td>
+									<p>
+										<?php
+											if ( $postal_code ) {
+												echo '<span>〒' . $postal_code . ' </span>';
+											}
+											if ( $house ) {
+												echo '<span>' . $house . '</span>';
+											}
+										?>
+									</p>
 								<?php
 									endwhile;
 								?>
+							</td>
 							</tr>
 							<?php
 								if(!empty(get_field('tel'))):
