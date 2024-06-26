@@ -20,45 +20,44 @@
 	<div class="c-area__content">
 		<div class="c-area__content-inner">
 			<div class="c-area__content-side">
-				<div class="p-exhibitors__detail-back">
+				<div class="c-area__content-back">
 					<a href="<?php echo home_url('exhibitors'); ?>"><span>All Exhibitiors</span></a>
 				</div>
-				<div class="p-exhibitors__detail-meta">
-					<dl>
-						<div>
-							<dt>SECTION</dt>
-							<dd>
-								<?php
-									$section = get_the_terms($post -> ID, 'section');
-									foreach($section as $term) {
-										$sectionName = $term->name;
-										echo $sectionName;
-									}
-								?>
-							</dd>
-						</div>
-						<?php /*
-						<div>
-							<dt>BOOTH</dt>
-							<dd><?php echo $number; ?></dd>
-						</div>
-						*/ ?>
-					</dl>
-					<p><?php echo $location; ?></p>
-				</div>
+				<table class="p-exhibitors__detail-meta">
+					<tbody>
+						<tr>
+							<th>Location</th>
+							<td><?php echo $location; ?></td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 			<div class="c-area__content-main">
 				<div class="p-exhibitors__detail-header">
-					<?php if ($currentLang != 'en_US') : ?>
-						<?php if ($enGallery) : ?>
-							<h1><?php the_title(); ?></h1>
-							<span><?php echo $enGallery; ?></span>
+					<div>
+						<?php if ($currentLang != 'en_US') : ?>
+							<?php if ($enGallery) : ?>
+								<h1><?php the_title(); ?></h1>
+								<span><?php echo $enGallery; ?></span>
+							<?php else: ?>
+								<h1 lang="en"><?php the_title(); ?></h1>
+							<?php endif; ?>
 						<?php else: ?>
 							<h1 lang="en"><?php the_title(); ?></h1>
 						<?php endif; ?>
-					<?php else: ?>
-					<h1 lang="en"><?php the_title(); ?></h1>
-					<?php endif; ?>
+					</div>
+					<div class="p-exhibitors__detail-section">
+						<dt>SECTION</dt>
+						<dd>
+							<?php
+								$section = get_the_terms($post -> ID, 'section');
+								foreach($section as $term) {
+									$sectionName = $term->name;
+									echo $sectionName;
+								}
+							?>
+						</dd>
+					</div>
 				</div>
 				<?php // header ここまで ?>
 				<?php
