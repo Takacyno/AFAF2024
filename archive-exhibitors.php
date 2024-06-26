@@ -3,9 +3,12 @@
 	$currentLang = get_locale();
 	$imagePath = get_stylesheet_directory_uri() . '/image';
 
-	$terms = get_terms('section');
-	$exhibitorsTermNames = ["galleries", "collaboration"];
-	$exhibitorsTermSlugs = ["gallery", "collaboration"];
+	$terms = get_terms('section', array(
+		'orderby'    => 'count',
+		'order' => 'DESC',
+	));
+	$exhibitorsTermNames = [];
+	$exhibitorsTermSlugs = [];
 	$exhibitorsHideTermSlugs = ["curation", "master"];
 	$exhibitorsTermCounts = [];
 	$exhibitorsTermJaCounts = [];
@@ -23,8 +26,8 @@
 		$exhibitorsTermIdsp = 'section_'.$exhibitorsTermId;
 		// $exhibitorsTermEnDescription = $term->term_id;
 		$exhibitorsTermDescription = $term->description;
-		// $exhibitorsTermNames[] = $exhibitorsTermName;
-		// $exhibitorsTermSlugs[] = $exhibitorsTermSlug;
+		$exhibitorsTermNames[] = $exhibitorsTermName;
+		$exhibitorsTermSlugs[] = $exhibitorsTermSlug;
 		$exhibitorsTermCounts[] = $exhibitorsTermCount;
 		$exhibitorsTermIds[] = $exhibitorsTermId;
 		$exhibitorsTermIdsps[] = $exhibitorsTermIdsp;
@@ -143,6 +146,12 @@
 								for ($i = 0; $i < $exhibitorsTermNum; $i++):
 							?>
 							<div id="<?php echo $exhibitorsTermSlugs[$i]; ?>" class="p-exhibitors__section-tabpanel-item" aria-hidden="true">
+								<div class="p-exhibitors__taxonomy-desc">
+									<?php if(get_field('img', $exhibitorsTermIdsps[$i])): ?>
+										<img src="<?php echo get_field('img', $exhibitorsTermIdsps[$i])['url']; ?>" />
+									<?php endif; ?>
+									<?php echo $exhibitorsTermDescriptions[$i] ?>
+								</div>
 								<ul class="p-exhibitors__taxonomy">
 									<?php
 										$args=array(

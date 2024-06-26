@@ -58,7 +58,7 @@
 			</div>
 			<div class="c-footer__links-social">
 				<ul>
-					<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter-white.svg" alt="TWITTER"></a></li>
+				<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x-white.svg" alt="X"></a></li>
 					<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram-white.svg" alt="INSTAGRAM"></a></li>
 					<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook-white.svg" alt="FACEBOOK"></a></li>
 				</ul>

@@ -2000,6 +2000,13 @@ body h4 {
   height: 100%;
 }
 
+.p-exhibitors__taxonomy-desc {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
 .p-exhibitors__taxonomy {
   display: flex;
   align-items: flex-start;
