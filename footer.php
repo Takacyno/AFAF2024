@@ -28,13 +28,13 @@
 		<div class="c-footer__section">
 			<div class="c-footer__section-link">
 				<ul>
-					<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
 					<li><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
 					<li><a href="<?php echo home_url('exhibitors'); ?>">EXHIBITORS</a></li>
-					<li><a href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a></li>
-					<?php if ($globalnav_on_value) : ?>
+					<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a></li>
+					<?php /*if ($globalnav_on_value) : ?>
 					<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
-					<?php endif; ?>
+					<?php endif; */ ?>
 					<li><a href="<?php echo home_url('access'); ?>">ACCESS</a></li>
 					<li><a href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
 				</ul>
@@ -43,7 +43,7 @@
 				</div>
 			</div>
 			<div class="c-footer__mail">
-				<h2>NEWSLETTER</h2>
+				<h2>MAIL NEWS</h2>
 				<div class="c-footer__mail-area">
 					<?php if ($currentLang != 'en_US') : ?>
 					<p>最新情報をメールにてお届けします。<br>
@@ -76,7 +76,7 @@
 			</div>
 		</div>
 		<div class="c-footer__copyright">
-			<small>© 2015-2023 ART FAIR ASIA FUKUOKA.<br>All Rights Reserved.</small>
+			<small>© 2015-2024 ART FAIR ASIA FUKUOKA.<br>All Rights Reserved.</small>
 		</div>
 	</div>
 </footer>
