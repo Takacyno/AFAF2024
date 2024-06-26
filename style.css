@@ -1100,7 +1100,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .c-title h1 {
-    font-size: 9rem;
+    font-size: 7rem;
   }
 }
 
@@ -1961,9 +1961,8 @@ body h4 {
 .p-exhibitors__section-tab {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   justify-content: flex-start;
-  gap: 3rem;
+  gap: 2rem;
   border-bottom: 2px solid black;
   overflow-x: auto;
 }
@@ -1972,9 +1971,6 @@ body h4 {
     gap: 1.2rem;
   }
 }
-.p-exhibitors__section-tab li {
-  flex: 0 0 auto;
-}
 .p-exhibitors__section-tab button {
   cursor: pointer;
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
@@ -1982,16 +1978,16 @@ body h4 {
   font-size: 3.2rem;
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
-  line-height: 1;
   text-align: left;
   text-transform: uppercase;
   color: #adadad;
   background-color: transparent;
   transition: all 300ms;
+  padding: 0 1rem;
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__section-tab button {
-    font-size: 3.5rem;
+    font-size: 3rem;
     min-width: 0;
   }
 }
