@@ -96,11 +96,12 @@
 									<?php
 										$args=array(
 											'post_type' => 'exhibitors', //カスタム投稿名
-											'posts_per_page'=> -1, //表示件数（-1で全ての記事を表示）
-											'orderby' => 'sort',
-											'order' => 'DESC',
+											'orderby' => 'meta_value',
+											'meta_key' => 'sort',
+											'order' => 'ASC',
+											'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
 										);
-										get_posts( $args );
+										query_posts( $args );
 										if(have_posts()):
 											$i2 = 0;
 											while(have_posts()):the_post();
@@ -146,7 +147,6 @@
 									<?php
 										$args=array(
 											'post_type' => 'exhibitors', //カスタム投稿名
-											'order' => 'ASC',
 											'tax_query' => array(
 												array(
 													'taxonomy' => 'section',
@@ -155,6 +155,9 @@
 													'_locale' => $currentLang,
 												)
 											),
+											'orderby' => 'meta_value',
+											'meta_key' => 'sort',
+											'order' => 'ASC',
 											'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
 										);
 										query_posts( $args );
