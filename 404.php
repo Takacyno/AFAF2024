@@ -4,12 +4,18 @@
 ?>
 
 <main class="p-404">
-	<div class="p-404__content">
-		<h1><img src="<?php echo $imagePath; ?>/text-404.svg" alt="404" decoding="async"></h1>
-		<div class="p-404__content-text">
-			<p>The page you are looking for could not be found.<br>
-			Please access again from the top page.</p>
-			<p><a href="<?php echo home_url(); ?>">TOP</a></p>
+	<div class="c-area__content">
+		<div class="c-area__content-inner">
+			<div class="p-404__section">
+				<div>
+					<h1>404</h1>
+					<h2>Page Not Fount</h2>
+				</div>
+				<p>お探しのページは見つかりませんでした。<br />トップページから再度アクセスをお願いいたします。</p>
+				<div class="p-404__top-link">
+					<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
+				</div>
+			</div>
 		</div>
 	</div>
 </main>
