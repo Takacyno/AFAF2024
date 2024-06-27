@@ -3364,11 +3364,11 @@ body h4 {
     min-width: 114px;
   }
 }
-.p-news__list li {
+.p-news__list-item {
   width: 100%;
   border-bottom: 1px solid #adadad;
 }
-.p-news__list a {
+.p-news__list-item a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -3384,7 +3384,7 @@ body h4 {
   background-color: transparent;
 }
 @media screen and (max-width: 768px) {
-  .p-news__list a {
+  .p-news__list-item a {
     font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
     font-weight: 400;
     font-size: 1.2rem;
@@ -3393,10 +3393,10 @@ body h4 {
     gap: 4px;
   }
 }
-.p-news__list a:hover {
-  background-color: #f9321d;
+.p-news__list-item a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
-.p-news__list a[target=_blank] .p-news__list-title::after {
+.p-news__list-item a[target=_blank] .p-news__list-title::after {
   display: inline-block;
   content: "";
   margin: 4px 0 0 4px;

@@ -4,7 +4,7 @@
 	<div class="c-area__content">
 		<div class="c-area__content-inner">
 			<div class="c-area__content-side">
-				<div class="p-news__detail-back">
+				<div class="c-area__content-back">
 					<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
 				</div>
 			</div>
