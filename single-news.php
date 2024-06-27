@@ -4,7 +4,7 @@
 	<div class="c-area__content">
 		<div class="c-area__content-inner">
 			<div class="c-area__content-side">
-				<div class="p-news__detail-back">
+				<div class="c-area__content-back">
 					<a href="<?php echo home_url('news'); ?>"><span>ALL ARTICLES</span></a>
 				</div>
 				<div class="p-news__detail-pager" data-pager="pc">
@@ -53,7 +53,7 @@
 					<?php endif; ?>
 				</div>
 			</div>
-			<div class="c-area__content-main">
+			<div class="c-area__content-main  margin-right">
 				<div class="p-news__detail-header">
 					<h1><?php the_title(); ?></h1>
 					<?php

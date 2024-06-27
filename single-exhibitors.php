@@ -35,7 +35,7 @@
 				</table>
 				*/ ?>
 			</div>
-			<div class="c-area__content-main">
+			<div class="c-area__content-main margin-right">
 				<div class="p-exhibitors__detail-header">
 					<div class="p-exhibitors__detail-section">
 						<dt>SECTION: </dt>

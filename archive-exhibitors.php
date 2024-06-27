@@ -113,7 +113,11 @@
 									?>
 									<li class="p-exhibitors__taxonomy-item">
 										<a href="<?php echo the_permalink( $post->ID ); ?>">
-											<h3><?php the_title(); ?></h3>
+											<?php if ($currentLang == 'en_US') : ?>
+												<h3 lang="en"><?php the_title(); ?></h3>
+											<?php else: ?>
+												<h3><?php the_title(); ?></h3>
+											<?php endif; ?>
 											<?php
 												$section = get_the_terms($post -> ID, 'section');
 												if ( $section ) {
