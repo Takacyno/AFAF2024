@@ -19,7 +19,7 @@
 				<ul>
 					<li><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
 					<li><a href="<?php echo home_url('exhibitors'); ?>">EXHIBITORS</a></li>
-					<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('about'); ?>">ABOUT</a></li>
 					<li><a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a></li>
 					<?php /*if ($globalnav_on_value) : ?>
 					<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
