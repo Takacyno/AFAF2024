@@ -14,8 +14,15 @@
 	<div class="p-front__hero">
 		<div class="p-front__hero-img">
 			<picture>
-				<source srcset="<?php echo $imagePath; ?>/pict-top-hero.jpg" media="(min-width: 768px)">
-				<img src="<?php echo $imagePath; ?>/pict-top-hero-sp.jpg" alt="">
+			<?php if(have_rows('fv')): ?>
+					<?php
+						$images = [];
+						while ( have_rows('fv') ) : the_row();
+							$images[] = get_sub_field('fv_img');
+						endwhile;
+					?>
+					<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
+				<?php endif; ?>
 			</picture>
 		</div>
 	</div>
@@ -45,18 +52,18 @@
 								$month = get_the_time('m');
 								$date = get_the_time('d');
 								$monthArray = [
-									"01" => "JAN",
-									"02" => "FEB",
-									"03" => "MAR",
-									"04" => "APR",
-									"05" => "MAY",
-									"06" => "JUN",
-									"07" => "JUL",
-									"08" => "AUG",
-									"09" => "SEP",
-									"10" => "OCT",
-									"11" => "NOV",
-									"12" => "DEC",
+									"01" => "Jan",
+									"02" => "Feb",
+									"03" => "Mar",
+									"04" => "Apr",
+									"05" => "May",
+									"06" => "Jun",
+									"07" => "Jul",
+									"08" => "Aug",
+									"09" => "Sep",
+									"10" => "Oct",
+									"11" => "Nov",
+									"12" => "Dec",
 								];
 								$url = get_field( 'url' );
 								if ( $url ) :
@@ -161,257 +168,86 @@
 		*/?>
 
 		<!-- <div class="p-front__section js-fadein"> -->
-		<div class="p-front__section">
-			<div class="p-front__heading">
-				<h2>EXHIBITORS</h2>
-			</div>
-			<?php /*
-				<div class="p-front__heading">
-					<?php
-						if(have_rows('exhibitions')):
-							while(have_rows('exhibitions')): the_row();
-								$title = get_sub_field('title');
-
-					?>
-						<h2><?php echo $title; ?></h2>
-					<?php
-							endwhile;
-						endif;
-					?>
-				</div>
-			*/?>
-			<?php /*
-			<div class="p-front__content">
-				<div class="p-front__exhibitors-taxonomy">
-					<?php
-						$terms = get_terms('section');
-						$exhibitorsTermNames = [];
-						$exhibitorsTermSlugs = [];
-						$exhibitorsTermCounts = [];
-						$exhibitorsTermJaCounts = [];
-						$exhibitorsTermEnCounts = [];
-						$exhibitorsTermNum = 0;
-						foreach ( $terms as $term ):
-							$exhibitorsTermNum++;
-							$exhibitorsTermName = $term->name;
-							$exhibitorsTermSlug = $term->slug;
-							$exhibitorsTermCount = $term->count;
-							$exhibitorsTermNames[] = $exhibitorsTermName;
-							$exhibitorsTermSlugs[] = $exhibitorsTermSlug;
-							$exhibitorsTermCounts[] = $exhibitorsTermCount;
-						endforeach;
-						for ($i = 0; $i < $exhibitorsTermNum; $i++):
-							$args=array(
-								'post_type' => 'exhibitors', //カスタム投稿名
-								'order' => 'ASC',
-								'tax_query' => array(
-									array(
-										'taxonomy' => 'section',
-										'field' => 'slug',
-										'terms' => array($exhibitorsTermSlugs[$i]),
-										'_locale' => $currentLang,
-									)
-								),
-								'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
-							);
-							query_posts( $args );
-							if(have_posts()):
-								$i2 = 0;
-								while(have_posts()):the_post();
-									$i2++;
-								endwhile;
-								$termLangCount = $i2;
-								if ($currentLang != 'en_US') :
-									$exhibitorsTermJaCounts[] = $termLangCount;
-								else:
-									$exhibitorsTermEnCounts[] = $termLangCount;
-								endif;
-							endif;
-						endfor;
-						wp_reset_postdata();
-					?>
-					<ul>
-						<?php
-							for ($i = 0; $i < $exhibitorsTermNum; $i++):
-						?>
-							<li><a href="#<?php echo $exhibitorsTermSlugs[$i]; ?>">
-								<?php echo $exhibitorsTermNames[$i]; ?>
-								<?php
-									if ($currentLang != 'en_US') :
-								?>
-									(<?php echo $exhibitorsTermJaCounts[$i]; ?>)
-								<?php
-									else:
-								?>
-									(<?php echo $exhibitorsTermEnCounts[$i]; ?>)
-								<?php endif; ?>
-							</a></li>
-						<?php endfor; ?>
-					</ul>
-				</div>
-			</div>
-			*/?>
-		</div>
 		<?php wp_reset_query(); ?>
-		<div class="p-front__exhibitors-area js-fadein">
-			<div class="p-front__exhibitors-introduction">
-				<div class="p-front__exhibitors-introduction-item">
-					<?php
-						if(have_rows('exhibitions')):
-							while(have_rows('exhibitions')): the_row();
-								$photo = wp_get_attachment_image_src(get_sub_field('photo'), 'full');
-					?>
-						<div class="p-front__exhibitors-introduction-galleries">
-							126
-							<span>Galleries</span>
-						</div>
-						<div class="p-front__exhibitors-introduction-item-bg">
-							<img src="<?php echo $photo[0]; ?>" alt="">
-						</div>
-					<?php
-							endwhile;
-						endif;
-					?>
+		<div class="p-front__wrapper">
+			<div class="p-front__exhibitors-area">
+				<div class="p-front__section">
+					<div class="p-front__heading">
+						<h2>EXHIBITORS</h2>
+					</div>
 				</div>
-				<div class="p-front__exhibitors-introduction-item">
-					<?php
-						if(have_rows('exhibitions')):
-							while(have_rows('exhibitions')): the_row();
-								$summary = get_sub_field('summary');
-								$url = get_sub_field('url');
-					?>
-						<p><?php echo $summary; ?></p>
-						<div class="c-link" data-link="secondary">
-							<a href="<?php echo $url; ?>"><span>ALL GALLERIES</span></a>
-						</div>
-					<?php
+				<div class="p-front__exhibitors-main">
+					<?php if(have_rows('fv')): ?>
+						<?php
+							$images = [];
+							while ( have_rows('fv') ) : the_row();
+								$images[] = get_sub_field('fv_img');
 							endwhile;
-						endif;
-					?>
+						?>
+						<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
+					<?php endif; ?>
+					<div>
+						<p>
+							<?php echo get_field('exhibitions'); ?>
+						</p>
+						<div class="c-link">
+							<a href="<?php echo home_url('exhibitors'); ?>"><span>View All</span></a>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="p-front__exhibitors-galleries">
-				<div>
-					<ul class="p-front__exhibitors-galleries-slider">
-					<?php
-						$args=array(
-							'post_type' => 'exhibitors', //カスタム投稿名
-							'orderby' => 'rand',
-							'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
-						);
-						remove_all_filters('posts_orderby');
-						query_posts( $args );
-						if(have_posts()):
-						while(have_posts()):the_post();
-					?>
-						<?php
-							$enGallery = get_field('en-gallery', $post->ID);
-							if (($currentLang != 'en_US') && $enGallery) :
-						?>
-							<li><?php echo $enGallery; ?></li>
-						<?php
-							else:
-						?>
-							<li><?php the_title(); ?></li>
-						<?php endif; ?>
-					<?php endwhile; endif; ?>
-					</ul>
-				</div>
-				<?php wp_reset_query(); ?>
-				<div>
-					<ul class="p-front__exhibitors-galleries-slider-reverse" dir="rtl">
-					<?php
-						$args=array(
-							'post_type' => 'exhibitors', //カスタム投稿名
-							'orderby' => 'rand',
-							'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
-						);
-						remove_all_filters('posts_orderby');
-						query_posts( $args );
-						if(have_posts()):
-						while(have_posts()):the_post();
-					?>
-						<?php
-							$enGallery = get_field('en-gallery', $post->ID);
-							if (($currentLang != 'en_US') && $enGallery) :
-						?>
-							<li><?php echo $enGallery; ?></li>
-						<?php
-							else:
-						?>
-							<li><?php the_title(); ?></li>
-						<?php endif; ?>
-					<?php endwhile; endif; ?>
-					</ul>
-				</div>
-				<?php wp_reset_query(); ?>
-				<div>
-					<ul class="p-front__exhibitors-galleries-slider">
-					<?php
-						$args=array(
-							'post_type' => 'exhibitors', //カスタム投稿名
-							'orderby' => 'rand',
-							'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
-						);
-						remove_all_filters('posts_orderby');
-						query_posts( $args );
-						if(have_posts()):
-						while(have_posts()):the_post();
-					?>
-						<?php
-							$enGallery = get_field('en-gallery', $post->ID);
-							if (($currentLang != 'en_US') && $enGallery) :
-						?>
-							<li><?php echo $enGallery; ?></li>
-						<?php
-							else:
-						?>
-							<li><?php the_title(); ?></li>
-						<?php endif; ?>
-					<?php endwhile; endif; ?>
-					</ul>
-				</div>
-				<?php wp_reset_query(); ?>
-			</div>
-			<div class="c-link c-link-left">
-					<a href="<?php echo home_url('exhibitors'); ?>"><span>View All</span></a>
-				</div>
 		</div>
 		<?php // exhibitors ここまで ?>
 		<?php if ( $access && $information ) : ?>
-		<div class="p-front__section">
-			<div class="p-front__heading">
-				<h2>Visitor<br />Information</h2>
-			</div>
-			<div class="p-front__content">
-				<div class="p-front__visitor__information-list">
-					<ul>
-						<li>
-							<p class="p-front__visitor__information-name">Date</p>
-							<div class="p-front__visitor__information-value">
-								<p class="p-front__visitor__information-value-heading"><?php echo $date_info; ?></p>
-								<p><?php echo $date_ad; ?></p>
-							</div>
-						</li>
-						<li>
-							<p class="p-front__visitor__information-name">Hours</p>
-							<div class="p-front__visitor__information-value">
-								<div>
-									<?php echo $hours ?>
-								</div>
-							</div>
-						</li>
-						<li>
-							<p class="p-front__visitor__information-name">Venue</p>
-							<div class="p-front__visitor__information-value">
-								<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
-								<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>
-							</div>
-						</li>
-					</ul>
+		<div class="p-front__wrapper">
+			<div class="p-front__info-area">
+				<div class="p-front__section">
+					<div class="p-front__heading">
+						<h2>VISITOR INFO</h2>
+					</div>
 				</div>
-				<div class="c-link">
-					<a href="<?php echo home_url('access'); ?>"><span>How to access</span></a>
+				<div class="p-front__info-main">
+						<?php if(have_rows('fv')): ?>
+							<?php
+								$images = [];
+								while ( have_rows('fv') ) : the_row();
+									$images[] = get_sub_field('fv_img');
+								endwhile;
+							?>
+							<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
+						<?php endif; ?>
+						<div>
+							<div class="p-front__visitor__information-list">
+								<ul>
+									<li>
+										<p class="p-front__visitor__information-name">DATE</p>
+										<div class="p-front__visitor__information-value">
+											<p class="p-front__visitor__information-value-heading"><?php echo $date_info; ?></p>
+											<p><?php echo $date_ad; ?></p>
+										</div>
+									</li>
+									<li>
+										<p class="p-front__visitor__information-name">HOURS</p>
+										<div class="p-front__visitor__information-value">
+											<div>
+												<?php echo $hours ?>
+											</div>
+										</div>
+									</li>
+									<li>
+										<p class="p-front__visitor__information-name">VENUE</p>
+										<div class="p-front__visitor__information-value">
+											<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
+											<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div class="c-link">
+								<a href="<?php echo home_url('access'); ?>"><span>DETAIL</span></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

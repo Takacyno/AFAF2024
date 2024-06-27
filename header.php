@@ -26,17 +26,15 @@
 </head>
 
 <body>
-<?php
-	$imagePath = get_stylesheet_directory_uri() . '/image';
-	$currentLang = get_locale();
-	$top_page_id = get_option('page_on_front');
-	$ticket = get_field( 'ticket', $top_page_id );
-	$title = $ticket[ 'title' ];
-	$url = $ticket[ 'url' ];
-	$site_flow_value = $ticket[ 'site_flow' ];
-	//トップページ以外の場合の処理
-	if( !is_front_page() and !is_home() ):
-?>
+	<?php
+		$imagePath = get_stylesheet_directory_uri() . '/image';
+		$currentLang = get_locale();
+		$top_page_id = get_option('page_on_front');
+		$ticket = get_field( 'ticket', $top_page_id );
+		$title = $ticket[ 'title' ];
+		$url = $ticket[ 'url' ];
+		$site_flow_value = $ticket[ 'site_flow' ];
+	?>
 	<header class="c-header">
 		<div class="c-header__wrapper">
 			<div class="c-header__logo">
@@ -86,59 +84,4 @@
 			</div>
 		</div>
 	</header>
-<?php else: ?>
-	<header class="c-header" data-header="front">
-		<div class="c-header__wrapper">
-			<div class="c-header__logo">
-				<h1>
-					<picture>
-						<source srcset="<?php echo $imagePath; ?>/logo-01.svg" media="(min-width: 1320px)">
-						<img src="<?php echo $imagePath; ?>/logo-03.svg" alt="ART FAIR ASIA FUKUKA 2023" decoding="async">
-					</picture>
-				</h1>
-			</div>
-			<div class="c-header__contents">
-				<div class="c-header__nav">
-					<div class="c-header__nav-wrapper">
-						<?php include('include/nav-global.php'); ?>
-						<?php if ($site_flow_value) : ?>
-						<div class="c-header__nav-ticket">
-							<a class="c-link__ticket" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
-							<?php if ( $title ) : ?>
-							<span><?php echo $title; ?></span>
-							<?php endif; ?>
-						</div>
-						<?php endif; ?>
-						<div class="c-header__nav-links">
-							<ul class="c-header__nav-links-list">
-								<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
-								<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
-								<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
-								<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
-							</ul>
-							<ul class="c-header__nav-links-social">
-								<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
-								<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
-								<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
-							</ul>
-						</div>
-					</div>
-					<?php if ($site_flow_value === true) : ?>
-				</div>
-				<div class="c-header__ticket">
-					<a href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
-					<?php if ( $title ) : ?>
-					<span><?php echo $title; ?></span>
-					<?php endif; ?>
-				</div>
-				<?php endif; ?>
-				<div class="c-header__lang">
-					<?php echo do_shortcode('[bogo]'); ?>
-				</div>
-				<button type="button" class="c-header__button" aria-expanded="false">
-					<span>MENU OPEN</span>
-				</button>
-			</div>
-		</div>
-	</header>
-<?php endif; ?>
+</body>
