@@ -2007,6 +2007,12 @@ body h4 {
   margin-bottom: 5rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .p-exhibitors__taxonomy-desc {
+    flex-direction: column;
+  }
+}
+
 .p-exhibitors__taxonomy {
   display: flex;
   align-items: flex-start;
