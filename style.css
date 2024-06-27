@@ -727,8 +727,8 @@ body h4 {
   align-items: center;
   justify-content: center;
   color: #000;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
   font-size: 1.3rem;
   line-height: 1;
   text-decoration: none;
@@ -3348,8 +3348,9 @@ body h4 {
   }
 }
 .p-news__list-date {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-size: 1.2rem;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+  font-size: 1.4rem;
   line-height: 1.7;
   color: #7e7e7e;
   min-width: 140px;
@@ -3357,8 +3358,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-news__list-date {
-    font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     line-height: 1.5;
     min-width: 114px;
@@ -3375,14 +3375,13 @@ body h4 {
   justify-content: flex-start;
   padding: 24px 0px;
   gap: 6px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.7;
   color: #2F2B2B;
   text-decoration: none;
   background-color: transparent;
-  transition: all linear 300ms;
 }
 @media screen and (max-width: 768px) {
   .p-news__list a {
@@ -3473,12 +3472,13 @@ body h4 {
 }
 .p-news__detail-pager[data-pager=sp] {
   display: none;
+  margin-bottom: 5rem;
 }
 @media screen and (max-width: 768px) {
   .p-news__detail-pager[data-pager=sp] {
     display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: space-between;
   }
 }
 .p-news__detail-pager a {
@@ -3553,7 +3553,7 @@ body h4 {
 }
 .p-news__detail-header h1 {
   margin-bottom: 16px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 2.1rem;
   line-height: 1.3;
@@ -3561,9 +3561,10 @@ body h4 {
 }
 .p-news__detail-header span {
   color: #2F2B2B;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   line-height: 1.6;
 }
 .p-news__detail-thumbnail {
@@ -3578,7 +3579,7 @@ body h4 {
   }
 }
 .p-news__detail-content h2 {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -3586,7 +3587,7 @@ body h4 {
   margin-bottom: 32px;
 }
 .p-news__detail-content p {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
   line-height: 1.7;
@@ -4817,6 +4818,7 @@ body h4 {
 .c-area__content-side {
   position: fixed;
   min-width: 350px;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -4824,6 +4826,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .c-area__content-side {
+    min-height: fit-content;
     position: relative;
     margin-bottom: 40px;
   }
