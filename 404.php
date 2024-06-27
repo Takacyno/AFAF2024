@@ -9,7 +9,7 @@
 			<div class="p-404__section">
 				<div>
 					<h1>404</h1>
-					<h2>Page Not Fount</h2>
+					<h2>Page Not Found</h2>
 				</div>
 				<p>お探しのページは見つかりませんでした。<br />トップページから再度アクセスをお願いいたします。</p>
 				<div class="p-404__top-link">
