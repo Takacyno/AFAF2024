@@ -382,7 +382,7 @@ body h4 {
   display: flex;
   align-items: flex-end;
   width: 100%;
-  height: 128px;
+  height: 96px;
   z-index: 100;
 }
 @media screen and (max-width: 768px) {
@@ -393,32 +393,38 @@ body h4 {
 
 .c-header__wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .c-header__wrapper {
+    align-items: center;
+  }
 }
 
 .c-header__logo {
   background-color: #f9321d;
 }
 .c-header__logo > a {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 67.5, "wght" 600;
   text-decoration: none;
   color: white;
 }
 .c-header__logo > a > h1 {
-  padding: 16px 40px 16px 72px;
+  padding: 4px 40px 4px 72px;
 }
 @media screen and (max-width: 768px) {
   .c-header__logo > a > h1 {
-    font-size: 2rem;
-    padding: 8px 24px 8px 24px;
+    font-size: 3rem;
+    padding: 4px 24px 4px 24px;
   }
 }
 
 .c-header__contents {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: flex-end;
   margin-right: 72px;
 }
@@ -503,6 +509,10 @@ body h4 {
     transition-delay: 500ms;
   }
 }
+.c-header__nav-menu {
+  display: flex;
+  flex-direction: column;
+}
 .c-header__nav-ticket {
   display: none;
 }
@@ -524,8 +534,8 @@ body h4 {
   width: 100%;
   padding: 10px 24px;
   color: #fff;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
   font-size: 1.6rem;
   line-height: 1.3;
   text-align: center;
@@ -566,8 +576,8 @@ body h4 {
   margin-top: 8px;
 }
 .c-header__nav-links-list a {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 400;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
   font-size: 1.2rem;
   line-height: 1.6;
   color: #000;
@@ -578,6 +588,12 @@ body h4 {
   align-items: center;
   justify-content: flex-start;
   gap: 24px;
+}
+
+.c-header__menu-button {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.75rem;
 }
 
 .c-header__ticket {
@@ -593,16 +609,15 @@ body h4 {
   display: inline-flex;
   align-items: center;
   height: 100%;
-  padding: 8px 24px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
+  padding: 4px 24px;
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
+  font-size: 2rem;
   line-height: 1;
   color: #fff;
   text-decoration: none;
-  border: 1px solid #000;
-  border-radius: 3px;
-  background-color: #000;
+  border-radius: 0;
+  background-color: #f9321d;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   transition: all 300ms;
@@ -647,49 +662,61 @@ body h4 {
   align-items: stretch;
   justify-content: flex-start;
   flex-direction: row-reverse;
-  gap: 32px;
+  gap: 0px;
   height: 100%;
+  width: 100%;
 }
 .c-header__lang li {
   line-height: 0;
+  flex-grow: 1;
 }
-.c-header__lang li.current {
-  display: none;
+@media screen and (max-width: 768px) {
+  .c-header__lang li.current {
+    display: none;
+  }
 }
-.c-header__lang li:not(.current) a:hover {
+
+.c-header__lang li.current span {
+  background-color: #000;
+}
+.c-header__lang li.current span:hover {
+  background-color: #fff;
+}
+.c-header__lang li.current a {
   color: #fff;
 }
+.c-header__lang li.current a:hover {
+  color: #000;
+}
+
 .c-header__lang span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 33px;
-  min-height: 33px;
+  min-width: 100%;
+  min-height: 24px;
   height: 100%;
-  color: #000;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
   line-height: 1;
   transition: all linear 300ms;
   border: 1px solid #000;
-  border-radius: 3px;
-  background-color: rgba(255, 255, 255, 0.1);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   position: relative;
 }
 @media screen and (max-width: 768px) {
   .c-header__lang span {
+    min-width: 33px;
+    min-height: 33px;
+  }
+}
+/* @media screen and (max-width: 768px) {
+  .c-header__lang span {
     border: none;
     -webkit-backdrop-filter: none;
             backdrop-filter: none;
     background-color: transparent;
   }
-}
-.c-header__lang span:hover {
-  color: #fff;
-}
+} */
 .c-header__lang a {
   position: absolute;
   top: 0;
@@ -713,8 +740,10 @@ body h4 {
     padding-top: 2px;
   }
 }
-.c-header__lang a:hover {
+.c-header__lang li:not(.current) a:hover {
   color: #fff;
+}
+.c-header__lang li:not(.current) span:hover {
   background-color: #000;
 }
 
@@ -755,27 +784,6 @@ body h4 {
 [data-menu=show] .c-header[data-header=front] .c-header__logo {
   display: block;
   opacity: 1;
-  visibility: visible;
-}
-
-.c-header__bg {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-image: url("image/bg-gradation-02.jpg");
-  background-size: cover;
-  background-position: top left;
-  background-repeat: no-repeat;
-  z-index: 100;
-  transition: all 300ms;
-}
-
-[data-menu=show] .c-header__bg {
-  opacity: 0.7;
   visibility: visible;
 }
 
@@ -928,20 +936,24 @@ body h4 {
     background-repeat: no-repeat;
   }
 }
-.c-nav-global ul {
+.c-nav-global {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.c-nav-global-menu {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 40px;
+  justify-content: flex-end;
   transition: gap 300ms;
 }
 @media screen and (max-width: 960px) {
-  .c-nav-global ul {
+  .c-nav-global-menu {
     gap: 16px;
   }
 }
 @media screen and (max-width: 1320px) {
-  .c-nav-global ul {
+  .c-nav-global-menu {
     align-items: flex-start;
     flex-direction: column;
     gap: 24px;
@@ -950,23 +962,37 @@ body h4 {
 .c-nav-global ul li {
   line-height: 1;
 }
-.c-nav-global ul a {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
+.c-nav-global-sns {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+@media screen and (max-width: 1320px) {
+  .c-nav-global-sns {
+    display: none;
+  }
+}
+.c-nav-global-menu {
+  gap: 40px;
+}
+.c-nav-global-menu a {
+  font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
+  font-size: 2.2rem;
   line-height: 1;
   color: #000;
   text-decoration: none;
   transition: color 300ms;
 }
 @media screen and (max-width: 768px) {
-  .c-nav-global ul a {
+  .c-nav-global-menu a {
     font-size: 1.6rem;
     line-height: 1.3;
     color: #2F2B2B;
   }
 }
-.c-nav-global ul a[target=_blank]::after {
+.c-nav-global-menu a[target=_blank]::after {
   display: inline-block;
   content: "";
   margin: 3px 0 0 4px;
@@ -978,7 +1004,7 @@ body h4 {
   background-position: center;
   background-repeat: no-repeat;
 }
-.c-nav-global ul a:hover {
+.c-nav-global-menu a:hover {
   color: #f9321d;
 }
 
@@ -4778,7 +4804,7 @@ body h4 {
 .c-area__content-inner {
   display: flex;
   flex-direction: row;
-  padding-top:calc(128px + 64px);
+  padding-top:calc(96px + 64px);
 }
 @media screen and (max-width: 768px) {
   .c-area__content-inner {

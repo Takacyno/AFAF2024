@@ -48,14 +48,12 @@
 				<div class="c-header__nav">
 					<div class="c-header__nav-wrapper">
 						<?php include('include/nav-global.php'); ?>
-						<?php if ($site_flow_value) : ?>
 						<div class="c-header__nav-ticket">
 							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
 						</div>
-						<?php endif; ?>
 						<div class="c-header__nav-links">
 							<ul class="c-header__nav-links-list">
 								<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
@@ -71,22 +69,21 @@
 						</div>
 					</div>
 				</div>
-				<?php if ($site_flow_value) : ?>
-				<div class="c-header__ticket">
-					<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
-					<?php if ( $title ) : ?>
-					<span><?php echo $title; ?></span>
-					<?php endif; ?>
-				</div>
-				<?php endif; ?>
-				<div class="c-header__lang">
-					<?php echo do_shortcode('[bogo]'); ?>
+				<div class="c-header__menu-button">
+					<div class="c-header__ticket">
+						<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+						<?php if ( $title ) : ?>
+						<span><?php echo $title; ?></span>
+						<?php endif; ?>
+					</div>
+					<div class="c-header__lang">
+						<?php echo do_shortcode('[bogo]'); ?>
+					</div>
 				</div>
 				<button type="button" class="c-header__button" aria-expanded="false">
 					<span>MENU OPEN</span>
 				</button>
 			</div>
-			<div class="c-header__bg"></div>
 		</div>
 	</header>
 <?php else: ?>
@@ -142,7 +139,6 @@
 					<span>MENU OPEN</span>
 				</button>
 			</div>
-			<div class="c-header__bg"></div>
 		</div>
 	</header>
 <?php endif; ?>
