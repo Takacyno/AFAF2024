@@ -34,7 +34,7 @@
 					</div>
 					<div class="p-about__content">
 						<h2>ART FAIR ASIA FUKUOKA 2023<span>OUTLINE</span></h2>
-						<div class="p-about__section js-fadein">
+						<div class="p-about__section">
 							<h3>GREETING</h3>
 							<div class="p-about__greeting">
 								<?php
@@ -43,13 +43,13 @@
 									}
 								?>
 								<?php if ($currentLang != 'en_US') : ?>
-								<p data-greeting="end">一般社団法人アートフェアアジア福岡</p>
+								<p data-greeting="end">一般社団法人 アートフェアアジア福岡</p>
 								<?php else: ?>
 								<p data-greeting="end">General Incorporated Association <span>ART FAIR ASIA FUKUOKA</span></p>
 								<?php endif; ?>
 							</div>
 						</div>
-						<div class="p-about__section js-fadein">
+						<div class="p-about__section">
 							<h3>OVERVIEW</h3>
 							<div class="p-about__overview">
 								<?php
