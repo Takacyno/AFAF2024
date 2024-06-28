@@ -1900,7 +1900,6 @@ body h4 {
   opacity: 1;
   visibility: visible;
   height: 100%;
-  transition: all 300ms;
 }
 .p-exhibitors__section-tabpanel-item[aria-hidden=true], .p-exhibitors__section-tabpanel-all[aria-hidden=true] {
   position: absolute;
