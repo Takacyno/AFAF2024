@@ -21,7 +21,4 @@ $globalnav_on_value = get_post_meta($program_page_id, 'globalnav_on', true);
 		<!-- <li><a href="<?php echo home_url('access'); ?>">VISIT</a></li>
 		<li><a href="<?php echo home_url('partners'); ?>">PARTNERS</a></li> -->
 	</ul>
-	<div class="c-nav-global__vip">
-		<a href="<?php echo home_url('vip'); ?>">VIP LOGIN</a>
-	</div>
 </div>
