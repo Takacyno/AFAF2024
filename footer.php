@@ -24,11 +24,11 @@
 					<?php /*if ($globalnav_on_value) : ?>
 					<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
 					<?php endif; */ ?>
-					<li><a href="<?php echo home_url('access'); ?>">ACCESS</a></li>
-					<li><a href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('access'); ?>">VISIT</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
 				</ul>
 				<div class="c-footer__section-link-vip">
-					<a href="<?php echo home_url('vip'); ?>"><span>VIP-LOGIN</span></a>
+					<a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('vip'); ?>"><span>VIP-LOGIN</span></a>
 				</div>
 			</div>
 			<div class="c-footer__mail">
