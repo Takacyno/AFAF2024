@@ -3051,8 +3051,12 @@ body h4 {
 .p-front__visitor__information-value {
   font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
+  font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
+}
+.p-front__visitor__information-value span {
+  font-weight: 700;
 }
 .p-front__visitor__information-value > div {
   display: flex;

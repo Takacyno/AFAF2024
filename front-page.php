@@ -5,7 +5,8 @@
 	$information = get_field( 'information', 409 );
 	$date_info = $information[ 'date' ];
 	$date_ad = $information[ 'date_ad' ];
-	$hours = $information[ 'hours' ];
+	$vip_hours = $information['hours']['vip_hours'];
+	$public_hours = $information['hours']['public_hours'];
 	$access = get_field( 'access', 409 );
 	$venue = $access[ 'venue' ];
 	$address = $access[ 'address' ];
@@ -227,7 +228,10 @@
 									<p class="p-front__visitor__information-name">HOURS</p>
 									<div class="p-front__visitor__information-value">
 										<div>
-											<?php echo $hours ?>
+											<span>VIP VIEW</span>
+											<?php echo $vip_hours ?>
+											<span>PUBLIC VIEW</span>
+											<?php echo $public_hours ?>
 										</div>
 									</div>
 								</li>
