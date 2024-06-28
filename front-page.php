@@ -169,14 +169,41 @@
 
 		<!-- <div class="p-front__section js-fadein"> -->
 		<?php wp_reset_query(); ?>
-		<div class="p-front__wrapper">
-			<div class="p-front__exhibitors-area">
-				<div class="p-front__section">
-					<div class="p-front__heading">
-						<h2>EXHIBITORS</h2>
+		<div class="p-front__exhibitors-area">
+			<div class="p-front__section">
+				<div class="p-front__heading">
+					<h2>EXHIBITORS</h2>
+				</div>
+			</div>
+			<div class="p-front__exhibitors-main">
+				<?php if(have_rows('fv')): ?>
+					<?php
+						$images = [];
+						while ( have_rows('fv') ) : the_row();
+							$images[] = get_sub_field('fv_img');
+						endwhile;
+					?>
+					<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
+				<?php endif; ?>
+				<div>
+					<p>
+						<?php echo get_field('exhibitions'); ?>
+					</p>
+					<div class="c-link">
+						<a href="<?php echo home_url('exhibitors'); ?>"><span>View All</span></a>
 					</div>
 				</div>
-				<div class="p-front__exhibitors-main">
+			</div>
+		</div>
+		<?php // exhibitors ここまで ?>
+		<?php if ( $access && $information ) : ?>
+		<div class="p-front__info-area">
+			<div class="p-front__section">
+				<div class="p-front__heading">
+					<h2>VISITOR INFO</h2>
+				</div>
+			</div>
+			<div class="p-front__info-main">
 					<?php if(have_rows('fv')): ?>
 						<?php
 							$images = [];
@@ -187,65 +214,34 @@
 						<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
 					<?php endif; ?>
 					<div>
-						<p>
-							<?php echo get_field('exhibitions'); ?>
-						</p>
-						<div class="c-link">
-							<a href="<?php echo home_url('exhibitors'); ?>"><span>View All</span></a>
+						<div class="p-front__visitor__information-list">
+							<ul>
+								<li>
+									<p class="p-front__visitor__information-name">DATE</p>
+									<div class="p-front__visitor__information-value">
+										<p class="p-front__visitor__information-value-heading"><?php echo $date_info; ?></p>
+										<p><?php echo $date_ad; ?></p>
+									</div>
+								</li>
+								<li>
+									<p class="p-front__visitor__information-name">HOURS</p>
+									<div class="p-front__visitor__information-value">
+										<div>
+											<?php echo $hours ?>
+										</div>
+									</div>
+								</li>
+								<li>
+									<p class="p-front__visitor__information-name">VENUE</p>
+									<div class="p-front__visitor__information-value">
+										<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
+										<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>
+									</div>
+								</li>
+							</ul>
 						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<?php // exhibitors ここまで ?>
-		<?php if ( $access && $information ) : ?>
-		<div class="p-front__wrapper">
-			<div class="p-front__info-area">
-				<div class="p-front__section">
-					<div class="p-front__heading">
-						<h2>VISITOR INFO</h2>
-					</div>
-				</div>
-				<div class="p-front__info-main">
-						<?php if(have_rows('fv')): ?>
-							<?php
-								$images = [];
-								while ( have_rows('fv') ) : the_row();
-									$images[] = get_sub_field('fv_img');
-								endwhile;
-							?>
-							<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
-						<?php endif; ?>
-						<div>
-							<div class="p-front__visitor__information-list">
-								<ul>
-									<li>
-										<p class="p-front__visitor__information-name">DATE</p>
-										<div class="p-front__visitor__information-value">
-											<p class="p-front__visitor__information-value-heading"><?php echo $date_info; ?></p>
-											<p><?php echo $date_ad; ?></p>
-										</div>
-									</li>
-									<li>
-										<p class="p-front__visitor__information-name">HOURS</p>
-										<div class="p-front__visitor__information-value">
-											<div>
-												<?php echo $hours ?>
-											</div>
-										</div>
-									</li>
-									<li>
-										<p class="p-front__visitor__information-name">VENUE</p>
-										<div class="p-front__visitor__information-value">
-											<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
-											<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<div class="c-link">
-								<a href="<?php echo home_url('access'); ?>"><span>DETAIL</span></a>
-							</div>
+						<div class="c-link">
+							<a href="<?php echo home_url('access'); ?>"><span>DETAIL</span></a>
 						</div>
 					</div>
 				</div>
