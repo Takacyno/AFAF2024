@@ -34,54 +34,107 @@
 		$title = $ticket[ 'title' ];
 		$url = $ticket[ 'url' ];
 		$site_flow_value = $ticket[ 'site_flow' ];
+		//トップページ以外の場合の処理
+		if( !is_front_page() and !is_home() ):
 	?>
-	<header class="c-header">
-		<div class="c-header__wrapper">
-			<div class="c-header__logo">
-				<a href="<?php echo home_url(); ?>">
-					<h1>AFAF 2024</h1>
-				</a>
-			</div>
-			<div class="c-header__contents">
-				<div class="c-header__nav">
-					<div class="c-header__nav-wrapper">
-						<?php include('include/nav-global.php'); ?>
-						<div class="c-header__nav-ticket">
+		<header class="c-header">
+			<div class="c-header__wrapper">
+				<div class="c-header__logo">
+					<a href="<?php echo home_url(); ?>">
+						<h1>AFAF 2024</h1>
+					</a>
+				</div>
+				<div class="c-header__contents">
+					<div class="c-header__nav">
+						<div class="c-header__nav-wrapper">
+							<?php include('include/nav-global.php'); ?>
+							<div class="c-header__nav-ticket">
+								<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+								<?php if ( $title ) : ?>
+								<span><?php echo $title; ?></span>
+								<?php endif; ?>
+							</div>
+							<div class="c-header__nav-links">
+								<ul class="c-header__nav-links-list">
+									<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+									<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
+									<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
+									<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
+								</ul>
+								<ul class="c-header__nav-links-social">
+									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
+									<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
+									<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="c-header__menu-button">
+						<div class="c-header__ticket">
 							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
 						</div>
-						<div class="c-header__nav-links">
-							<ul class="c-header__nav-links-list">
-								<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
-								<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
-								<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
-								<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
-							</ul>
-							<ul class="c-header__nav-links-social">
-								<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
-								<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
-								<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
-							</ul>
+						<div class="c-header__lang">
+							<?php echo do_shortcode('[bogo]'); ?>
 						</div>
 					</div>
+					<button type="button" class="c-header__button" aria-expanded="false">
+						<span>MENU OPEN</span>
+					</button>
 				</div>
-				<div class="c-header__menu-button">
-					<div class="c-header__ticket">
-						<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
-						<?php if ( $title ) : ?>
-						<span><?php echo $title; ?></span>
-						<?php endif; ?>
-					</div>
-					<div class="c-header__lang">
-						<?php echo do_shortcode('[bogo]'); ?>
-					</div>
-				</div>
-				<button type="button" class="c-header__button" aria-expanded="false">
-					<span>MENU OPEN</span>
-				</button>
 			</div>
-		</div>
-	</header>
+		</header>
+	<?php else: ?>
+		<header class="c-header">
+			<div class="c-header__wrapper" page="top">
+				<div class="c-header__logo">
+					<a href="<?php echo home_url(); ?>">
+						<h1>ART FAIR ASIA<br />FKUOKA<br />2024</h1>
+					</a>
+				</div>
+				<div class="c-header__contents">
+					<div class="c-header__nav">
+						<div class="c-header__nav-wrapper">
+							<?php include('include/nav-global.php'); ?>
+							<div class="c-header__nav-ticket">
+								<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+								<?php if ( $title ) : ?>
+								<span><?php echo $title; ?></span>
+								<?php endif; ?>
+							</div>
+							<div class="c-header__nav-links">
+								<ul class="c-header__nav-links-list">
+									<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+									<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
+									<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
+									<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
+								</ul>
+								<ul class="c-header__nav-links-social">
+									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-twitter.svg" alt="TWITTER"></a></li>
+									<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
+									<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="c-header__menu-button">
+						<div class="c-header__ticket">
+							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+							<?php if ( $title ) : ?>
+							<span><?php echo $title; ?></span>
+							<?php endif; ?>
+						</div>
+						<div class="c-header__lang">
+							<?php echo do_shortcode('[bogo]'); ?>
+						</div>
+					</div>
+					<button type="button" class="c-header__button" aria-expanded="false">
+						<span>MENU OPEN</span>
+					</button>
+				</div>
+			</div>
+		</header>
+	<?php endif; ?>
 </body>
