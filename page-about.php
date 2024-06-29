@@ -27,7 +27,7 @@
 							<p><?php echo $afaf['afaf_summary'] ?></p>
 						</div>
 						<div class="p-about__hero-picture">
-							<img src="<?php echo $imagePath; ?>/pict-about-01.jpg" alt="写真：ART FAIR ASIA FUKUOKAの様子">
+							<img src="<?php echo $afaf['afaf_img']['url']; ?>" alt="写真：ART FAIR ASIA FUKUOKAの様子">
 						</div>
 					</div>
 					<div class="p-about__content">

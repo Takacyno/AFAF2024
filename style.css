@@ -1093,7 +1093,7 @@ body h4 {
   .p-about__hero {
     margin-bottom: 80px;
     margin-top: 111px;
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 40px;
   }
 }
