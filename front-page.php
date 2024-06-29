@@ -177,18 +177,10 @@
 				</div>
 			</div>
 			<div class="p-front__exhibitors-main">
-				<?php if(have_rows('fv')): ?>
-					<?php
-						$images = [];
-						while ( have_rows('fv') ) : the_row();
-							$images[] = get_sub_field('fv_img');
-						endwhile;
-					?>
-					<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
-				<?php endif; ?>
+				<img src="<?php echo get_field('exhibitions')['exhibitions_img']['url'] ?>">
 				<div>
 					<p>
-						<?php echo get_field('exhibitions'); ?>
+						<?php echo get_field('exhibitions')['exhibitions_text']; ?>
 					</p>
 					<div class="c-link">
 						<a href="<?php echo home_url('exhibitors'); ?>"><span>View All</span></a>
@@ -205,15 +197,7 @@
 				</div>
 			</div>
 			<div class="p-front__info-main">
-					<?php if(have_rows('fv')): ?>
-						<?php
-							$images = [];
-							while ( have_rows('fv') ) : the_row();
-								$images[] = get_sub_field('fv_img');
-							endwhile;
-						?>
-						<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
-					<?php endif; ?>
+					<img src="<?php echo get_field('access_img')['url'] ?>">
 					<div>
 						<div class="p-front__visitor__information-list">
 							<ul>
