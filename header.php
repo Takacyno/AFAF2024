@@ -96,6 +96,7 @@
 					</a>
 				</div>
 				<div class="c-header__contents">
+					<div class="c-header__nav-bg"></div>
 					<div class="c-header__nav">
 						<div class="c-header__nav-wrapper">
 							<?php include('include/nav-global.php'); ?>
