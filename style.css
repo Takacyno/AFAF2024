@@ -3545,40 +3545,20 @@ body h4 {
   text-decoration: none;
 }
 
-.p-privacy {
-  padding: 269px 72px 160px;
-}
-@media screen and (max-width: 768px) {
-  .p-privacy {
-    padding: 239px 24px 160px;
-  }
-}
-.p-privacy__wrapper {
-  margin: 0 auto;
-  max-width: 768px;
-}
-.p-privacy__title {
-  margin-bottom: 95px;
-}
-.p-privacy__title h1 {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
-  font-size: 3.5rem;
-  line-height: 1.1;
-}
 .p-privacy__content {
   color: #2F2B2B;
+  margin-top: 80px;
 }
 .p-privacy__content p {
   margin-bottom: 24px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.8;
 }
 .p-privacy__content p:first-of-type {
   margin-bottom: 40px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -3587,7 +3567,7 @@ body h4 {
   margin-bottom: 0;
 }
 .p-privacy__content h2 {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: 1.6;
@@ -3602,7 +3582,7 @@ body h4 {
   margin-bottom: 24px;
 }
 .p-privacy__content li {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.8;
