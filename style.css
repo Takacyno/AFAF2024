@@ -943,7 +943,12 @@ body h4 {
   }
 }
 .c-nav-global-menu {
-  gap: 40px;
+  gap: 24px;
+}
+@media screen and (max-width: 960px) {
+  .c-nav-global-menu {
+    gap: 32px;
+  }
 }
 .c-nav-global-menu a {
   font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -2414,6 +2419,11 @@ body h4 {
 .p-front__hero-img {
   width: 100%;
   height: calc(100vh - 96px);
+}
+@media screen and (max-width: 768px) {
+  .p-front__hero-img {
+    height: calc(100vh - 80px);
+  }
 }
 .p-front__hero-img picture,
 .p-front__hero-img img {
