@@ -26,6 +26,10 @@
 				<?php endif; ?>
 			</picture>
 		</div>
+		<div class="p-front__hero-logo">
+			<img src="<?php echo $imagePath; ?>/logo.svg">
+			<img src="<?php echo $imagePath; ?>/date.svg">
+		</div>
 	</div>
 	<div class="p-front__wrapper">
 	<!-- <div class="p-front__section js-fadein"> -->
