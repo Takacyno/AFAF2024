@@ -942,10 +942,6 @@ body h4 {
     display: none;
   }
 }
-.c-nav-global-sns img {
-  height: 24px;
-  width: 24px;
-}
 .c-nav-global-menu {
   gap: 24px;
 }
@@ -4535,4 +4531,9 @@ body h4 {
   .margin-right {
     margin-right: 0px;
   }
+}
+
+.sns-icon-x {
+  width: 20px;
+  height: 20px;
 }

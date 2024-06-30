@@ -63,7 +63,7 @@
 									<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
 								</ul>
 								<ul class="c-header__nav-links-social">
-									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x.svg" alt="X"></a></li>
+									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x.svg" class="sns-icon-x" alt="X"></a></li>
 									<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
 									<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
 								</ul>
@@ -114,7 +114,7 @@
 									<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
 								</ul>
 								<ul class="c-header__nav-links-social">
-									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x.svg" alt="X"></a></li>
+									<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x.svg" class="sns-icon-x" alt="X"></a></li>
 									<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram.svg" alt="INSTAGRAM"></a></li>
 									<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook.svg" alt="FACEBOOK"></a></li>
 								</ul>
