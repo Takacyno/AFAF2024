@@ -183,7 +183,9 @@
 				</div>
 			</div>
 			<div class="p-front__exhibitors-main">
-				<img src="<?php echo get_field('exhibitions')['exhibitions_img']['url'] ?>">
+				<div class="p-front__exhibitors-img">
+					<img src="<?php echo get_field('exhibitions')['exhibitions_img']['url'] ?>">
+				</div>
 				<div>
 					<p>
 						<?php echo get_field('exhibitions')['exhibitions_text']; ?>
@@ -203,7 +205,9 @@
 				</div>
 			</div>
 			<div class="p-front__info-main">
+				<div class="p-front__info-img">
 					<img src="<?php echo get_field('access_img')['url'] ?>">
+				</div>
 					<div>
 						<div class="p-front__visitor__information-list">
 							<ul>
