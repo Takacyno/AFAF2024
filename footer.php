@@ -58,9 +58,11 @@
 			</div>
 			<div class="c-footer__links-social">
 				<ul>
-				<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x-white.svg" class="sns-icon-x" alt="X"></a></li>
+					<li><a href="https://bit.ly/3qgb3ee" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-x-white.svg" class="sns-icon-x" alt="X"></a></li>
 					<li><a href="https://bit.ly/3qhZjIj" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-instagram-white.svg" alt="INSTAGRAM"></a></li>
 					<li><a href="https://bit.ly/428gJo1" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-facebook-white.svg" alt="FACEBOOK"></a></li>
+					<li><a href="https://linkedin.com/company/art-fair-asia-fukuoka-2024" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-in-white.svg" alt="LINKEDIN"></a></li>
+					<li><a href="https://www.tiktok.com/@artfairasiafukuoka" target="_blank"><img src="<?php echo $imagePath; ?>/icon-social-tik-white.svg" alt="TIKTOK"></a></li>
 				</ul>
 			</div>
 		</div>
