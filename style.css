@@ -1089,7 +1089,7 @@ body h4 {
   min-width: 373px;
   width: calc(473 / 1280 * 100vw);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .p-about__hero-content {
     width: 100%;
     min-width: 0;
