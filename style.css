@@ -1692,24 +1692,19 @@ body h4 {
   height: 100%;
   overflow-y: hidden;
 }
-.p-exhibitors__section-tabpanel-item, .p-exhibitors__section-tabpanel-all {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-}
 .p-exhibitors__section-tabpanel-item[aria-hidden=true], .p-exhibitors__section-tabpanel-all[aria-hidden=true] {
   position: absolute;
   top: 0;
   left: 0;
   height: 0;
   opacity: 0;
-  visibility: hidden;
+  display: none;
   z-index: -1;
 }
 .p-exhibitors__section-tabpanel-item[aria-hidden=false], .p-exhibitors__section-tabpanel-all[aria-hidden=false] {
   position: relative;
   opacity: 1;
-  visibility: visible;
+  display: block;
   z-index: 1;
   height: 100%;
 }
