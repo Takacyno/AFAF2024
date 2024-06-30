@@ -2430,6 +2430,17 @@ body h4 {
   height: 100%;
   object-fit: cover;
 }
+.p-front__hero-img-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .p-front__hero-img-pc {
+    display: none;
+  }
+  .p-front__hero-img-sp {
+    display: block;
+  }
+}
 .p-front__hero-logo {
   display: flex;
   flex-direction: column;

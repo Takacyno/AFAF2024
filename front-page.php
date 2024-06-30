@@ -22,7 +22,9 @@
 							$images[] = get_sub_field('fv_img');
 						endwhile;
 					?>
-					<?php echo wp_get_attachment_image(intval($images[0]), 'full'); ?>
+					<?php /* echo wp_get_attachment_image(intval($images[0]), 'full'); */ ?>
+					<img class="p-front__hero-img-pc" src="<?php echo $images[0]['url']; ?>">
+					<img class="p-front__hero-img-sp" src="<?php echo $images[1]['url']; ?>">
 				<?php endif; ?>
 			</picture>
 		</div>
