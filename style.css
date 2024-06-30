@@ -2540,31 +2540,11 @@ body h4 {
     flex-direction: column;
   }
 }
-.p-front__section::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  content: "";
-  width: 0;
-  height: 1px;
-  background-color: #2F2B2B;
-  transition-duration: 1000ms;
-}
-@media screen and (max-width: 768px) {
-  .p-front__section::before {
-    background-color: #000;
-  }
-}
-.p-front__section[data-view=show]::before {
+.p-front__heading {
   width: 100%;
 }
-.p-front__section .p-front__heading {
-  flex: 0 0 auto;
-  width: calc(427 / 1280 * 100vw);
-}
 @media screen and (max-width: 768px) {
-  .p-front__section .p-front__heading {
+  .p-front__section {
     width: 100%;
   }
 }
