@@ -36,7 +36,7 @@
 	<div class="p-front__wrapper">
 	<!-- <div class="p-front__section js-fadein"> -->
 		<div class="p-front__section">
-			<div class="p-front__heading">
+			<div class="p-front__heading p-front__heading-news">
 				<h2>NEWS</h2>
 			</div>
 			<div class="p-front__content">
@@ -237,7 +237,7 @@
 							</ul>
 						</div>
 						<div class="c-link">
-							<a href="<?php echo home_url('access'); ?>"><span>DETAIL</span></a>
+							<a href="<?php echo home_url('access'); ?>"><span>Detail</span></a>
 						</div>
 					</div>
 				</div>
