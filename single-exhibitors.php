@@ -61,7 +61,7 @@
 								<h1><?php the_title(); ?></h1>
 								<span><?php echo $enGallery; ?></span>
 							<?php else: ?>
-								<h1 lang="en"><?php the_title(); ?></h1>
+								<h1><?php the_title(); ?></h1>
 							<?php endif; ?>
 						<?php else: ?>
 							<h1 lang="en"><?php the_title(); ?></h1>

@@ -1896,7 +1896,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__detail-header h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 }
 .p-exhibitors__detail-header h1[lang=en] {
@@ -1909,7 +1909,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__detail-header h1[lang=en] {
-    font-size: 5rem;
+    font-size: 4rem;
   }
 }
 .p-exhibitors__detail-header span {
