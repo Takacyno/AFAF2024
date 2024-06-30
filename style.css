@@ -942,6 +942,10 @@ body h4 {
     display: none;
   }
 }
+.c-nav-global-sns img {
+  height: 24px;
+  width: 24px;
+}
 .c-nav-global-menu {
   gap: 24px;
 }
@@ -1887,7 +1891,7 @@ body h4 {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 600;
   word-break: break-all;
 }
 @media screen and (max-width: 768px) {
@@ -1901,7 +1905,7 @@ body h4 {
   font-style: normal;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
   line-height: 1.4;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media screen and (max-width: 768px) {
   .p-exhibitors__detail-header h1[lang=en] {
@@ -2455,6 +2459,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-front__hero-logo {
+    height: calc(100vh - 80px);
     padding: 40px 24px;
     top: 80px;
   }
@@ -2915,15 +2920,17 @@ body h4 {
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 400;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 .p-front__visitor__information-value span {
   font-weight: 700;
+  padding-bottom: 8px;
+  line-height: 1.7;
 }
 .p-front__visitor__information-value > div {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.4rem;
 }
 .p-front__visitor__information-value-heading {
   font-size: 1.6rem;
@@ -2933,7 +2940,6 @@ body h4 {
   color: #adadad;
   font-weight: 500;
   line-height: 1.8;
-  margin-top: -1.6rem;
 }
 .p-front__visitor__information-name {
   display: flex;
@@ -2951,7 +2957,6 @@ body h4 {
 }
 .p-front__visitor__information-value-address {
   color: #F9321D;
-  border-bottom: #F9321D 1px solid;
 }
 
 .p-news__list {

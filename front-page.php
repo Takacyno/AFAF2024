@@ -215,11 +215,15 @@
 									<p class="p-front__visitor__information-name">Schedule</p>
 									<div class="p-front__visitor__information-value">
 										<div>
-											<span>VIP View</span>
-											<?php echo $vip_hours ?>
-											<p class="p-front__visitor__information-value-add"><?php echo $date_ad; ?></p>
-											<span>Public View</span>
-											<?php echo $public_hours ?>
+											<div>
+												<span>VIP View</span><br />
+												<?php echo $vip_hours ?>
+												<p class="p-front__visitor__information-value-add"><?php echo $date_ad; ?></p>
+											</div>
+											<div>
+												<span>Public View</span><br />
+												<?php echo $public_hours ?>
+											</div>
 										</div>
 									</div>
 								</li>
@@ -227,7 +231,7 @@
 									<p class="p-front__visitor__information-name">Venue</p>
 									<div class="p-front__visitor__information-value">
 										<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
-										<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>
+										<a href="#" class="p-front__visitor__information-value-address"><?php echo $address; ?></a>
 									</div>
 								</li>
 							</ul>
