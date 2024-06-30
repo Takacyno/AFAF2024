@@ -8,8 +8,7 @@
 		<div class="c-area__content-inner">
 			<div class="p-404__section">
 				<div>
-					<h1>404</h1>
-					<h2>Page Not Found</h2>
+					<img src="<?php echo $imagePath; ?>/404.svg">
 				</div>
 				<p>お探しのページは見つかりませんでした。<br />トップページから再度アクセスをお願いいたします。</p>
 				<div class="p-404__top-link">
