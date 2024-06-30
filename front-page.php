@@ -212,25 +212,19 @@
 						<div class="p-front__visitor__information-list">
 							<ul>
 								<li>
-									<p class="p-front__visitor__information-name">DATE</p>
-									<div class="p-front__visitor__information-value">
-										<p class="p-front__visitor__information-value-heading"><?php echo $date_info; ?></p>
-										<p><?php echo $date_ad; ?></p>
-									</div>
-								</li>
-								<li>
-									<p class="p-front__visitor__information-name">HOURS</p>
+									<p class="p-front__visitor__information-name">Schedule</p>
 									<div class="p-front__visitor__information-value">
 										<div>
-											<span>VIP VIEW</span>
+											<span>VIP View</span>
 											<?php echo $vip_hours ?>
-											<span>PUBLIC VIEW</span>
+											<p class="p-front__visitor__information-value-add"><?php echo $date_ad; ?></p>
+											<span>Public View</span>
 											<?php echo $public_hours ?>
 										</div>
 									</div>
 								</li>
 								<li>
-									<p class="p-front__visitor__information-name">VENUE</p>
+									<p class="p-front__visitor__information-name">Venue</p>
 									<div class="p-front__visitor__information-value">
 										<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
 										<p class="p-front__visitor__information-value-address"><?php echo $address; ?></p>

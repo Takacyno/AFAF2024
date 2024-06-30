@@ -2918,6 +2918,13 @@ body h4 {
 .p-front__visitor__information-value-heading {
   font-size: 1.6rem;
 }
+.p-front__visitor__information-value-add {
+  font-size: 1.2rem;
+  color: #adadad;
+  font-weight: 500;
+  line-height: 1.8;
+  margin-top: -1.6rem;
+}
 .p-front__visitor__information-name {
   display: flex;
   flex-direction: column;
