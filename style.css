@@ -451,11 +451,6 @@ body h4 {
   justify-content: flex-end;
   margin-right: 72px;
 }
-@media screen and (max-width: 1320px) {
-  .c-header__contents {
-    align-items: center;
-  }
-}
 @media screen and (max-width: 768px) {
   .c-header__contents {
     margin-right: 24px;
@@ -468,7 +463,7 @@ body h4 {
   justify-content: flex-start;
   padding-bottom: 3px;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav {
     position: fixed;
     top: 0;
@@ -494,7 +489,7 @@ body h4 {
     min-width: 0;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   body[data-menu="show"] .c-header__nav-bg {
     position: fixed;
     top: 0;
@@ -505,7 +500,7 @@ body h4 {
     z-index: 0;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav[aria-hidden=false] {
     opacity: 1;
     visibility: visible;
@@ -519,19 +514,20 @@ body h4 {
     height: calc(100vh - 69px);
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav[aria-hidden=false] .c-header__nav-wrapper {
     visibility: visible;
     opacity: 1;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav-wrapper {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     height: 100%;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: all 500ms cubic-bezier(0.635, 0, 0.125, 1);
@@ -546,7 +542,7 @@ body h4 {
 .c-header__nav-ticket {
   display: none;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav-ticket {
     display: flex;
     align-items: center;
@@ -586,7 +582,7 @@ body h4 {
 .c-header__nav-links {
   display: none;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__nav-links {
     display: flex;
     flex-direction: column;
@@ -774,7 +770,7 @@ body h4 {
 .c-header__button {
   display: none;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-header__button {
     display: block;
     margin-left: 16px;
@@ -925,7 +921,7 @@ body h4 {
     gap: 16px;
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-nav-global-menu {
     align-items: flex-start;
     flex-direction: column;
@@ -941,7 +937,7 @@ body h4 {
   justify-content: flex-end;
   gap: 1.75rem;
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 960px) {
   .c-nav-global-sns {
     display: none;
   }
