@@ -2453,6 +2453,11 @@ body h4 {
   height: 130px;
   width: fit-content;
 }
+@media screen and (max-width: 768px) {
+  .p-front__hero-logo > img {
+    height: fit-content;
+  }
+}
 .p-front__hero-logo > img:last-child {
   margin-left: auto;
 }
