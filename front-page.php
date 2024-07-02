@@ -2,12 +2,13 @@
 	include('header.php');
 	$imagePath = get_stylesheet_directory_uri() . '/image';
 	$currentLang = get_locale();
-	$information = get_field( 'information', 409 );
+	$id = $currentLang == 'en_US' ? 409 : 15;
+	$information = get_field( 'information', $id );
 	$date_info = $information[ 'date' ];
 	$date_ad = $information[ 'date_ad' ];
 	$vip_hours = $information['hours']['vip_hours'];
 	$public_hours = $information['hours']['public_hours'];
-	$access = get_field( 'access', 409 );
+	$access = get_field( 'access', $id );
 	$venue = $access[ 'venue' ];
 	$address = $access[ 'address' ];
 ?>

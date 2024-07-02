@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div class="p-about__content">
-						<h2>ART FAIR ASIA FUKUOKA 2023<span>Outline</span></h2>
+						<h2>ART FAIR ASIA FUKUOKA 2024<span>Outline</span></h2>
 						<div class="p-about__section">
 							<h3>Greeting</h3>
 							<div class="p-about__greeting">

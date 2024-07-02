@@ -50,9 +50,9 @@
 		<div class="c-footer__links">
 			<div class="c-footer__links-link">
 				<ul>
-					<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
-					<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
-					<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('press'); ?>">PRESS</a></li>
+					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
 					<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
 				</ul>
 			</div>
