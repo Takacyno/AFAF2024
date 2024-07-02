@@ -18,7 +18,7 @@
 					$args = array(
 						'post_type' => array('news'), /* 投稿タイプを指定 */
 						'paged' => $paged,
-						'orderby' => 'menu_order',
+						'orderby' => 'post_date',
 						'order' => 'DESC',
 						'posts_per_page' => '-1' /* 20件を取得 */
 					);

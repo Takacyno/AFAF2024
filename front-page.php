@@ -45,8 +45,8 @@
 					<?php
 						$args = array(
 							'post_type' => 'news', /* カスタム投稿名 */
-							'orderby' => 'menu_order',
-							'order' => 'ASC',
+							'orderby' => 'post_date',
+							'order' => 'DESC',
 							'posts_per_page'=> 5 //表示件数（-1で全ての記事を表示）
 						);
 						query_posts( $args );
