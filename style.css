@@ -1361,16 +1361,27 @@ body h4 {
   width: 100%;
 }
 .p-archives__vr-item a {
-  margin-top: 16px;
+  margin-top: 8px;
   display: block;
-  text-align: right;
   color: #f9321d;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 500;
+  font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
   font-size: 1.3rem;
   line-height: 1;
   text-decoration: none;
   transition: color 300ms;
+}
+.p-archives__vr-item a::before {
+  display: inline-block;
+  margin-right: 8px;
+  font-size: 0;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  background-image: url("image/icon-full-screen.svg");
 }
 .p-archives__vr-item a:hover {
   color: #000;
@@ -1389,7 +1400,7 @@ body h4 {
   height: 100%;
 }
 .p-archives__vr h3 {
-  margin-bottom: 40px;
+  margin-bottom: 16px;
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
@@ -1399,11 +1410,12 @@ body h4 {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 8px;
 }
 @media screen and (max-width: 768px) {
   .p-archives__vr ul {
     flex-direction: column;
+    gap: 24px;
   }
 }
 
@@ -3431,7 +3443,7 @@ body h4 {
   position: relative;
   padding-bottom: 40px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   .p-press__section {
     flex-direction: column;
     gap: 40px;
@@ -4509,4 +4521,103 @@ body h4 {
 
 .border-bottom {
   border-bottom: 1px solid black;
+}
+
+.p-archive__wrapper {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .p-archive__wrapper {
+    margin: 80px auto 160px;
+  }
+}
+
+.p-archive__section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 960px) {
+  .p-archive__section {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.p-archive__section:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.p-archive__section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition-duration: 1000ms;
+}
+.p-archive__section[data-view=show]::before {
+  width: 100%;
+}
+.p-archive__section-heading {
+  flex: 0 0 auto;
+  width: 280px;
+  margin-right: 47px;
+}
+@media screen and (max-width: 768px) {
+  .p-archive__section-heading {
+    width: 100%;
+  }
+}
+.p-archive__section-heading h2 {
+  font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 700;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.p-archive__list {
+  width: 100%;
+}
+.p-archive__list ul {
+  width: 100%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.p-archive__list ul li:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.p-archive__list ul a {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 24px 0;
+}
+.p-archive__list ul a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.p-archive__list ul a[href$=pdf]::after {
+  display: inline-block;
+  font-size: 0;
+  margin: 7px 0 0 auto;
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "PDF";
+  background-image: url("image/icon-pdf-01.svg");
 }
