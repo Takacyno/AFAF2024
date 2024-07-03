@@ -28,7 +28,7 @@
 				</div>
 				<div class="p-access__wrapper">
 					<?php if ( $access ) : ?>
-						<div class="p-access__section">
+						<div class="p-access__section border-bottom">
 							<div class="p-access__title">
 								<h2>Schedule</h2>
 							</div>
@@ -41,7 +41,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="p-access__section">
+						<div class="p-access__section border-bottom">
 							<div class="p-access__title">
 								<h2>Ticket</h2>
 							</div>
@@ -56,10 +56,17 @@
 								<h2>Venue</h2>
 							</div>
 							<div class="p-access__content">
-								<p><?php echo $venue; ?></p>
-								<p><?php echo $address; ?></p>
+								<h3><?php echo $venue; ?></h3>
+								<?php if ( $maps['google_url'] ) : ?>
+									<a href="<?php echo $maps['google_url']; ?>" target="_blank"><?php echo $address; ?></a>
+								<?php endif; ?>
 							</div>
 						</div>
+						<?php if ( $maps['iframe'] ) : ?>
+							<div class="p-access__iframe">
+								<?php echo $maps['iframe']; ?>
+							</div>
+						<?php endif; ?>
 						<div class="p-access__section">
 							<div class="p-access__title">
 								<h2>Getting There</h2>
