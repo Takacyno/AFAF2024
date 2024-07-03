@@ -11,6 +11,7 @@
 	$access = get_field( 'access', $id );
 	$venue = $access[ 'venue' ];
 	$address = $access[ 'address' ];
+	$google_url = $access[ 'maps' ]['google_url'];
 ?>
 <main class="p-front">
 	<div class="p-front__hero">
@@ -232,7 +233,9 @@
 									<p class="p-front__visitor__information-name">Venue</p>
 									<div class="p-front__visitor__information-value">
 										<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
-										<a href="#" class="p-front__visitor__information-value-address"><?php echo $address; ?></a>
+										<?php if ( $google_url ) : ?>
+											<a href="<?php echo $google_url ?>" class="p-front__visitor__information-value-address" target="_blank"><?php echo $address; ?></a>
+										<?php endif; ?>
 									</div>
 								</li>
 							</ul>
