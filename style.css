@@ -1286,6 +1286,7 @@ body h4 {
 @media screen and (max-width: 768px) {
   .p-access__section {
     flex-direction: column;
+    gap: 40px;
   }
 }
 .p-access__section h2 {
@@ -1297,7 +1298,6 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .p-access__section h2 {
-    margin-bottom: 40px;
     width: 100%;
   }
 }
