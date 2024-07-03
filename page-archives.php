@@ -7,12 +7,12 @@
 				<div class="c-title" data-title="minimal">
 					<h1><?php the_title(); ?></h1>
 				</div>
-				<div class="p-archive__wrapper">
-						<div class="p-archive__section">
-							<div class="p-archive__section-heading">
+				<div class="p-archives__wrapper">
+						<div class="p-archives__section">
+							<div class="p-archives__section-heading">
 								<h2>Closing Report</h2>
 							</div>
-							<div class="p-archive__list">
+							<div class="p-archives__list">
 								<?php
 									if(have_rows('closing')):
 								?>
@@ -28,8 +28,8 @@
 								<?php endif; ?>
 							</div>
 						</div>
-						<div class="p-archive__section">
-							<div class="p-archive__section-heading">
+						<div class="p-archives__section">
+							<div class="p-archives__section-heading">
 								<h2>VR</h2>
 							</div>
 							<div class="p-archives__vr">

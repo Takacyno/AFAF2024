@@ -4523,7 +4523,7 @@ body h4 {
   border-bottom: 1px solid black;
 }
 
-.p-archive__wrapper {
+.p-archives__wrapper {
   margin-top: 80px;
   width: 100%;
   display: flex;
@@ -4531,12 +4531,12 @@ body h4 {
   gap: 40px;
 }
 @media screen and (max-width: 768px) {
-  .p-archive__wrapper {
+  .p-archives__wrapper {
     margin: 80px auto 160px;
   }
 }
 
-.p-archive__section {
+.p-archives__section {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -4544,15 +4544,15 @@ body h4 {
   padding-bottom: 40px;
 }
 @media screen and (max-width: 960px) {
-  .p-archive__section {
+  .p-archives__section {
     flex-direction: column;
     gap: 40px;
   }
 }
-.p-archive__section:not(:last-child) {
+.p-archives__section:not(:last-child) {
   border-bottom: 1px solid black;
 }
-.p-archive__section::before {
+.p-archives__section::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -4563,40 +4563,40 @@ body h4 {
   background-color: #000;
   transition-duration: 1000ms;
 }
-.p-archive__section[data-view=show]::before {
+.p-archives__section[data-view=show]::before {
   width: 100%;
 }
-.p-archive__section-heading {
+.p-archives__section-heading {
   flex: 0 0 auto;
   width: 280px;
   margin-right: 47px;
 }
 @media screen and (max-width: 768px) {
-  .p-archive__section-heading {
+  .p-archives__section-heading {
     width: 100%;
   }
 }
-.p-archive__section-heading h2 {
+.p-archives__section-heading h2 {
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 700;
   font-size: 3.2rem;
   line-height: 1;
 }
 
-.p-archive__list {
+.p-archives__list {
   width: 100%;
 }
-.p-archive__list ul {
+.p-archives__list ul {
   width: 100%;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.7;
 }
-.p-archive__list ul li:not(:last-child) {
+.p-archives__list ul li:not(:last-child) {
   border-bottom: 1px solid black;
 }
-.p-archive__list ul a {
+.p-archives__list ul a {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -4606,10 +4606,10 @@ body h4 {
   background-color: transparent;
   padding: 24px 0;
 }
-.p-archive__list ul a:hover {
+.p-archives__list ul a:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.p-archive__list ul a[href$=pdf]::after {
+.p-archives__list ul a[href$=pdf]::after {
   display: inline-block;
   font-size: 0;
   margin: 7px 0 0 auto;
