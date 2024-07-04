@@ -240,9 +240,11 @@
 								</li>
 							</ul>
 						</div>
+						<!--
 						<div class="c-link">
 							<a href="<?php echo home_url('access'); ?>"><span>Detail</span></a>
 						</div>
+						-->
 					</div>
 				</div>
 			</div>
