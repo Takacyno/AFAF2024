@@ -1220,7 +1220,7 @@ body h4 {
 }
 .p-about__overview dd p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.6rem;
   line-height: 1.7;
 }
@@ -1345,12 +1345,14 @@ body h4 {
 
 .p-access__iframe > iframe {
   width: 100%;
-  height: 400px;
+  height: 440px;
   margin-top: -40px;
+  margin-bottom: 40px;
 }
 @media screen and (max-width: 768px) {
   .p-access__iframe > iframe {
-    height: 200px;
+    height: 220px;
+    margin-bottom: 0;
   }
 }
 
@@ -1583,12 +1585,15 @@ body h4 {
   }
 }
 .p-contact__content dl dt {
+  width: 284px;
+  font-size: 2.4rem;
   min-width: 140px;
-  padding-right: 24px;
+  margin-right: 40px;
 }
 @media screen and (max-width: 768px) {
   .p-contact__content dl dt {
-    padding-right: 0;
+    width: 100%;
+    margin-right: 0;
     min-width: 114px;
   }
 }
@@ -1596,7 +1601,7 @@ body h4 {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
+  flex-grow: 1;
 }
 .p-contact__content dl dd span::after {
   display: inline-block;
@@ -3464,12 +3469,13 @@ body h4 {
 }
 .p-press__section-heading {
   flex: 0 0 auto;
-  width: 280px;
-  margin-right: 47px;
+  width: 236px;
+  margin-right: 48px;
 }
 @media screen and (max-width: 768px) {
   .p-press__section-heading {
     width: 100%;
+    margin-right: 0;
   }
 }
 .p-press__section-heading h2 {
@@ -3514,7 +3520,7 @@ body h4 {
 }
 .p-press__list ul a[href$=pdf]::after {
   content: "PDF";
-  background-image: url("image/icon-pdf-01.svg");
+  background-image: url("image/icon-pdf-02.svg");
 }
 .p-press__list ul a[href$=zip]::after {
   content: "zip";
@@ -4564,12 +4570,13 @@ body h4 {
 }
 .p-archives__section-heading {
   flex: 0 0 auto;
-  width: 280px;
-  margin-right: 47px;
+  width: 236px;
+  margin-right: 48px;
 }
 @media screen and (max-width: 768px) {
   .p-archives__section-heading {
     width: 100%;
+    margin-right: 0;
   }
 }
 .p-archives__section-heading h2 {
@@ -4615,5 +4622,5 @@ body h4 {
   background-position: center;
   background-repeat: no-repeat;
   content: "PDF";
-  background-image: url("image/icon-pdf-01.svg");
+  background-image: url("image/icon-pdf-02.svg");
 }

@@ -9,6 +9,11 @@
 <main class="p-contact">
 	<div class="c-area__content">
 		<div class="c-area__content-inner">
+			<div class="c-area__content-side">
+				<div class="c-area__content-back">
+					<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
+				</div>
+			</div>
 			<div class="c-area__content-main margin-right">
 				<div class="c-title" data-title="minimal">
 					<h1><?php the_title(); ?></h1>
