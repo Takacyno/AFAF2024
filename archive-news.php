@@ -49,10 +49,17 @@
 							if ( $url ) :
 							// 外部リンクに飛ばす場合
 						?>
+							<?php if (get_field("internallinks")): ?>
+							<a href="<?php echo $url; ?>">
+								<span class="p-news__list-date"><?php echo $monthArray[$month] .' ' . $date . ', ' . $year; ?></span>
+								<span class="p-news__list-title"><?php the_title(); ?></span>
+							</a>
+							<?php else: ?>
 							<a href="<?php echo $url; ?>" target="_blank">
 								<span class="p-news__list-date"><?php echo $monthArray[$month] .' ' . $date . ', ' . $year; ?></span>
 								<span class="p-news__list-title"><?php the_title(); ?></span>
 							</a>
+							<?php endif; ?>
 						<?php else: ?>
 							<a href="<?php echo the_permalink( $post->ID ); ?>">
 								<span class="p-news__list-date"><?php echo $monthArray[$month] .' ' . $date . ', ' . $year; ?></span>
