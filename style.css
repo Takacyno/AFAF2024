@@ -8,7 +8,8 @@ Theme Name: afaf-2024
 }
 
 :root {
-  --main-background-color: #ffffff
+  --main-background-color: #ffffff;
+  --theme-color: #E83F22;
 }
 
 /* typeface en */
@@ -219,7 +220,7 @@ body h4 {
   background-repeat: no-repeat;
 }
 .c-footer__section-link ul li a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 
 .c-footer__mail-area p {
@@ -282,7 +283,7 @@ body h4 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f9321d;
+  background-color: var(--theme-color);
   background-image: url("image/icon-submit-01.svg");
   background-size: 24px;
   background-position: center;
@@ -346,7 +347,7 @@ body h4 {
   transition: all 300ms;
 }
 .c-footer__links-link a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .c-footer__links-social ul {
   gap: 24px;
@@ -408,7 +409,7 @@ body h4 {
 
 .c-header__logo {
   width: 240px;
-  background-color: #f9321d;
+  background-color: var(--theme-color);
 }
 @media screen and (max-width: 768px) {
   .c-header__logo {
@@ -639,7 +640,7 @@ body h4 {
   color: #fff;
   text-decoration: none;
   border-radius: 0;
-  background-color: #f9321d;
+  background-color: var(--theme-color);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   transition: all 300ms;
@@ -885,7 +886,7 @@ body h4 {
   transition: all 300ms;
 }
 .c-link a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .c-link a::after {
   position: absolute;
@@ -981,7 +982,7 @@ body h4 {
   background-repeat: no-repeat;
 }
 .c-nav-global-menu a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 
 .c-pagination {
@@ -1248,7 +1249,7 @@ body h4 {
   margin-bottom: 8px;
 }
 .p-about__overview dd a {
-  color: #f9321d;
+  color: var(--theme-color);
   transition: color 300ms;
 }
 .p-about__overview dd a:hover {
@@ -1327,7 +1328,7 @@ body h4 {
   line-height: 1.7;
 }
 .p-access__content a {
-  color: #F9321D;
+  color: var(--theme-color);
 }
 .p-access__content h2 {
   margin-bottom: 64px;
@@ -1366,7 +1367,7 @@ body h4 {
 .p-archives__vr-item a {
   margin-top: 8px;
   display: block;
-  color: #f9321d;
+  color: var(--theme-color);
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
   font-size: 1.3rem;
@@ -1515,7 +1516,7 @@ body h4 {
   font-size: 1.6rem;
 }
 .p-benefits__content p a {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-benefits__content p a:hover {
   text-decoration: none;
@@ -1692,7 +1693,7 @@ body h4 {
   }
 }
 .p-exhibitors__section-tab button:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-exhibitors__section-tab button[aria-selected=true] {
   color: #000;
@@ -1776,7 +1777,7 @@ body h4 {
   text-decoration: none;
 }
 .p-exhibitors__taxonomy-item a:hover h3 {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-exhibitors__taxonomy-item h3 {
   width: 100%;
@@ -1855,7 +1856,7 @@ body h4 {
   transition: all 300ms;
 }
 .c-area__content-back a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .c-area__content-back a::before {
   display: inline-block;
@@ -1987,7 +1988,7 @@ body h4 {
   width: 6.5rem;
 }
 .p-exhibitors__detail-information a {
-  color: #f9321d;
+  color: var(--theme-color);
   transition: all 300ms;
   text-decoration: none;
 }
@@ -2036,7 +2037,7 @@ body h4 {
   /* custom */
 }
 .p-exhibitors__detail-artist ul a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-exhibitors__detail-artist ul a::after {
   display: inline-block;
@@ -2648,7 +2649,7 @@ body h4 {
   line-height: 1.6;
 }
 .p-front__overview-item > div a {
-  color: #f9321d;
+  color: var(--theme-color);
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -2687,7 +2688,7 @@ body h4 {
   line-height: 1.6;
 }
 .p-front__overview-item p a {
-  color: #f9321d;
+  color: var(--theme-color);
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -2811,7 +2812,7 @@ body h4 {
   transition: all 300ms;
 }
 .p-front__exhibitors-taxonomy ul a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-front__exhibitors-area {
   position: relative;
@@ -2967,7 +2968,7 @@ body h4 {
   }
 }
 .p-front__visitor__information-value-address {
-  color: #F9321D;
+  color: var(--theme-color);
 }
 
 .p-news__list {
@@ -3076,7 +3077,7 @@ body h4 {
   transition: all 300ms;
 }
 .p-news__detail-back a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-news__detail-back a::before {
   display: inline-block;
@@ -3130,7 +3131,7 @@ body h4 {
   transition: all 300ms;
 }
 .p-news__detail-pager a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-news__detail-pager a[data-link=next] {
   flex-direction: row-reverse;
@@ -3231,7 +3232,7 @@ body h4 {
   transition: color 300ms;
 }
 .p-news__detail-content a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
   text-decoration: none;
 }
 .p-news__detail-content img {
@@ -3555,7 +3556,7 @@ body h4 {
   line-height: 1.6;
 }
 .p-press__contact a {
-  color: #f9321d;
+  color: var(--theme-color);
   transition: all 300ms;
 }
 .p-press__contact a:hover {
@@ -3672,7 +3673,7 @@ body h4 {
   }
 }
 .p-vip__login-text a {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-vip__login-text a:hover {
   text-decoration: none;
@@ -3751,7 +3752,7 @@ body h4 {
 }
 .p-vip__login form input[type=submit] {
   color: #fff;
-  background-color: #f9321d;
+  background-color: var(--theme-color);
   cursor: pointer;
   opacity: 1;
   transition: all 300ms cubic-bezier(0.635, 0, 0.125, 1);
@@ -3816,7 +3817,7 @@ body h4 {
   /* custom */
 }
 .p-vip__detail-back a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-vip__detail-back a::before {
   display: inline-block;
@@ -3908,7 +3909,7 @@ body h4 {
   /* custom */
 }
 .p-vip__detail-pager a:hover {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-vip__detail-pager a[data-link=next] {
   flex-direction: row-reverse;
@@ -4008,7 +4009,7 @@ body h4 {
   margin-bottom: 40px;
 }
 .p-vip__detail-content a {
-  color: #f9321d;
+  color: var(--theme-color);
   transition: color 300ms;
 }
 .p-vip__detail-content a:hover {
@@ -4182,7 +4183,7 @@ body h4 {
 }
 .p-vip__list-thumbnail-status[data-status=now-accepting-applications] {
   color: #fff;
-  background-color: #f9321d;
+  background-color: var(--theme-color);
 }
 .p-vip__list-thumbnail-status[data-status=closed] {
   color: #7e7e7e;
@@ -4294,13 +4295,13 @@ body h4 {
   width: 100%;
 }
 .p-vip__list a:hover .p-vip__list-title {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-vip__list a:hover .p-vip__list-thumbnail img {
   transform: scale(1.05);
 }
 .p-vip__list a:hover .p-vip__list-more span {
-  color: #f9321d;
+  color: var(--theme-color);
 }
 .p-vip__list a:hover .p-vip__list-more span::after {
   background-image: url("image/icon-arrow-01-red.svg");
@@ -4473,7 +4474,7 @@ body h4 {
   font-weight: 700;
   font-size: 24px;
   line-height: 1.3;
-  color: #f9321d;
+  color: var(--theme-color);
   text-decoration: none;
   text-transform: uppercase;
   display: inline-flex;
