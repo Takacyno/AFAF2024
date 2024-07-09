@@ -386,6 +386,9 @@ body h4 {
     height: 80px;
   }
 }
+.c-header[page="top"] {
+  height: 108px;
+}
 
 .c-header__wrapper {
   display: flex;
@@ -398,7 +401,7 @@ body h4 {
     align-items: center;
   }
 }
-.c-header__wrapper[page="top"] {
+.c-header[page="top"] > .c-header__wrapper {
   height: 100%;
   align-items: center;
 }
@@ -412,7 +415,7 @@ body h4 {
     width: 144px;
   }
 }
-.c-header__wrapper[page="top"] .c-header__logo {
+.c-header[page="top"] > .c-header__wrapper .c-header__logo {
   height: 100%;
   display: flex;
   align-items: center;
@@ -434,12 +437,12 @@ body h4 {
   }
 }
 
-.c-header__wrapper[page="top"] h1 {
+.c-header[page="top"] > .c-header__wrapper h1 {
   font-size: 24px;
   line-height: 1;
 }
 @media screen and (max-width: 768px) {
-  .c-header__wrapper[page="top"] h1 {
+  .c-header[page="top"] > .c-header__wrapper h1 {
     font-size: 16px;
   }
 }
@@ -648,7 +651,7 @@ body h4 {
 }
 .c-header__ticket > span {
   position: absolute;
-  top: 33px;
+  top: 36px;
   left: -25px;
   width: calc(100% + 50px);
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
@@ -1210,13 +1213,11 @@ body h4 {
   font-size: 1.6rem;
   line-height: 1.7;
   flex: 0 0 auto;
-  width: 142px;
-  padding-right: 2em;
+  min-width: 160px;
+  margin-right: 40px;
 }
-@media screen and (max-width: 768px) {
-  .p-about__overview dt {
-    width: 114px;
-  }
+.p-about__overview dd {
+  flex-grow: 1;
 }
 .p-about__overview dd p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -2405,7 +2406,7 @@ body h4 {
 }
 
 .p-front {
-  padding-top: 96px;
+  padding-top: 108px;
 }
 @media screen and (max-width: 768px) {
   .p-front {
@@ -2426,7 +2427,7 @@ body h4 {
 }
 .p-front__hero-img {
   width: 100%;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 108px);
 }
 @media screen and (max-width: 768px) {
   .p-front__hero-img {
@@ -2455,10 +2456,10 @@ body h4 {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 108px);
   padding: 40px 72px;
   position: absolute;
-  top: 96px;
+  top: 108px;
   left: 0;
 }
 @media screen and (max-width: 768px) {

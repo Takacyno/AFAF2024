@@ -88,8 +88,8 @@
 			</div>
 		</header>
 	<?php else: ?>
-		<header class="c-header">
-			<div class="c-header__wrapper" page="top">
+		<header class="c-header" page="top">
+			<div class="c-header__wrapper">
 				<div class="c-header__logo">
 					<a href="<?php echo home_url(); ?>">
 						<h1>ART FAIR ASIA<br />FKUOKA<br />2024</h1>

@@ -217,42 +217,40 @@
 				<div class="p-front__info-img">
 					<img src="<?php echo get_field('access_img')['url'] ?>">
 				</div>
-					<div>
-						<div class="p-front__visitor__information-list">
-							<ul>
-								<li>
-									<p class="p-front__visitor__information-name">Schedule</p>
-									<div class="p-front__visitor__information-value">
+					<div class="p-front__visitor__information-list">
+						<ul>
+							<li>
+								<p class="p-front__visitor__information-name">Schedule</p>
+								<div class="p-front__visitor__information-value">
+									<div>
 										<div>
-											<div>
-												<span>VIP View</span><br />
-												<?php echo $vip_hours ?>
-												<p class="p-front__visitor__information-value-add"><?php echo $date_ad; ?></p>
-											</div>
-											<div>
-												<span>Public View</span><br />
-												<?php echo $public_hours ?>
-											</div>
+											<span>VIP View</span><br />
+											<?php echo $vip_hours ?>
+											<p class="p-front__visitor__information-value-add"><?php echo $date_ad; ?></p>
+										</div>
+										<div>
+											<span>Public View</span><br />
+											<?php echo $public_hours ?>
 										</div>
 									</div>
-								</li>
-								<li>
-									<p class="p-front__visitor__information-name">Venue</p>
-									<div class="p-front__visitor__information-value">
-										<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
-										<?php if ( $google_url ) : ?>
-											<a href="<?php echo $google_url ?>" class="p-front__visitor__information-value-address" target="_blank"><?php echo $address; ?></a>
-										<?php endif; ?>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<!--
-						<div class="c-link">
-							<a href="<?php echo home_url('access'); ?>"><span>Detail</span></a>
-						</div>
-						-->
+								</div>
+							</li>
+							<li>
+								<p class="p-front__visitor__information-name">Venue</p>
+								<div class="p-front__visitor__information-value">
+									<p class="p-front__visitor__information-value-heading"><?php echo $venue; ?></p>
+									<?php if ( $google_url ) : ?>
+										<a href="<?php echo $google_url ?>" class="p-front__visitor__information-value-address" target="_blank"><?php echo $address; ?></a>
+									<?php endif; ?>
+								</div>
+							</li>
+						</ul>
 					</div>
+					<!--
+					<div class="c-link">
+						<a href="<?php echo home_url('access'); ?>"><span>Detail</span></a>
+					</div>
+					-->
 				</div>
 			</div>
 		</div>
