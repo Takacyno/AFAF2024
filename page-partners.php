@@ -79,6 +79,30 @@
 							</div>
 						<?php endif; ?>
 						<?php
+							if(have_rows('assisting')):
+						?>
+							<div class="p-partners__special">
+								<?php if ($currentLang != 'en_US') : ?>
+								<h2>助成</h2>
+								<?php else: ?>
+								<h2>Assisting</h2>
+								<?php endif; ?>
+								<ul>
+									<?php
+										while(have_rows('assisting')): the_row();
+											$logo = wp_get_attachment_image_src(get_sub_field('assisting_logo'), 'full');
+											$link = get_sub_field('assisting_link');
+									?>
+									<li>
+										<a href="<?php echo $link; ?>">
+											<img src="<?php echo $logo[0]; ?>" alt="">
+										</a>
+									</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
+						<?php
 							if(have_rows('special_repeat')):
 						?>
 							<div class="p-partners__special">
