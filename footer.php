@@ -19,13 +19,13 @@
 				<ul>
 					<li><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
 					<li><a href="<?php echo home_url('exhibitors'); ?>">EXHIBITORS</a></li>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('about'); ?>">ABOUT</a></li>
+					<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
 					<li><a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a></li>
 					<?php /*if ($globalnav_on_value) : ?>
 					<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
 					<?php endif; */ ?>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('access'); ?>">VISIT</a></li>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
+					<li><a href="<?php echo home_url('visit'); ?>">VISIT</a></li>
+					<li><a href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
 				</ul>
 				<div class="c-footer__section-link-vip">
 					<a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('vip'); ?>"><span>VIP-LOGIN</span></a>
@@ -50,9 +50,9 @@
 		<div class="c-footer__links">
 			<div class="c-footer__links-link">
 				<ul>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('press'); ?>">PRESS</a></li>
-					<li><a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
+					<li><a href="<?php echo home_url('contact'); ?>">CONTACT</a></li>
+					<li><a href="<?php echo home_url('press'); ?>">PRESS</a></li>
+					<li><a href="<?php echo home_url('archives'); ?>">ARCHIVES</a></li>
 					<li><a href="<?php echo home_url('privacy-policy'); ?>">PRIVACY POLICY</a></li>
 				</ul>
 			</div>
