@@ -14,7 +14,10 @@ $globalnav_on_value = get_post_meta($program_page_id, 'globalnav_on', true);
 		<li><a href="<?php echo home_url('news'); ?>">NEWS</a></li>
 		<li><a href="<?php echo home_url('exhibitors'); ?>">EXHIBITORS</a></li>
 		<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
-		<li><a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a></li>
+		<li>
+			<a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a>
+			<span>8月中旬公開予定</span>
+		</li>
 		<?php /* if ($globalnav_on_value) : ?>
 		<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
 		<?php endif; */ ?>

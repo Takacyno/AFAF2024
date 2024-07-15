@@ -951,6 +951,9 @@ body h4 {
     gap: 32px;
   }
 }
+.c-nav-global-menu li {
+  position: relative;
+}
 .c-nav-global-menu a {
   font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 50, "wght" 600;
@@ -981,6 +984,27 @@ body h4 {
 }
 .c-nav-global-menu a:hover {
   color: var(--theme-color);
+}
+.c-nav-global-menu span {
+  position: absolute;
+  top: 36px;
+  left: -30px;
+  width: calc(100% + 50px);
+  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1;
+  color: #000;
+  text-align: center;
+  opacity: 0.3;
+}
+@media screen and (min-width: 1600px) {
+  .c-nav-global-menu span {
+    left: -37px;
+    width: calc(100% + 74px);
+  }
 }
 
 .c-pagination {
