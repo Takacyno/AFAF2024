@@ -90,12 +90,12 @@
 								<ul>
 									<?php
 										while(have_rows('assisting')): the_row();
-											$logo = wp_get_attachment_image_src(get_sub_field('assisting_logo'), 'full');
+											$logo = get_sub_field('assisting_logo')['url'];
 											$link = get_sub_field('assisting_link');
 									?>
 									<li>
 										<a href="<?php echo $link; ?>">
-											<img src="<?php echo $logo[0]; ?>" alt="">
+											<img src="<?php echo $logo; ?>" alt="">
 										</a>
 									</li>
 									<?php endwhile; ?>
