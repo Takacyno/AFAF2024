@@ -34,9 +34,9 @@
 							</div>
 							<div class="p-access__content">
 								<p>
-									<span>VIP VIEW</span><br />
+									<span>VIP View</span><br />
 									<?php echo $vip_hours ?><br />
-									<span>PUBLIC VIEW</span><br />
+									<span>PUBLIC View</span><br />
 									<?php echo $public_hours ?><br />
 								</p>
 							</div>
