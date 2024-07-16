@@ -47,7 +47,7 @@
 						<div class="p-press__list">
 							<ul>
 								<li>
-									<a href="<?php echo $filePath; ?>/afaf2023_logo_v1.zip" target="_blank">
+									<a href="<?php echo $filePath; ?>/ARTFAIRASIAFUKUOKA-logokit2024-2.zip" target="_blank">
 										<?php if ($currentLang != 'en_US') : ?>
 										<span>ロゴキット</span>
 										<?php else: ?>
