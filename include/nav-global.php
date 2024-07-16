@@ -3,6 +3,7 @@
 $program_page_id = get_page_by_path('program')->ID;
 // 'globalnav_on' カスタムフィールドの値を取得
 $globalnav_on_value = get_post_meta($program_page_id, 'globalnav_on', true);
+$currentLang = get_locale();
 ?>
 <div class="c-nav-global">
 	<ul class="c-nav-global-sns">
@@ -16,7 +17,11 @@ $globalnav_on_value = get_post_meta($program_page_id, 'globalnav_on', true);
 		<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
 		<li>
 			<a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks" target="_blank">ARTWORKS</a>
+			<?php if ($currentLang != 'en_US') : ?>
 			<span>8月中旬公開予定</span>
+			<?php else: ?>
+			<span>Scheduled to be released in mid-August</span>
+			<?php endif; ?>
 		</li>
 		<?php /* if ($globalnav_on_value) : ?>
 		<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>
