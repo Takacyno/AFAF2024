@@ -2918,6 +2918,11 @@ body h4 {
 .p-front__visitor__information {
   flex-grow: 1;
 }
+@media screen and (max-width: 960px) {
+  .p-front__visitor__information {
+    width: 100%;
+  }
+}
 
 .p-front__visitor__information-list {
   flex-grow: 1;
