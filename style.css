@@ -390,7 +390,11 @@ body h4 {
 .c-header[page="top"] {
   height: 108px;
 }
-
+@media screen and (max-width: 768px) {
+  .c-header[page="top"] {
+    height: 80px;
+  }
+}
 .c-header__wrapper {
   display: flex;
   align-items: flex-end;
@@ -413,7 +417,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .c-header__logo {
-    width: 144px;
+    width: fit-content;
   }
 }
 .c-header[page="top"] > .c-header__wrapper .c-header__logo {
@@ -433,6 +437,7 @@ body h4 {
 }
 @media screen and (max-width: 768px) {
   .c-header__logo > a > h1 {
+    width: fit-content;
     font-size: 3rem;
     padding: 4px 24px 4px 24px;
   }
@@ -445,12 +450,14 @@ body h4 {
 @media screen and (max-width: 768px) {
   .c-header[page="top"] > .c-header__wrapper h1 {
     font-size: 16px;
+    width: fit-content;
+    padding: 16px 16px 16px 24px;
   }
 }
 
 .c-header__contents {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: flex-end;
   margin-right: 72px;
 }
@@ -988,8 +995,8 @@ body h4 {
 .c-nav-global-menu span {
   position: absolute;
   top: 36px;
-  left: -30px;
-  width: calc(100% + 50px);
+  left: -6px;
+  width: 100%;
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 400;
   font-size: 1.2rem;
@@ -999,12 +1006,6 @@ body h4 {
   color: #000;
   text-align: center;
   opacity: 0.3;
-}
-@media screen and (min-width: 1600px) {
-  .c-nav-global-menu span {
-    left: -37px;
-    width: calc(100% + 74px);
-  }
 }
 
 .c-pagination {
@@ -1382,6 +1383,9 @@ body h4 {
 
 .p-archives__vr {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
 }
 .p-archives__vr-item {
   width: 100%;
@@ -2911,13 +2915,16 @@ body h4 {
   justify-content: space-between;
 }
 
-.p-front__visitor__information-list {
+.p-front__visitor__information {
   flex-grow: 1;
 }
 
+.p-front__visitor__information-list {
+  flex-grow: 1;
+}
 @media screen and (max-width: 768px) {
   .p-front__visitor__information-list {
-    padding-top: 40px;
+    width: 100%;
   }
 }
 .p-front__visitor__information-list ul {
@@ -2943,11 +2950,6 @@ body h4 {
 .p-front__visitor__information-list li:last-child {
   padding-top: 24px;
   padding-bottom: 0;
-}
-@media screen and (max-width: 768px) {
-  .p-front__visitor__information-list  {
-    padding: 24px 0;
-  }
 }
 .p-front__visitor__information-value {
   font-family: "acumin-variable", "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -3505,7 +3507,7 @@ body h4 {
 .p-press__section-heading h2 {
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 700;
-  font-size: 3.2rem;
+  font-size: 32px;
   line-height: 1;
 }
 
@@ -4606,7 +4608,7 @@ body h4 {
 .p-archives__section-heading h2 {
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 700;
-  font-size: 3.2rem;
+  font-size: 32px;
   line-height: 1;
 }
 

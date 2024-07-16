@@ -92,7 +92,7 @@
 			<div class="c-header__wrapper">
 				<div class="c-header__logo">
 					<a href="<?php echo home_url(); ?>">
-						<h1>ART FAIR ASIA<br />FKUOKA<br />2024</h1>
+						<h1>ART FAIR ASIA<br />FUKUOKA<br />2024</h1>
 					</a>
 				</div>
 				<div class="c-header__contents">

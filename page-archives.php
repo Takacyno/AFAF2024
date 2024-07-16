@@ -56,53 +56,59 @@
 								<?php
 									if(count($vr2024)):
 								?>
+									<div>
 									<h3>2024</h3>
-									<ul>
-										<?php
-											foreach ($vr2024 as $item):
-										?>
-											<div class="p-archives__vr-item">
-												<div class="p-archives__vr-iframe">
-													<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<ul>
+											<?php
+												foreach ($vr2024 as $item):
+											?>
+												<div class="p-archives__vr-item">
+													<div class="p-archives__vr-iframe">
+														<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+													</div>
+													<a href="<?php echo $item['url']; ?>">View Full Screen</a>
 												</div>
-												<a href="<?php echo $item['url']; ?>">View Full Screen</a>
-											</div>
-										<?php endforeach; ?>
-									</ul>
+											<?php endforeach; ?>
+										</ul>
+									</div>
 								<?php endif; ?>
 								<?php
 									if(count($vr2023)):
 								?>
+									<div>
 									<h3>2023</h3>
-									<ul>
-										<?php
-											foreach ($vr2023 as $item):
-										?>
-											<div class="p-archives__vr-item">
-												<div class="p-archives__vr-iframe">
-													<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+										<ul>
+											<?php
+												foreach ($vr2023 as $item):
+											?>
+												<div class="p-archives__vr-item">
+													<div class="p-archives__vr-iframe">
+														<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+													</div>
+													<a href="<?php echo $item['url']; ?>">View Full Screen</a>
 												</div>
-												<a href="<?php echo $item['url']; ?>">View Full Screen</a>
-											</div>
-										<?php endforeach; ?>
-									</ul>
+											<?php endforeach; ?>
+										</ul>
+									</div>
 								<?php endif; ?>
 								<?php
 									if(count($vr2022)):
 								?>
-									<h3>2022</h3>
-									<ul>
-										<?php
-											foreach ($vr2022 as $item):
-										?>
-											<div class="p-archives__vr-item">
-												<div class="p-archives__vr-iframe">
-													<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									<div>
+										<h3>2022</h3>
+										<ul>
+											<?php
+												foreach ($vr2022 as $item):
+											?>
+												<div class="p-archives__vr-item">
+													<div class="p-archives__vr-iframe">
+														<iframe src="<?php echo $item['url']; ?>" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+													</div>
+													<a href="<?php echo $item['url']; ?>">View Full Screen</a>
 												</div>
-												<a href="<?php echo $item['url']; ?>">View Full Screen</a>
-											</div>
-										<?php endforeach; ?>
-									</ul>
+											<?php endforeach; ?>
+										</ul>
+									</div>
 								<?php endif; ?>
 							</div>
 						</div>
