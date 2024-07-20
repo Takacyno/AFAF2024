@@ -105,6 +105,7 @@
 								?>
 							</td>
 							</tr>
+							<?php endif; ?>
 							<?php
 								if(!empty(get_field('tel'))):
 							?>
@@ -142,7 +143,6 @@
 							<?php
 								endif;
 							?>
-						<?php endif; ?>
 					</tbody>
 				</table>
 					<?php
