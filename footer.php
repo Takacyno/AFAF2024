@@ -28,7 +28,7 @@
 					<li><a href="<?php echo home_url('partners'); ?>">PARTNERS</a></li>
 				</ul>
 				<div class="c-footer__section-link-vip">
-					<a style="pointer-events: none; color: #adadad;" href="<?php echo home_url('vip'); ?>"><span>VIP-LOGIN</span></a>
+					<a href="<?php echo home_url('vip'); ?>"><span>VIP-LOGIN</span></a>
 				</div>
 			</div>
 			<div class="c-footer__mail">
