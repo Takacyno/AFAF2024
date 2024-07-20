@@ -2021,6 +2021,11 @@ body h4 {
 .p-exhibitors__detail-information a:hover {
   color: #7e7e7e;
 }
+.p-exhibitors__detail-information-website {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .p-exhibitors__detail-sns > ul {
   display: flex;
   flex-direction: row;

@@ -130,19 +130,24 @@
 										<?php endwhile; ?>
 									</td>
 								</tr>
-							<?php
-								endif;
-								if(!empty(get_field('website'))):
-							?>
-								<tr>
-									<th>Website</th>
-									<td>
-										<a href="<?php echo get_field('website'); ?>" target="_blank"><?php echo get_field('website'); ?></a>
-									</td>
-								</tr>
-							<?php
-								endif;
-							?>
+						<?php
+							endif;
+							if(have_rows('web')):
+						?>
+							<tr>
+								<th>Website</th>
+								<td class='p-exhibitors__detail-information-website'>
+								<?php
+									while(have_rows('web')): the_row();
+										$website = get_sub_field('website');
+								?>
+									<a href="<?php echo $website; ?>" target="_blank"><?php echo $website; ?></a>
+								<?php
+									endwhile;
+								?>
+								</td>
+							</tr>
+						<?php endif; ?>
 					</tbody>
 				</table>
 					<?php
