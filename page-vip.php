@@ -1,15 +1,16 @@
 <?php
 	include('header.php');
 	$imagePath = get_stylesheet_directory_uri() . '/image';
-	$comingSoon = get_field( 'coming_soon' );
+	$comingSoon = get_field( 'comingsoon' );
 	$loginText = get_field( 'login_text' );
 	$loggedInText = get_field( 'logged_in_text' );
-	$comingSoonText = get_field( 'coming_soon_text' );
+	$isComingsoon = $comingSoon['comingsoon_button'];
+	$comingSoonText = $comingSoon['comingsoon_text'];
 	$currentLang = get_locale();
 ?>
 
 <main class="p-vip">
-	<?php if ($comingSoon != true): ?>
+	<?php if ($isComingsoon != true): ?>
 		<?php if( !post_password_required( $post->ID ) ) : ?>
 			<div class="c-title" data-bg="secondary">
 				<h1>VIP</h1>
@@ -254,12 +255,20 @@
 			<?php endif; ?>
 		<?php else: ?>
 			<div class="c-area__content">
-				<div class="p-vip__login">
-					<div class="p-vip__login-title">
-						<h1>VIP-LOGIN</h1>
+				<div class="c-area__content-inner">
+					<div class="c-area__content-side">
+						<div class="c-area__content-back">
+							<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
+						</div>
 					</div>
-					<div class="p-vip__login-coming">
-						<?php if ($comingSoonText) { echo $comingSoonText; } ?>
+					<div class="c-area__content-main">
+						<div class="c-title" data-bg="secondary">
+							<h1>VIP-LOGIN</h1>
+						</div>
+						<div class="p-vip__login-coming">
+							<h1>COMING SOON</h1>
+							<?php if ($comingSoonText) { echo $comingSoonText; } ?>
+						</div>
 					</div>
 				</div>
 			</div>
