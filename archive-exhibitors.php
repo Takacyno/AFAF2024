@@ -154,7 +154,11 @@
 									<?php if(get_field('img', $exhibitorsTermIdsps[$i])): ?>
 										<img src="<?php echo get_field('img', $exhibitorsTermIdsps[$i])['url']; ?>" />
 									<?php endif; ?>
-									<?php echo $exhibitorsTermDescriptions[$i] ?>
+									<?php if($currentLang == 'en_US'): ?>
+										<?php echo get_field('description_en', $exhibitorsTermIdsps[$i]) ?>
+									<?php else: ?>
+										<?php echo $exhibitorsTermDescriptions[$i] ?>
+									<?php endif; ?>
 								</div>
 								<ul class="p-exhibitors__taxonomy">
 									<?php
