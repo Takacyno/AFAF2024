@@ -242,14 +242,23 @@
 			</div>
 			<?php else: ?>
 			<div class="c-area__content">
-				<div class="p-vip__login">
-					<div class="p-vip__login-title">
-						<h1>VIP-LOGIN</h1>
+			<div class="c-area__content-inner">
+					<div class="c-area__content-side">
+						<div class="c-area__content-back">
+							<a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
+						</div>
 					</div>
-					<?php echo get_the_password_form(); //パスワード入力フォームの出力 ?>
-					<?php if ($loginText) : ?>
-						<div class="p-vip__login-text"><?php echo $loginText; ?></div>
-					<?php endif; ?>
+					<div class="c-area__content-main">
+						<div class="c-title" data-bg="secondary">
+							<h1>VIP-LOGIN</h1>
+						</div>
+						<div class="p-vip__login">
+							<?php echo get_the_password_form(); //パスワード入力フォームの出力 ?>
+							<?php if ($loginText) : ?>
+								<div class="p-vip__login-text"><?php echo $loginText; ?></div>
+							<?php endif; ?>
+						</div>
+					</div>
 				</div>
 			</div>
 			<?php endif; ?>

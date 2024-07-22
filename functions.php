@@ -74,14 +74,14 @@ add_filter( 'bogo_language_switcher_links', function ( $links ) {
 	return $links;
 } );
 
-// function my_password_form() {
-// 	return
-// 	'<form class="post_password" action="' . home_url() . '/wp-login.php?action=postpass" method="post">
-// 	<input name="post_password" type="password" size="24" placeholder="PASSWORD" />
-// 	<input type="submit" name="Submit" value="' . esc_attr__("ENTER") . '" />
-// 	</form>';
-// }
-// add_filter('the_password_form', 'my_password_form');
+function my_password_form() {
+	return
+	'<form class="post_password" action="' . home_url() . '/wp-login.php?action=postpass" method="post">
+	<input name="post_password" type="password" placeholder="PASSWORD" />
+	<button type="submit"><span>ENTER</span></button>
+	</form>';
+}
+add_filter('the_password_form', 'my_password_form');
 
 function show_error_message( $form ) {
 	// パスワード入力前かどうか postpass_XXXX が Cookie に保存されているかで確認。
