@@ -995,7 +995,7 @@ body h4 {
 .c-nav-global-menu span {
   position: absolute;
   top: 36px;
-  left: -6px;
+  left: 0px;
   width: 100%;
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-weight: 400;
