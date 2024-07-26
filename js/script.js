@@ -243,7 +243,7 @@
 					$exhibitorsTabPanel.attr('aria-hidden', 'true');
 					// 押されたタブのcontrols取得
 					let controls = jQuery(this).attr('aria-controls');
-					// console.log(controls);
+					console.log(controls);
 					jQuery('#' + controls).attr('aria-hidden', 'false');
 					let target = jQuery('#' + controls);
 					return false;
@@ -401,5 +401,29 @@
 			//DOM ツリーの構築（解析）が完了した時点で呼び出す
 			setObserver();
 		});
+	});
+
+	jQuery(function() {
+		const $vipTabButton = jQuery('.p-vip__section-tab button');
+		const $vipTabPanel = jQuery('.p-vip__section-tabpanel div');
+		if ($vipTabButton) {
+			$vipTabButton.click(function () {
+				let selected = jQuery(this).attr('aria-selected');
+				if (selected === 'false') {
+					// もともと選択されていないタブを選択した場合
+					// すべてのタブを未選択状態に
+					$vipTabButton.attr('aria-selected', 'false');
+					// 押されたタブを選択状態に
+					jQuery(this).attr('aria-selected', 'true');
+					// すべてのタブパネルを非表示
+					$vipTabPanel.attr('aria-hidden', 'true');
+					// 押されたタブのcontrols取得
+					let controls = jQuery(this).attr('aria-controls');
+					// console.log(controls);
+					jQuery('#' + controls).attr('aria-hidden', 'false');
+					return false;
+				}
+			});
+		}
 	});
 })();
