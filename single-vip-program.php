@@ -4,6 +4,7 @@
 	$hours = get_field( 'hours' );
 	$location = get_field( 'location' );
 	$contents = get_field( 'contents' );
+	$is_finished = get_the_terms($post -> ID, 'vip-status')[0]->name != "受付中";
 	$currentLang = get_locale();
 ?>
 
@@ -15,10 +16,18 @@
 					<a href="<?php echo home_url('vip'); ?>"><span>VIP-PROGRAM</span></a>
 				</div>
 				<div class="p-vip__aply-side">
-					<?php if ($currentLang != 'en_US') : ?>
-					<a href="#" class="p-vip__aply">お申し込みはこちら</a>
+					<?php if ($is_finished): ?>
+						<?php if ($currentLang != 'en_US') : ?>
+						<a href="#" class="p-vip__aply-finished">申し込みは終了しました</a>
+						<?php else: ?>
+						<a href="#" class="p-vip__aply-finished">Registration is closed</a>
+						<?php endif; ?>
 					<?php else: ?>
-					<a href="#" class="p-vip__aply">Click here to apply</a>
+						<?php if ($currentLang != 'en_US') : ?>
+						<a href="#" class="p-vip__aply">お申し込みはこちら</a>
+						<?php else: ?>
+						<a href="#" class="p-vip__aply">Click here to apply</a>
+						<?php endif; ?>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -75,13 +84,23 @@
 					</div>
 					<?php endif; ?>
 					<?php echo $contents; ?>
+					<?php if ($is_finished): ?>
 					<div class="ly__center">
+						<?php if ($currentLang != 'en_US') : ?>
+						<a href="#" class="p-vip__aply-finished padding-x-115">申し込みは終了しました</a>
+						<?php else: ?>
+						<a href="#" class="p-vip__aply-finished padding-x-115">Registration is closed</a>
+						<?php endif; ?>
+					</div>
+					<?php else: ?>
+						<div class="ly__center">
 						<?php if ($currentLang != 'en_US') : ?>
 						<a href="#" class="p-vip__aply padding-x-115">お申し込みはこちら</a>
 						<?php else: ?>
 						<a href="#" class="p-vip__aply padding-x-115">Click here to apply</a>
 						<?php endif; ?>
-					<div>
+					</div>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
