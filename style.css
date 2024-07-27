@@ -4005,7 +4005,13 @@ body h4 {
   }
 }
 .p-vip__aply-side {
+  display: block;
   margin-top: auto;
+}
+@media screen and (max-width: 768px) {
+  .p-vip__aply-side {
+    display: none;
+  }
 }
 .p-vip__aply {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
