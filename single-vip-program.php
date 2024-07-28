@@ -47,19 +47,29 @@
 										(<?php echo $week[date("w", strtotime($dateTimes[0]['start_date']))] ?>)
 									</span>
 								</p>
-								<?php
-									foreach(array_slice($dateTimes, 1) as $dateTime):
-										$date = $dateTime['start_date'];
-										$hours = $dateTime['hours'];
-								?>
-									<p><?php echo get_field('is_date_consecutive') ? '-' : ',' ?></p>
+								<?php if (get_field('is_date_consecutive')) : ?>
+									<p>-</p>
 									<p class="p-vip__detail-header-date">
-										<?php echo mb_substr($date, mb_strrpos($date, '/') + 1, mb_strlen($date)); ?>
+									<?php echo end($dateTimes)['start_date']; ?>
 										<span>
-											(<?php echo $week[date("w", strtotime($date))] ?>)
+											(<?php echo $week[date("w", strtotime(end($dateTimes)['start_date']))] ?>)
 										</span>
 									</p>
-								<?php endforeach; ?>
+								<?php else: ?>
+									<?php
+										foreach(array_slice($dateTimes, 1) as $dateTime):
+											$date = $dateTime['start_date'];
+											$hours = $dateTime['hours'];
+									?>
+										<p>,</p>
+										<p class="p-vip__detail-header-date">
+											<?php echo mb_substr($date, mb_strrpos($date, '/') + 1, mb_strlen($date)); ?>
+											<span>
+												(<?php echo $week[date("w", strtotime($date))] ?>)
+											</span>
+										</p>
+									<?php endforeach; ?>
+								<?php endif; ?>
 							</div>
 						<?php endif; ?>
 						<p class="p-vip__detail-header-section">
