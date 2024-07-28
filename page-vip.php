@@ -58,7 +58,7 @@
 														<?php the_post_thumbnail('full'); ?>
 														<div class="p-vip__list-thumbnail-overlay"></div>
 														<?php $status = get_field('status'); ?>
-														<span class="p-vip__list-thumbnail-status" data-status="<?php echo $status == '受付中' ? "now-accepting-applications" : "closed" ?>">
+														<span class="p-vip__list-thumbnail-status" data-status="<?php echo $status == '受付中' ? "now-accepting-applications" : ($status == '受付前' ? "before" : "closed"); ?>">
 															<?php echo $status; ?>
 														</span>
 														<div class="p-vip__list-more">
@@ -119,6 +119,7 @@
 												'order' => 'ASC',
 												'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
 											);
+											query_posts( $args );
 											if(have_posts() && !$experienceComingsoon['experience_comingsoon_button']):
 										?>
 										<ul class="p-vip__list">
@@ -128,18 +129,16 @@
 													$lead = get_field( 'vip_lead' );
 													$isReadmore = get_field('readmore');
 												?>
-												<a href="<?php echo the_permalink( $post->ID ); ?>">
+												<a style="pointer-events: <?php echo $isReadmore ? "auto" : "none" ?>;" href="<?php echo the_permalink( $post->ID ); ?>">
 													<?php
 														if (has_post_thumbnail()):
 													?>
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
 														<div class="p-vip__list-thumbnail-overlay"></div>
-														<?php if ($isReadmore): ?>
 															<div class="p-vip__list-more">
 																<span>READ MORE</span>
 															</div>
-														<?php endif; ?>
 													</div>
 													<?php endif; ?>
 													<div class="p-vip__list-body">
