@@ -167,9 +167,11 @@
 													<div class="p-vip__list-body">
 														<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
 														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
-														<div class="p-vip__list-more-sp">
-															<span>READ MORE</span>
-														</div>
+														<?php if (get_field('readmore')): ?>
+															<div class="p-vip__list-more-sp">
+																<span>READ MORE</span>
+															</div>
+														<?php endif; ?>
 													</div>
 												</a>
 											</li>
