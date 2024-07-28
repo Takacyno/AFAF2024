@@ -4363,13 +4363,15 @@ body h4 {
   color: #7E7E7E;
 }
 .p-vip__list-more {
+  visibility: hidden;
+  position: absolute;
   display: block;
-  margin-top: auto;
   text-align: right;
+  right: 0;
+  bottom: 0;
 }
 .p-vip__list-more span {
   display: inline-flex;
-  visibility: hidden;
   align-items: center;
   justify-content: flex-end;
   font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
@@ -4377,14 +4379,16 @@ body h4 {
   font-size: 1.3rem;
   line-height: 1;
   gap: 10px;
-  margin-top: auto;
+  padding: 3px 8px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 .p-vip__list-more span::after {
   display: inline-block;
   content: "";
   width: 19px;
   height: 19px;
-  background-image: url("image/icon-arrow-01.svg");
+  background-image: url("image/icon-arrow-01-white.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

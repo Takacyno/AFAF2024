@@ -58,6 +58,9 @@
 														<span class="p-vip__list-thumbnail-status" data-status="<?php echo $status == '受付中' ? "now-accepting-applications" : "closed" ?>">
 															<?php echo $status; ?>
 														</span>
+														<div class="p-vip__list-more">
+															<span>READ MORE</span>
+														</div>
 													</div>
 													<?php endif; ?>
 													<div class="p-vip__list-body">
@@ -90,9 +93,6 @@
 																<p class="p-vip__list-location">会場　<?php echo get_field('location'); ?></p>
 															</div>
 														<?php endif; ?>
-														<div class="p-vip__list-more">
-															<span>READ MORE</span>
-														</div>
 													</div>
 												</a>
 											</li>
@@ -127,14 +127,14 @@
 													?>
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
+														<div class="p-vip__list-more">
+															<span>READ MORE</span>
+														</div>
 													</div>
 													<?php endif; ?>
 													<div class="p-vip__list-body">
 														<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
 														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
-														<div class="p-vip__list-more">
-															<span>READ MORE</span>
-														</div>
 													</div>
 												</a>
 											</li>
