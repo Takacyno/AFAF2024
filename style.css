@@ -4806,6 +4806,7 @@ body h4 {
   font-style: normal;
   font-weight: 500;
   line-height: 1.7;
+  text-align: center;
 }
 @media screen and (max-width: 768px) {
   .p-vip__comingsoon {
