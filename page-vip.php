@@ -7,6 +7,8 @@
 	$isComingsoon = $comingSoon['comingsoon_button'];
 	$comingSoonText = $comingSoon['comingsoon_text'];
 	$sectionQuery = get_query_var('section');
+	$programComingsoon = get_field('program_comingsoon');
+	$experienceComingsoon = get_field('experience_comingsoon');
 	$currentLang = get_locale();
 ?>
 
@@ -40,7 +42,7 @@
 												'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
 											);
 											query_posts( $args );
-											if(have_posts()):
+											if(have_posts() && !$programComingsoon['program_comingsoon_button']):
 										?>
 										<ul class="p-vip__list">
 											<?php while(have_posts()):the_post(); ?>
@@ -99,9 +101,13 @@
 											<?php endwhile; ?>
 										</ul>
 										<?php else: ?>
-											<div class="p-vip__login-coming">
+											<div class="p-vip__comingsoon">
 												<h1>COMING SOON</h1>
-												<?php if ($comingSoonText) { echo $comingSoonText; } ?>
+												<p>
+													<?php
+														echo $programComingsoon['program_comingsoon_text'];
+													?>
+												</p>
 											</div>
 										<?php endif; ?>
 									</div>
@@ -112,8 +118,7 @@
 												'order' => 'ASC',
 												'posts_per_page'=> -1 //表示件数（-1で全ての記事を表示）
 											);
-											query_posts( $args );
-											if(have_posts()):
+											if(have_posts() && !$experienceComingsoon['experience_comingsoon_button']):
 										?>
 										<ul class="p-vip__list">
 											<?php while(have_posts()):the_post(); ?>
@@ -141,9 +146,11 @@
 											<?php endwhile; ?>
 										</ul>
 										<?php else: ?>
-											<div class="p-vip__login-coming">
+											<div class="p-vip__comingsoon">
 												<h1>COMING SOON</h1>
-												<?php if ($comingSoonText) { echo $comingSoonText; } ?>
+												<p>
+													<?php echo $experienceComingsoon['experience_comingsoon_text']; ?>
+												</p>
 											</div>
 										<?php endif; ?>
 									</div>
