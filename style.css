@@ -4240,11 +4240,13 @@ body h4 {
   z-index: 1;
   height: 100%;
 }
+.p-vip__list-body {
+  padding: 16px;
+}
 .p-vip__list-thumbnail {
   position: relative;
   width: 100%;
   padding-bottom: 67%;
-  margin-bottom: 16px;
   overflow: hidden;
 }
 .p-vip__list-thumbnail-status {
@@ -4307,6 +4309,38 @@ body h4 {
     margin-bottom: 12px;
   }
 }
+.p-vip__list-date-time-location {
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid black;
+  padding-left: 16px;
+  gap: 8px;
+}
+.p-vip__list-date {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.p-vip__list-hours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.p-vip__list-time {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+.p-vip__list-location {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #7E7E7E;
+}
 .p-vip__list-more {
   margin-top: auto;
   text-align: right;
@@ -4354,20 +4388,21 @@ body h4 {
   color: var(--theme-color);
 }
 .p-vip__list-taxonomy-item {
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  font-size: 1rem;
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 2px;
-  background-color: #adadad;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-weight: 700;
+  line-height: 1.7;
+  font-size: 10px;
+  color: #7E7E7E;
+  border-bottom: 1px solid #7E7E7E;
+}
+.p-vip__list-taxonomy-item::before {
+  content: "#";
 }
 .p-vip__list > li {
   display: flex;
   width: calc(100% / 3 - 32px * 2 / 3);
   flex: 0 0 auto;
+  background-color: #F5F5F5;
 }
 @media screen and (max-width: 1200px) {
   .p-vip__list > li {

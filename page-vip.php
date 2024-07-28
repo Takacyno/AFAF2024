@@ -60,20 +60,46 @@
 														</span>
 													</div>
 													<?php endif; ?>
-													<?php
-														$section = get_the_terms($post -> ID, 'vip-program-section');
-														if ( $section ) :
-													?>
-														<ul class="p-vip__list-taxonomy">
-															<li class="p-vip__list-taxonomy-item"><?php echo get_field('vip_section') ?></li>
-														</ul>
-													<?php
-														endif;
-													?>
-													<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
-													<span class="p-vip__list-lead"><?php echo $lead; ?></span>
-													<div class="p-vip__list-more">
-														<span>READ MORE</span>
+													<div class="p-vip__list-body">
+														<?php
+															$section = get_the_terms($post -> ID, 'vip-program-section');
+															if ( $section ) :
+														?>
+															<ul class="p-vip__list-taxonomy">
+																<li class="p-vip__list-taxonomy-item"><?php echo get_field('vip_section') ?></li>
+															</ul>
+														<?php
+															endif;
+														?>
+														<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
+														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
+														<?php if(have_rows('date and time')): ?>
+															<div class="p-vip__list-date-time-location">
+																<?php
+																	while(have_rows('date and time')): the_row();
+																		$date = get_sub_field('start_date');
+																		$hours = get_sub_field('hours');
+																?>
+																	<div>
+																		<p class="p-vip__list-date"><?php echo $date; ?></p>
+																		<?php if(have_rows('hours')): ?>
+																			<div class="p-vip__list-hours">
+																				<?php
+																					while(have_rows('hours')): the_row();
+																						$time = get_sub_field('time');
+																				?>
+																					<p class="p-vip__list-time"><?php echo $time; ?></p>
+																				<?php endwhile; ?>
+																			</div>
+																		<?php endif; ?>
+																	</div>
+																<?php endwhile; ?>
+																<p class="p-vip__list-location">会場　<?php echo get_field('location'); ?></p>
+															</div>
+														<?php endif; ?>
+														<div class="p-vip__list-more">
+															<span>READ MORE</span>
+														</div>
 													</div>
 												</a>
 											</li>
@@ -110,17 +136,12 @@
 														<?php the_post_thumbnail('full'); ?>
 													</div>
 													<?php endif; ?>
-													<?php
-														$section = get_the_terms($post -> ID, 'vip-program-section');
-														if ( $section ) :
-													?>
-													<?php
-														endif;
-													?>
-													<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
-													<span class="p-vip__list-lead"><?php echo $lead; ?></span>
-													<div class="p-vip__list-more">
-														<span>READ MORE</span>
+													<div class="p-vip__list-body">
+														<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
+														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
+														<div class="p-vip__list-more">
+															<span>READ MORE</span>
+														</div>
 													</div>
 												</a>
 											</li>
