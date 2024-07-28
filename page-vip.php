@@ -126,6 +126,7 @@
 											<li>
 												<?php
 													$lead = get_field( 'vip_lead' );
+													$isReadmore = get_field('readmore');
 												?>
 												<a href="<?php echo the_permalink( $post->ID ); ?>">
 													<?php
@@ -134,9 +135,11 @@
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
 														<div class="p-vip__list-thumbnail-overlay"></div>
-														<div class="p-vip__list-more">
-															<span>READ MORE</span>
-														</div>
+														<?php if ($isReadmore): ?>
+															<div class="p-vip__list-more">
+																<span>READ MORE</span>
+															</div>
+														<?php endif; ?>
 													</div>
 													<?php endif; ?>
 													<div class="p-vip__list-body">
