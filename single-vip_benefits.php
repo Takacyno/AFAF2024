@@ -7,7 +7,7 @@
     <div class="c-area__content-inner">
       <div class="c-area__content-side">
         <div class="c-area__content-back">
-          <a href="<?php echo home_url('vip'); ?>"><span>VIP-EXPERIENCE</span></a>
+          <a href="<?php echo home_url('vip'); ?>?section=experience"><span>VIP-EXPERIENCE</span></a>
         </div>
       </div>
       <div class="c-area__content-main margin-right">

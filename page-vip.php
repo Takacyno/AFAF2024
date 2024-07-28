@@ -6,6 +6,7 @@
 	$loggedInText = get_field( 'logged_in_text' );
 	$isComingsoon = $comingSoon['comingsoon_button'];
 	$comingSoonText = $comingSoon['comingsoon_text'];
+	$sectionQuery = get_query_var('section');
 	$currentLang = get_locale();
 ?>
 
@@ -26,12 +27,12 @@
 						<div class="p-vip__wrapper">
 							<div class="p-vip__list-wrapper">
 								<ul class="p-vip__section-tab">
-									<li><button type="button" aria-controls="program" aria-selected="true">PROGRAM</button></li>
-									<li><button type="button" aria-controls="experience" aria-selected="false">EXPERIENCE</button></li>
+									<li><button type="button" aria-controls="program" aria-selected="<?php echo $sectionQuery == "experience" ? "false" : "true" ?>">PROGRAM</button></li>
+									<li><button type="button" aria-controls="experience" aria-selected="<?php echo $sectionQuery == "experience" ? "true" : "false" ?>">EXPERIENCE</button></li>
 									<li><button type="button" aria-controls="contact" aria-selected="false">CONTACT</button></li>
 								</ul>
 								<div class="p-vip__section-tabpanel">
-									<div id="program" aria-hidden="false">
+									<div id="program" aria-hidden="<?php echo $sectionQuery == "experience" ? "true" : "false" ?>">
 										<?php
 											$args = array(
 												'post_type' => 'vip-program', /* カスタム投稿名 */
@@ -96,7 +97,7 @@
 											</div>
 										<?php endif; ?>
 									</div>
-									<div id="experience" aria-hidden="true">
+									<div id="experience" aria-hidden="<?php echo $sectionQuery == "experience" ? "false" : "true" ?>">
 										<?php
 											$args = array(
 												'post_type' => 'vip_benefits', /* カスタム投稿名 */

@@ -106,4 +106,10 @@ add_filter('protected_title_format', 'remove_protected');
 function remove_protected($title) {
 	return '%s';
 }
+
+function vip_query_vars( $qvars ) {
+	$qvars[] = 'section';
+	return $qvars;
+	}
+	add_filter( 'query_vars', 'vip_query_vars' );
 ?>
