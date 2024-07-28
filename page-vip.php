@@ -61,16 +61,9 @@
 													</div>
 													<?php endif; ?>
 													<div class="p-vip__list-body">
-														<?php
-															$section = get_the_terms($post -> ID, 'vip-program-section');
-															if ( $section ) :
-														?>
 															<ul class="p-vip__list-taxonomy">
 																<li class="p-vip__list-taxonomy-item"><?php echo get_field('vip_section') ?></li>
 															</ul>
-														<?php
-															endif;
-														?>
 														<h3 class="p-vip__list-title"><?php the_title(); ?></h3>
 														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
 														<?php if(have_rows('date and time')): ?>

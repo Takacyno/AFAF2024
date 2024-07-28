@@ -4,7 +4,7 @@
 	$hours = get_field( 'hours' );
 	$location = get_field( 'location' );
 	$contents = get_field( 'contents' );
-	$is_finished = get_the_terms($post -> ID, 'vip-status')[0]->name != "受付中";
+	$is_finished = get_field('status') != "受付中";
 	$entry = get_field( 'entry' );
 	$currentLang = get_locale();
 ?>
@@ -34,51 +34,42 @@
 			</div>
 			<div class="c-area__content-main margin-right">
 				<div class="p-vip__detail-header">
+					<div class="p-vip__detail-sub-header">
+						<?php if(have_rows('date and time')): ?>
+							<div class="p-vip__detail-header-dates">
+								<?php
+									$dateTimes = get_field('date and time');
+									$week = array( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat")
+								?>
+								<p class="p-vip__detail-header-date">
+									<?php echo $dateTimes[0]['start_date']; ?>
+									<span>
+										(<?php echo $week[date("w", strtotime($dateTimes[0]['start_date']))] ?>)
+									</span>
+								</p>
+								<?php
+									foreach(array_slice($dateTimes, 1) as $dateTime):
+										$date = $dateTime['start_date'];
+										$hours = $dateTime['hours'];
+								?>
+									<p><?php echo get_field('is_date_consecutive') ? '-' : ',' ?></p>
+									<p class="p-vip__detail-header-date">
+										<?php echo mb_substr($date, mb_strrpos($date, '/') + 1, mb_strlen($date)); ?>
+										<span>
+											(<?php echo $week[date("w", strtotime($date))] ?>)
+										</span>
+									</p>
+								<?php endforeach; ?>
+							</div>
+						<?php endif; ?>
+						<p class="p-vip__detail-header-section">
+							<?php echo get_field('vip_section') ?>
+						</p>
+					</div>
 					<h1><?php the_title(); ?></h1>
 				</div>
 				<?php // header ここまで ?>
 				<div class="p-vip__detail-content">
-				<?php if(have_rows('date and time')): ?>
-					<?php
-						while(have_rows('date and time')): the_row();
-							$start = get_sub_field('start_date');
-							$end = get_sub_field('end_date');
-							$hours = get_sub_field( 'hours' );
-					?>
-						<div class="p-vip__detail-header-dates">
-							<?php
-								if ($start) :
-							?>
-							<span class="p-vip__detail-header-date"><?php echo $start; ?></span>
-							<?php
-								endif;
-								if ($hours) :
-							?>
-							<span class="p-vip__detail-header-hours"><?php echo $hours; ?></span>
-							<?php endif; ?>
-						</div>
-					<?php endwhile; ?>
-				<?php endif; ?>
-				<?php if ($location) : ?>
-					<dl class="p-vip__detail-venue">
-						<?php if ($currentLang != 'en_US') : ?>
-						<dt>会場:</dt>
-						<?php else: ?>
-						<dt>VENUE:</dt>
-						<?php endif; ?>
-						<dd><?php echo $location; ?></dd>
-					</dl>
-				<?php
-					endif;
-					$section = get_the_terms($post -> ID, 'vip_section');
-					if ( $section ) :
-				?>
-					<ul class="p-vip__detail-taxonomy">
-						<li class="p-vip__detail-taxonomy-item">
-							<?php echo get_field('vip_section') ?>
-						</list>
-					</ul>
-					<?php endif; ?>
 					<?php
 						if (has_post_thumbnail()):
 					?>
