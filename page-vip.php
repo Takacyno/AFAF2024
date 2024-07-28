@@ -56,6 +56,7 @@
 													?>
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
+														<div class="p-vip__list-thumbnail-overlay"></div>
 														<?php $status = get_field('status'); ?>
 														<span class="p-vip__list-thumbnail-status" data-status="<?php echo $status == '受付中' ? "now-accepting-applications" : "closed" ?>">
 															<?php echo $status; ?>
@@ -132,6 +133,7 @@
 													?>
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
+														<div class="p-vip__list-thumbnail-overlay"></div>
 														<div class="p-vip__list-more">
 															<span>READ MORE</span>
 														</div>
