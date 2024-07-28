@@ -5,6 +5,7 @@
 	$location = get_field( 'location' );
 	$contents = get_field( 'contents' );
 	$is_finished = get_the_terms($post -> ID, 'vip-status')[0]->name != "受付中";
+	$entry = get_field( 'entry' );
 	$currentLang = get_locale();
 ?>
 
@@ -18,15 +19,15 @@
 				<div class="p-vip__aply-side">
 					<?php if ($is_finished): ?>
 						<?php if ($currentLang != 'en_US') : ?>
-						<a href="#" class="p-vip__aply-finished">申し込みは終了しました</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
 						<?php else: ?>
-						<a href="#" class="p-vip__aply-finished">Registration is closed</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
 						<?php endif; ?>
 					<?php else: ?>
 						<?php if ($currentLang != 'en_US') : ?>
-						<a href="#" class="p-vip__aply">お申し込みはこちら</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
 						<?php else: ?>
-						<a href="#" class="p-vip__aply">Click here to apply</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
 						<?php endif; ?>
 					<?php endif; ?>
 				</div>
@@ -87,17 +88,17 @@
 					<?php if ($is_finished): ?>
 					<div class="ly__center">
 						<?php if ($currentLang != 'en_US') : ?>
-						<a href="#" class="p-vip__aply-finished padding-x-115">申し込みは終了しました</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
 						<?php else: ?>
-						<a href="#" class="p-vip__aply-finished padding-x-115">Registration is closed</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
 						<?php endif; ?>
 					</div>
 					<?php else: ?>
 						<div class="ly__center">
 						<?php if ($currentLang != 'en_US') : ?>
-						<a href="#" class="p-vip__aply padding-x-115">お申し込みはこちら</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
 						<?php else: ?>
-						<a href="#" class="p-vip__aply padding-x-115">Click here to apply</a>
+						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
 						<?php endif; ?>
 					</div>
 					<?php endif; ?>
