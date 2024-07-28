@@ -38,23 +38,28 @@
 				</div>
 				<?php // header ここまで ?>
 				<div class="p-vip__detail-content">
+				<?php if(have_rows('date and time')): ?>
 					<?php
-						$dates = get_field( 'dates' );
-						$hours = get_field( 'hours' );
+						while(have_rows('date and time')): the_row();
+							$start = get_sub_field('start_date');
+							$end = get_sub_field('end_date');
+							$hours = get_sub_field( 'hours' );
 					?>
-					<div class="p-vip__detail-header-dates">
-						<?php
-							if ($dates) :
-						?>
-						<span class="p-vip__detail-header-date"><?php echo $dates; ?></span>
-						<?php
-							endif;
-							if ($hours) :
-						?>
-						<span class="p-vip__detail-header-hours"><?php echo $hours; ?></span>
-						<?php endif; ?>
-					</div>
-					<?php if ($location) : ?>
+						<div class="p-vip__detail-header-dates">
+							<?php
+								if ($start) :
+							?>
+							<span class="p-vip__detail-header-date"><?php echo $start; ?></span>
+							<?php
+								endif;
+								if ($hours) :
+							?>
+							<span class="p-vip__detail-header-hours"><?php echo $hours; ?></span>
+							<?php endif; ?>
+						</div>
+					<?php endwhile; ?>
+				<?php endif; ?>
+				<?php if ($location) : ?>
 					<dl class="p-vip__detail-venue">
 						<?php if ($currentLang != 'en_US') : ?>
 						<dt>会場:</dt>
@@ -63,11 +68,11 @@
 						<?php endif; ?>
 						<dd><?php echo $location; ?></dd>
 					</dl>
-					<?php
-						endif;
-						$section = get_the_terms($post -> ID, 'vip-program-section');
-						if ( $section ) :
-					?>
+				<?php
+					endif;
+					$section = get_the_terms($post -> ID, 'vip-program-section');
+					if ( $section ) :
+				?>
 					<ul class="p-vip__detail-taxonomy">
 						<?php
 							foreach($section as $term) {
