@@ -19,7 +19,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>共催</h2>
 								<?php else: ?>
-								<h2>Co-sponsors</h2>
+								<h2>Co-organizers</h2>
 								<?php endif; ?>
 								<ul>
 									<?php
@@ -43,7 +43,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>協賛</h2>
 								<?php else: ?>
-								<h2>Partners</h2>
+								<h2>Sponsors</h2>
 								<?php endif; ?>
 								<ul data-sponsorship="large">
 									<?php
@@ -85,7 +85,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>助成</h2>
 								<?php else: ?>
-								<h2>Assisting</h2>
+								<h2>Benefactor </h2>
 								<?php endif; ?>
 								<ul>
 									<?php
@@ -109,7 +109,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>特別協力</h2>
 								<?php else: ?>
-								<h2>Special Associated Partners</h2>
+								<h2>Excecuted by</h2>
 								<?php endif; ?>
 								<ul>
 									<?php
@@ -133,7 +133,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>協力</h2>
 								<?php else: ?>
-								<h2>Associated Partners</h2>
+								<h2>Contributors</h2>
 								<?php endif; ?>
 								<ul class="p-partners__list">
 									<?php
@@ -187,7 +187,7 @@
 						?>
 							<div class="p-partners__museum">
 								<?php if ($currentLang != 'en_US') : ?>
-								<h2>特別協力美術館・博物館</h2>
+								<h2>Institutional Partners</h2>
 								<?php else: ?>
 								<h2>Special Support Museum</h2>
 								<?php endif; ?>
