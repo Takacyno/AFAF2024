@@ -74,25 +74,45 @@
 														<span class="p-vip__list-lead"><?php echo $lead; ?></span>
 														<?php if(have_rows('date and time')): ?>
 															<div class="p-vip__list-date-time-location">
-																<?php
-																	while(have_rows('date and time')): the_row();
-																		$date = get_sub_field('start_date');
-																		$hours = get_sub_field('hours');
-																?>
+																<?php $week = array( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"); ?>
+																<?php if (get_field('is_date_consecutive')): ?>
 																	<div>
-																		<p class="p-vip__list-date"><?php echo $date; ?></p>
-																		<?php if(have_rows('hours')): ?>
-																			<div class="p-vip__list-hours">
-																				<?php
-																					while(have_rows('hours')): the_row();
-																						$time = get_sub_field('time');
-																				?>
-																					<p class="p-vip__list-time"><?php echo $time; ?></p>
-																				<?php endwhile; ?>
-																			</div>
-																		<?php endif; ?>
+																		<p class="p-vip__list-date">
+																			<?php
+																				$dateTimes = get_field('date and time');
+																				echo $dateTimes[0]['start_date'];
+																			?>
+																			-
+																			<?php
+																				$lastDate = end($dateTimes)['start_date'];
+																				echo mb_substr($lastDate, mb_strrpos($lastDate, '/') + 1, mb_strlen($lastDate));
+																			?>
+																		</p>
+																		<?php foreach ($dateTimes[0]['hours'] as $hour): ?>
+																			<p class="p-vip__list-time"><?php echo $hour['time']; ?></p>
+																		<?php endforeach; ?>
 																	</div>
-																<?php endwhile; ?>
+																<?php else: ?>
+																	<?php
+																		while(have_rows('date and time')): the_row();
+																			$date = get_sub_field('start_date');
+																			$hours = get_sub_field('hours');
+																	?>
+																		<div>
+																			<p class="p-vip__list-date"><?php echo $date; ?> (<?php echo $week[date("w", strtotime($date))] ?>)</p>
+																			<?php if(have_rows('hours')): ?>
+																				<div class="p-vip__list-hours">
+																					<?php
+																						while(have_rows('hours')): the_row();
+																							$time = get_sub_field('time');
+																					?>
+																						<p class="p-vip__list-time"><?php echo $time; ?></p>
+																					<?php endwhile; ?>
+																				</div>
+																			<?php endif; ?>
+																		</div>
+																	<?php endwhile; ?>
+																<?php endif; ?>
 																<p class="p-vip__list-location">会場　<?php echo get_field('location'); ?></p>
 															</div>
 														<?php endif; ?>

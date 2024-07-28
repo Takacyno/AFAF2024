@@ -50,7 +50,10 @@
 								<?php if (get_field('is_date_consecutive')) : ?>
 									<p>-</p>
 									<p class="p-vip__detail-header-date">
-									<?php echo end($dateTimes)['start_date']; ?>
+									<?php
+										$lastDate = end($dateTimes)['start_date'];
+										echo mb_substr($lastDate, mb_strrpos($lastDate, '/') + 1, mb_strlen($lastDate));
+									?>
 										<span>
 											(<?php echo $week[date("w", strtotime(end($dateTimes)['start_date']))] ?>)
 										</span>
