@@ -96,8 +96,8 @@ function show_error_message( $form ) {
 	}
 
 	// Cookie があり、パスワードが一致しない場合にメッセージを表示
-	$error_message = '<p class="custom-password-message">パスワードが違います</p>';
-	return $form . $error_message;
+	$error_message = '<p class="custom-password-message">パスワードが違います。再度確認して入力してください。</p>';
+	return $error_message . $form;
 }
 add_filter( 'the_password_form', 'show_error_message' );
 

@@ -3811,16 +3811,14 @@ body h4 {
   margin-left: 8px;
 }
 .p-vip__login .custom-password-message {
-  margin-top: 16px;
-  font-family: "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-weight: 700;
-  font-size: 1.4rem;
-  line-height: 1.7;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  color: rgba(232, 63, 34, 1);
+  font-size: 14px;
+  font-style: normal;
   font-weight: 400;
-  color: #7e7e7e;
-  font-size: 1.2rem;
-  margin-top: 1em;
-  font-weight: 600;
+  line-height: 1.7;
+  margin-bottom: 24px;
+  text-align: left;
 }
 
 .p-vip__detail {
