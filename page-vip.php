@@ -54,16 +54,10 @@
 													?>
 													<div class="p-vip__list-thumbnail">
 														<?php the_post_thumbnail('full'); ?>
-														<?php
-															$status = get_the_terms($post -> ID, 'vip-status');
-															if ( $status ) {
-																foreach($status as $term) {
-																	$statusName = $term->name;
-																	$sectionSlug = $term->slug;
-																	echo '<span class="p-vip__list-thumbnail-status" data-status="'. $sectionSlug .'">' . $statusName . '</span>';
-																}
-															}
-														?>
+														<?php $status = get_field('status'); ?>
+														<span class="p-vip__list-thumbnail-status" data-status="<?php echo $status == '受付中' ? "now-accepting-applications" : "closed" ?>">
+															<?php echo $status; ?>
+														</span>
 													</div>
 													<?php endif; ?>
 													<?php
@@ -71,12 +65,7 @@
 														if ( $section ) :
 													?>
 														<ul class="p-vip__list-taxonomy">
-															<?php
-																foreach($section as $term) {
-																	$sectionName = $term->name;
-																	echo '<li class="p-vip__list-taxonomy-item">' . $sectionName . '</li>';
-																}
-															?>
+															<li class="p-vip__list-taxonomy-item"><?php echo get_field('vip_section') ?></li>
 														</ul>
 													<?php
 														endif;

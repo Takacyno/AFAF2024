@@ -70,16 +70,13 @@
 					</dl>
 				<?php
 					endif;
-					$section = get_the_terms($post -> ID, 'vip-program-section');
+					$section = get_the_terms($post -> ID, 'vip_section');
 					if ( $section ) :
 				?>
 					<ul class="p-vip__detail-taxonomy">
-						<?php
-							foreach($section as $term) {
-								$sectionName = $term->name;
-								echo '<li class="p-vip__detail-taxonomy-item">' . $sectionName . '</li>';
-							}
-						?>
+						<li class="p-vip__detail-taxonomy-item">
+							<?php echo get_field('vip_section') ?>
+						</list>
 					</ul>
 					<?php endif; ?>
 					<?php
