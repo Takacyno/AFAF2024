@@ -49,6 +49,8 @@ function add_localizable_post_types($localizable) {
 	$localizable[] = 'vip-program';
 	$localizable[] = 'artworks';
 	$localizable[] = 'program';
+	$localizable[] = 'vip_benefits';
+	$localizable[] = 'vip_contact';
 	return $localizable;
 }
 
