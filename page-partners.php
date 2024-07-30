@@ -85,7 +85,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>助成</h2>
 								<?php else: ?>
-								<h2>Benefactor </h2>
+								<h2>Supports</h2>
 								<?php endif; ?>
 								<ul>
 									<?php
@@ -109,7 +109,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>特別協力</h2>
 								<?php else: ?>
-								<h2>Excecuted by</h2>
+								<h2>Special Support Museums</h2>
 								<?php endif; ?>
 								<ul>
 									<?php
@@ -165,7 +165,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>メディアパートナー</h2>
 								<?php else: ?>
-								<h2>Media Partner</h2>
+								<h2>Media Partners</h2>
 								<?php endif; ?>
 								<ul class="p-partners__list">
 									<?php
@@ -213,7 +213,7 @@
 								<?php if ($currentLang != 'en_US') : ?>
 								<h2>アートフェアパートナー</h2>
 								<?php else: ?>
-								<h2>Art Fair Partner</h2>
+								<h2>Art Fair Partners</h2>
 								<?php endif; ?>
 								<ul class="p-partners__list">
 									<?php

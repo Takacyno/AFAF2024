@@ -39,6 +39,12 @@ function change_posts_per_page($query) {
 	if ( $query->is_post_type_archive('program') ) { //カスタム投稿タイプを指定
         $query->set( 'posts_per_page', '-1' ); //表示件数を指定
     }
+	if ( $query->is_post_type_archive('vip_benefits') ) { //カスタム投稿タイプを指定
+		$query->set( 'posts_per_page', '-1' ); //表示件数を指定
+		}
+	if ( $query->is_post_type_archive('vip_contact') ) { //カスタム投稿タイプを指定
+		$query->set( 'posts_per_page', '-1' ); //表示件数を指定
+		}
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
@@ -78,7 +84,7 @@ add_filter( 'bogo_language_switcher_links', function ( $links ) {
 
 function my_password_form() {
 	return
-	'<form class="post_password" action="' . home_url() . '/wp-login.php?action=postpass" method="post">
+	'<form class="post_password" action="' . site_url() . '/wp-login.php?action=postpass" method="post">
 	<input name="post_password" type="password" placeholder="PASSWORD" />
 	<button type="submit"><span>ENTER</span></button>
 	</form>';
@@ -98,7 +104,11 @@ function show_error_message( $form ) {
 	}
 
 	// Cookie があり、パスワードが一致しない場合にメッセージを表示
-	$error_message = '<p class="custom-password-message">パスワードが違います。再度確認して入力してください。</p>';
+	if (get_locale() == 'en_US') {
+		$error_message = '<p class="custom-password-message">The password is wrong. Please check and enter it again.</p>';
+	} else {
+		$error_message = '<p class="custom-password-message">パスワードが違います。再度確認して入力してください。</p>';
+	}
 	return $error_message . $form;
 }
 add_filter( 'the_password_form', 'show_error_message' );

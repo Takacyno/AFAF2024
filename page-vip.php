@@ -14,7 +14,7 @@
 
 <main class="p-vip">
 	<?php if ($isComingsoon != true): ?>
-		<?php if( !post_password_required( $post->ID ) ) : ?>
+		<?php if( post_password_required( $post->ID ) ) : ?>
 			<div class="c-area__content">
 				<div class="c-area__content-inner">
 					<div class="c-area__content-side">

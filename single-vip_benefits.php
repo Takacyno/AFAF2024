@@ -1,6 +1,7 @@
 <?php
 	include('header.php');
   $contents = get_field( 'vip_text' );
+  $currentLang = get_locale();
 ?>
 <main class="p-vip" data-news="detail">
   <div class="c-area__content">
