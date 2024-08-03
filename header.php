@@ -50,7 +50,7 @@
 						<div class="c-header__nav-wrapper">
 							<?php include('include/nav-global.php'); ?>
 							<div class="c-header__nav-ticket">
-								<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+								<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
 								<?php if ( $title ) : ?>
 								<span><?php echo $title; ?></span>
 								<?php endif; ?>
@@ -72,7 +72,7 @@
 					</div>
 					<div class="c-header__menu-button">
 						<div class="c-header__ticket">
-							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+							<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
@@ -101,7 +101,7 @@
 						<div class="c-header__nav-wrapper">
 							<?php include('include/nav-global.php'); ?>
 							<div class="c-header__nav-ticket">
-								<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+								<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
 								<?php if ( $title ) : ?>
 								<span><?php echo $title; ?></span>
 								<?php endif; ?>
@@ -123,7 +123,7 @@
 					</div>
 					<div class="c-header__menu-button">
 						<div class="c-header__ticket">
-							<a style="pointer-events: none; color: #adadad;" href="<?php if ($url) { echo $url; } ?>" target="_blank"><span>TICKET</span></a>
+							<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
