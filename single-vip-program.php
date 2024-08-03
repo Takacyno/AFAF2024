@@ -18,17 +18,9 @@
 				</div>
 				<div class="p-vip__aply-side">
 					<?php if ($is_finished): ?>
-						<?php if ($currentLang != 'en_US') : ?>
 						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
-						<?php else: ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
-						<?php endif; ?>
 					<?php else: ?>
-						<?php if ($currentLang != 'en_US') : ?>
 						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
-						<?php else: ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
-						<?php endif; ?>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -93,19 +85,11 @@
 					<?php echo $contents; ?>
 					<?php if ($is_finished): ?>
 					<div class="ly__center">
-						<?php if ($currentLang != 'en_US') : ?>
 						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
-						<?php else: ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
-						<?php endif; ?>
 					</div>
 					<?php else: ?>
 						<div class="ly__center">
-						<?php if ($currentLang != 'en_US') : ?>
 						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
-						<?php else: ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
-						<?php endif; ?>
 					</div>
 					<?php endif; ?>
 				</div>
