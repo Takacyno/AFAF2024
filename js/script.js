@@ -426,4 +426,27 @@
 			});
 		}
 	});
+
+	jQuery(function() {
+		let $artworkCard = jQuery('.p-artworks__card');
+		let $modalOverlay = jQuery('.p-artworks__modal-overlay');
+		let $modalCloseCard = jQuery('.p-artworks__modal-close-button');
+		$artworkCard.click(function () {
+			const url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().find('.p-artworks__modal').attr('display', 'true');
+		});
+		$modalOverlay.click(function () {
+			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().attr('display', 'false');
+		});
+		$modalCloseCard.click(function () {
+			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().parent().attr('display', 'false');
+		});
+	});
 })();

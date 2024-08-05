@@ -51,7 +51,7 @@
 						<?php if ($isBooth): ?>
 						<dt>BOOTH: </dt>
 						<dd>
-							<?php echo get_field('booth-number') ?>
+							<?php echo get_field('booth‐number') ?>
 						</dd>
 						<?php endif; ?>
 					</div>

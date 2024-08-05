@@ -119,9 +119,10 @@ function remove_protected($title) {
 	return '%s';
 }
 
-function vip_query_vars( $qvars ) {
-	$qvars[] = 'section';
-	return $qvars;
+function add_query_vars( $vars ) {
+	$vars[] = 'section';
+	$vars[] = 'type';
+	return $vars;
 	}
-	add_filter( 'query_vars', 'vip_query_vars' );
+	add_filter( 'query_vars', 'add_query_vars' );
 ?>
