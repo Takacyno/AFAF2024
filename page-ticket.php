@@ -67,30 +67,32 @@
                     $features = get_sub_field('features');
                   ?>
                     <div class="p-ticket__tickets-inner">
-                      <h2>
+                      <h3>
                         <?php echo $ticket_type_name; ?>
-                      </h2>
+                      </h3>
                       <div>
-                        <p class="p-ticket__tickets-label" lang="<?php echo $currentLang == 'ja' ? 'ja' : 'en' ?>">
-                          <span>
-                            <?php echo $currentLang == 'ja' ? '販売期間' : 'Sales period'; ?>
-                          </span>
-                        </p>
-                        <p class="p-ticket__tickets-value">
-                          <?php echo $dates['start']; ?>
-                          -
-                          <?php echo mb_substr($dates['end'], mb_strrpos($dates['end'], '/') + 1, mb_strlen($dates['end'])); ?>
-                        </p>
+                        <div>
+                          <p class="p-ticket__tickets-label" lang="<?php echo $currentLang == 'ja' ? 'ja' : 'en' ?>">
+                            <span>
+                              <?php echo $currentLang == 'ja' ? '販売期間' : 'Sales period'; ?>
+                            </span>
+                          </p>
+                          <p class="p-ticket__tickets-value">
+                            <?php echo $dates['start']; ?>
+                            -
+                            <?php echo mb_substr($dates['end'], mb_strrpos($dates['end'], '/') + 1, mb_strlen($dates['end'])); ?>
+                          </p>
+                        </div>
+                        <div>
+                          <p class="p-ticket__tickets-label" lang="<?php echo $currentLang == 'ja' ? 'ja' : 'en' ?>">
+                            <span>
+                              <?php echo $currentLang == 'ja' ? '価格' : 'Price'; ?>
+                            </span>
+                          </p>
+                          <p class="p-ticket__tickets-value"><?php echo $price; ?></p>
+                        </div>
+                        <?php echo $features; ?>
                       </div>
-                      <div>
-                        <p class="p-ticket__tickets-label" lang="<?php echo $currentLang == 'ja' ? 'ja' : 'en' ?>">
-                          <span>
-                            <?php echo $currentLang == 'ja' ? '価格' : 'Price'; ?>
-                          </span>
-                        </p>
-                        <p class="p-ticket__tickets-value"><?php echo $price; ?></p>
-                      </div>
-                      <?php echo $features; ?>
                     </div>
                   <?php endwhile; ?>
                 <?php endif; ?>

@@ -4979,8 +4979,8 @@ body h4 {
   background-color: var(--theme-color);
   color: white;
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
-  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 700;
-  font-size: 21px;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
+  font-size: 18px;
   font-style: normal;
   line-height: 1.3;
   text-transform: uppercase;
@@ -5036,6 +5036,12 @@ body h4 {
   background-position: center;
   background-repeat: no-repeat;
 }
+.p-ticket__tickets {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
 .p-ticket__tickets-title {
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif !important;
   font-weight: normal !important;
@@ -5056,13 +5062,25 @@ body h4 {
   border-bottom: 1px solid black;
   padding-bottom: 8px;
 }
-.p-ticket__tickets-inner {
+.p-ticket__tickets-inner h3 {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  padding: 12px 24px;
+  background-color: var(--theme-color);
+  color: white;
+}
+.p-ticket__tickets-inner > div {
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  border: 1px solid var(--theme-color);
 }
-.p-ticket__tickets-inner div {
+.p-ticket__tickets-inner > div > div {
   display: flex;
   flex-direction: row;
   gap: 24px;
