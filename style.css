@@ -4928,18 +4928,19 @@ body h4 {
 }
 .p-ticket__wrapper-highlights-head h3 {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 21px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
 }
 .p-ticket__wrapper-highlights-head h4 {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 27px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.6;
   margin-top: 8px;
+  white-space: nowrap;
 }
 .p-ticket__wrapper-highlights-head p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -4952,14 +4953,21 @@ body h4 {
 .p-ticket__wrapper-highlights-body {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
   margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .p-ticket__wrapper-highlights-body {
+    gap: 24px;
+  }
 }
 .p-ticket__wrapper-highlights-card {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3 - 32px * 2 / 3);
+  width: calc(100% / 4 - 32px * 3 / 4);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .p-ticket__wrapper-highlights-card {
     width: calc(100% / 2 - 32px / 2);
   }
@@ -4972,15 +4980,19 @@ body h4 {
 .p-ticket__wrapper-highlights-card-thumbnail {
   position: relative;
 }
+.p-ticket__wrapper-highlights-card-thumbnail img {
+  width: 100%;
+  object-fit: contain;
+}
 .p-ticket__wrapper-highlights-card-thumbnail h5 {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-color: var(--theme-color);
+  background-color: #EB5E36;
   color: white;
   font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
   font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
-  font-size: 18px;
+  font-size: 14px;
   font-style: normal;
   line-height: 1.3;
   text-transform: uppercase;
@@ -5062,15 +5074,32 @@ body h4 {
   border-bottom: 1px solid black;
   padding-bottom: 8px;
 }
+.p-ticket__tickets-inner {
+  position: relative;
+}
 .p-ticket__tickets-inner h3 {
+  display: inline-flex;
+  justify-content: space-between;
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
   padding: 12px 24px;
-  background-color: var(--theme-color);
+  background-color: #433F3E;
   color: white;
+  width: 100%;
+}
+.p-ticket__tickets-inner h3 > span {
+  font-family: "acumin-variable", "New Title", "neue-haas-grotesk-text", "neue-haas-grotesk-display", "Noto Sans CJK JP", "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN W3", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Sans-serif;
+  font-variation-settings: "slnt" 0, "wdth" 100, "wght" 600;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+.p-ticket__tickets-inner[status=active] h3 {
+  background-color: #EB5E36;
 }
 .p-ticket__tickets-inner > div {
   padding: 24px;
@@ -5078,31 +5107,35 @@ body h4 {
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  border: 1px solid var(--theme-color);
+  border: 1px solid #433F3E;
+}
+.p-ticket__tickets-inner[status=active] > div {
+  border: 1px solid #EB5E36;
 }
 .p-ticket__tickets-inner > div > div {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
-.p-ticket__tickets-inner > p {
+.p-ticket__tickets-inner > div > p {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.8;
+  border-top: 1px solid #7E7E7E;
+  padding-top: 16px;
 }
 .p-ticket__tickets-label {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.7;
-  border: 1px solid black;
-  padding: 4px 16px;
+  padding: 4px 0;
 }
 .p-ticket__tickets-label > span {
-  text-align: center;
+  text-align: left;
   display: inline-block;
   min-width: 56px;
 }
@@ -5111,10 +5144,39 @@ body h4 {
 }
 .p-ticket__tickets-value {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 21px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
+  white-space: nowrap;
+}
+.p-ticket__tickets-value span {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.p-ticket__tickets-finished-box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none !important;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+}
+.p-ticket__tickets-finished-text {
+  border: none !important;
+  padding: 0 !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  line-height: 1.6 !important;
+  white-space: nowrap;
+  text-align: center;
 }
 .p-ticket__precautions {
   display: flex;
@@ -5150,11 +5212,11 @@ body h4 {
 .p-ticket__benefits-card {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3 - 32px * 2 / 3);
+  width: calc(100% / 4 - 32px * 3 / 4);
   flex: 0 0 auto;
   background-color: #F5F5F5;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .p-ticket__benefits-card {
     width: calc(100% / 2 - 32px / 2);
   }
@@ -5187,18 +5249,30 @@ body h4 {
   flex-direction: column;
   gap: 8px;
   margin-top: 32px;
+  border-left: 1px solid black;
+  padding-left: 16px;
+}
+.p-ticket__benefits-card-info > p {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
 }
 .p-ticket__benefits-card-info-row {
   display: flex;
   flex-direction: row;
   gap: 24px;
 }
+@media screen and (max-width: 768px) {
+  .p-ticket__benefits-card-info-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
 .p-ticket__benefits-card-info-label {
-  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.7;
+  font-weight: 700 !important;
+  line-height: 1.7 !important;
   min-width: 64px;
 }
 .p-ticket__benefits-card-info-row p {
@@ -5208,9 +5282,16 @@ body h4 {
   font-weight: 500;
   line-height: 1.8;
 }
+.p-ticket__benefits-card-info-row p span {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.6;
+}
 .p-ticket__link {
   font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font-size: 27px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: 1.3;
@@ -5313,3 +5394,4 @@ body h4 {
   justify-content: center;
   align-items: center;
 }
+ /* 27.2px */
