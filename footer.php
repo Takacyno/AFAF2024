@@ -67,6 +67,9 @@
 			</div>
 		</div>
 		<div class="c-footer__copyright">
+			<a href="https://fukuoka-art-next.jp/fanweek2024/">
+				<img class="fotter-asset" src="<?php echo site_url(); ?>/wp-content/themes/afaf-2024/image/fotter-asset.png" />
+			</a>
 			<small>© 2015-2024 ART FAIR ASIA FUKUOKA.<br>All Rights Reserved.</small>
 		</div>
 	</div>
