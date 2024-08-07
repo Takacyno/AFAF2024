@@ -1,13 +1,12 @@
 <?php
   include('header.php');
   $week = array( "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat");
-  $now = strtotime(date("Y/m/d H:i"));
+  $now = strtotime((new DateTime())->setTimeZone(new DateTimeZone('Asia/Tokyo'))->format('Y-m-d H:i'));
   $before_tickets = [];
   $active_tickets = [];
   $finished_tickets = [];
   if (have_rows('ticket_type')) {
     foreach(get_field('ticket_type') as $ticket) {
-      echo strtotime($ticket['dates']['end']) < $now ? "true" : "false";
       if ($now < strtotime($ticket['dates']['start'])) {
         $before_tickets[] = $ticket;
       } else if (strtotime($ticket['dates']['end']) < $now) {
@@ -26,7 +25,7 @@
           <div class="c-area__content-back">
             <a href="<?php echo home_url('top'); ?>"><span>Top</span></a>
           </div>
-          <a href="<?php echo get_field('ticket_url'); ?>" class="p-ticket__side-link">
+          <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__side-link">
             <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
           </a>
         </div>
@@ -35,7 +34,7 @@
             <h1><?php the_title(); ?></h1>
           </div>
           <div class="p-ticket__wrapper">
-            <a href="<?php echo get_field('ticket_url'); ?>" class="p-ticket__link">
+            <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__link">
               <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
             </a>
             <div class="p-ticket__wrapper-highlights">
@@ -153,7 +152,7 @@
               <h2><?php echo $currentLang == "ja" ? "注意事項" : "Precautions"; ?></h2>
               <?php echo get_field('attention'); ?>
             </div>
-            <a href="<?php echo get_field('ticket_url'); ?>" class="p-ticket__link">
+            <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__link">
               <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
             </a>
             <?php if (have_rows('public_benefits')): ?>
@@ -168,6 +167,7 @@
                       $period = get_sub_field('period');
                       $location = get_sub_field('location');
                       $contents = get_sub_field('contents');
+                      $text = get_sub_field('benefits_text');
                     ?>
                       <div class="p-ticket__benefits-card">
                         <img src="<?php echo $img['url']; ?>" />
@@ -180,7 +180,7 @@
                           <div class="p-ticket__benefits-card-info">
                             <div class="p-ticket__benefits-card-info-row">
                               <p class="p-ticket__benefits-card-info-label">
-                                <?php echo $currentLang == "ja" ? "販売期間" : "Period" ?>
+                                <?php echo $currentLang == "ja" ? "期間" : "Period" ?>
                               </p>
                               <p>
                                 <?php echo $period['start']; ?>
@@ -208,7 +208,7 @@
                                 <?php echo $location['location']; ?>
                               </p>
                             </div>
-                            <?php echo $contents['contents_text']; ?>
+                            <?php echo $text; ?>
                           </div>
                         </div>
                       </div>
@@ -216,7 +216,7 @@
                 </div>
               </div>
             <?php endif; ?>
-            <a href="<?php echo get_field('ticket_url'); ?>" class="p-ticket__link">
+            <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__link">
               <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
             </a>
           </div>
