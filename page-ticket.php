@@ -215,10 +215,10 @@
                     <?php endwhile; ?>
                 </div>
               </div>
+              <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__link">
+                <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
+              </a>
             <?php endif; ?>
-            <a href="<?php echo get_field('ticket_url'); ?>" target="_blank" class="p-ticket__link">
-              <?php echo $currentLang == "ja" ? "チケット購入ページ" : "Ticket Sales Page" ?>
-            </a>
           </div>
         </div>
       </div>
