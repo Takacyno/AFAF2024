@@ -1,3 +1,4 @@
+<?php $is_ticket = true; ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -34,7 +35,7 @@
 		$title = $ticket[ 'title' ];
 		$url = $ticket[ 'url' ];
 		$site_flow_value = $ticket[ 'site_flow' ];
-		//トップページ以外の場合の処理
+		//??????????????
 		if( !is_front_page() and !is_home() ):
 	?>
 		<header class="c-header">
@@ -50,7 +51,7 @@
 						<div class="c-header__nav-wrapper">
 							<?php include('include/nav-global.php'); ?>
 							<div class="c-header__nav-ticket">
-								<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
+								<a href="<?php echo $is_ticket ? home_url('tickets') : "#"; ?>"><span>TICKET</span></a>
 								<?php if ( $title ) : ?>
 								<span><?php echo $title; ?></span>
 								<?php endif; ?>
@@ -72,7 +73,7 @@
 					</div>
 					<div class="c-header__menu-button">
 						<div class="c-header__ticket">
-							<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
+							<a href="<?php echo $is_ticket ? home_url('tickets') : "#"; ?>"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
@@ -101,7 +102,7 @@
 						<div class="c-header__nav-wrapper">
 							<?php include('include/nav-global.php'); ?>
 							<div class="c-header__nav-ticket">
-								<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
+								<a href="<?php echo $is_ticket ? home_url('tickets') : "#"; ?>"><span>TICKET</span></a>
 								<?php if ( $title ) : ?>
 								<span><?php echo $title; ?></span>
 								<?php endif; ?>
@@ -123,7 +124,7 @@
 					</div>
 					<div class="c-header__menu-button">
 						<div class="c-header__ticket">
-							<a href="<?php echo home_url('ticket'); ?>"><span>TICKET</span></a>
+							<a href="<?php echo $is_ticket ? home_url('tickets') : "#"; ?>"><span>TICKET</span></a>
 							<?php if ( $title ) : ?>
 							<span><?php echo $title; ?></span>
 							<?php endif; ?>
