@@ -449,4 +449,23 @@
 			jQuery(this).parent().parent().attr('display', 'false');
 		});
 	});
+
+	jQuery(function() {
+		let $checkbox = jQuery('.p-artworks__side-form-row');
+		$checkbox.click(function () {
+			const id = jQuery(this).find('.p-artworks__side-form-ckeckbox').attr('id');
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			const types = params.getAll("type[]")
+			window.location.href = url;
+			if (types.includes(id)) {
+				params.delete('type[]');
+				types.filter(v => v != id).forEach(v => params.append("type[]", v));
+				window.location = (url.href);
+			} else {
+				params.append("type[]", id);
+				window.location = (url.href);
+			}
+		});
+	});
 })();
