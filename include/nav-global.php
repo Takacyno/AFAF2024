@@ -16,12 +16,7 @@ $currentLang = get_locale();
 		<li><a href="<?php echo home_url('exhibitors'); ?>">EXHIBITORS</a></li>
 		<li><a href="<?php echo home_url('about'); ?>">ABOUT</a></li>
 		<li>
-			<a style="pointer-events: none; color: #adadad;" href="https://art-scenes.net/ja/fairs/31/artworks">ARTWORKS</a>
-			<?php if ($currentLang != 'en_US') : ?>
-			<span>8月中旬公開予定</span>
-			<?php else: ?>
-			<span>Scheduled to be released in mid-August</span>
-			<?php endif; ?>
+			<a href="<?php echo home_url('artworks'); ?>">ARTWORKS</a>
 		</li>
 		<?php /* if ($globalnav_on_value) : ?>
 		<li><a href="<?php echo home_url('program'); ?>">PROGRAM</a></li>

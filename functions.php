@@ -121,7 +121,11 @@ function remove_protected($title) {
 
 function add_query_vars( $vars ) {
 	$vars[] = 'section';
+	$vars[] = 'key';
 	$vars[] = 'type';
+	$vars[] = 'tags';
+	$vars[] = 'sections';
+	$vars[] = 'page';
 	return $vars;
 	}
 	add_filter( 'query_vars', 'add_query_vars' );

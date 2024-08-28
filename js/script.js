@@ -428,32 +428,64 @@
 	});
 
 	jQuery(function() {
-		let $artworkCard = jQuery('.p-artworks__card');
-		let $modalOverlay = jQuery('.p-artworks__modal-overlay');
-		let $modalCloseCard = jQuery('.p-artworks__modal-close-button');
-		$artworkCard.click(function () {
-			const url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
-			window.history.replaceState({}, '', url);
-			jQuery(this).parent().find('.p-artworks__modal').attr('display', 'true');
-		});
-		$modalOverlay.click(function () {
-			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
-			url = url.substring(0, url.lastIndexOf('/') + 1)
-			window.history.replaceState({}, '', url);
-			jQuery(this).parent().attr('display', 'false');
-		});
-		$modalCloseCard.click(function () {
-			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
-			url = url.substring(0, url.lastIndexOf('/') + 1)
-			window.history.replaceState({}, '', url);
-			jQuery(this).parent().parent().attr('display', 'false');
+		let $form = jQuery('.js-side-key');
+		let $input = jQuery('.js-side-key-input');
+		$form.submit(function() {
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			params.delete('key');
+			params.append("key", $input.val());
+			window.location = (url.href);
 		});
 	});
 
 	jQuery(function() {
-		let $checkbox = jQuery('.p-artworks__side-form-row');
-		$checkbox.click(function () {
-			const id = jQuery(this).find('.p-artworks__side-form-ckeckbox').attr('id');
+		let $form = jQuery('.js-key');
+		let $input = jQuery('.js-key-input');
+		$form.submit(function() {
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			params.delete('key');
+			params.append("key", $input.val());
+			window.location = (url.href);
+		});
+	});
+
+	jQuery(function() {
+		let $form = jQuery('.js-key');
+		let $input = jQuery('.js-key-input');
+		$form.submit(function() {
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			params.delete('key');
+			params.append("key", $input.val());
+			window.location = (url.href);
+		});
+	});
+
+	jQuery(function() {
+		let $row = jQuery('.js-artworks__side-form-row-section');
+		$row.click(function () {
+			const id = jQuery(this).find('.js-artworks__side-form-checkbox-section').attr('id');
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			const sections = params.getAll("sections[]")
+			window.location.href = url;
+			if (sections.includes(id)) {
+				params.delete('sections[]');
+				sections.filter(v => v != id).forEach(v => params.append("sections[]", v));
+				window.location = (url.href);
+			} else {
+				params.append("sections[]", id);
+				window.location = (url.href);
+			}
+		});
+	});
+
+	jQuery(function() {
+		let $row = jQuery('.js-artworks__side-form-row-type');
+		$row.click(function () {
+			const id = jQuery(this).find('.js-artworks__side-form-checkbox-type').attr('id');
 			const url = new URL(window.location.href);
 			const params = (url).searchParams;
 			const types = params.getAll("type[]")
@@ -468,4 +500,175 @@
 			}
 		});
 	});
+
+	jQuery(function() {
+		let $row = jQuery('.js-artworks__side-form-row-tag');
+		$row.click(function () {
+			const id = jQuery(this).find('.js-artworks__side-form-checkbox-tag').attr('id');
+			const url = new URL(window.location.href);
+			const params = (url).searchParams;
+			const tags = params.getAll("tags[]")
+			window.location.href = url;
+			if (tags.includes(id)) {
+				params.delete('tags[]');
+				tags.filter(v => v != id).forEach(v => params.append("tags[]", v));
+				window.location = (url.href);
+			} else {
+				params.append("tags[]", id);
+				window.location = (url.href);
+			}
+		});
+	});
+
+	jQuery(function() {
+		let $image = jQuery('.js-artworks__image');
+		let $thumbnail = jQuery('.js-artworks__thumbnail')
+		$thumbnail.hover(
+			function() {
+				jQuery(this).parent().parent().parent().find('.js-artworks__image').attr('src', jQuery(this).attr('src'));
+			},
+			function() {}
+		);
+		$thumbnail.click(function() {
+			jQuery(this).parent().parent().parent().find('.js-artworks__image').attr('src', jQuery(this).attr('src'));
+			});
+	});
+
+	jQuery(function() {
+		let $resetButton = jQuery('.p-artworks__side-form-reset');
+		$resetButton.click(function() {
+			const url = new URL(window.location.href)
+			window.location = url.pathname;
+		});
+	});
+
+	jQuery(function() {
+		let $formButton = jQuery('.p-artworks__form-button');
+		let $form = jQuery('.p-artworks__form-inner');
+		$formButton.click(function() {
+			let hide = $form.attr('hide');
+			if (hide == "true") {
+				$form.attr('hide', "false");
+			} else {
+				$form.attr('hide', "true");
+			}
+		});
+	});
+
+	// jQuery(function() {
+	// 	let footerHeight = jQuery(".c-footer").height();
+	// 	let documentHeight = jQuery(document).height();
+	// 	let windowsHeight = jQuery(window).height();
+	// 	let url = "http://localhost:8000/wp-content/themes/afaf-2024/ajax-artworks.php";
+	// 	const link = new URL(window.location.href);
+	// 	const params = (link).searchParams;
+	// 	const key = params.get("key");
+	// 	const sections = params.getAll("sections[]");
+	// 	const type = params.getAll("type[]");
+	// 	const tags = params.getAll("tags[]");
+	// 	let postNumNow = 0;
+	// 	let postNumAdd = 6;
+	// 	let flag = false;
+	// 	if (!flag) {
+	// 		flag = true;
+	// 		jQuery.ajax({
+	// 			type: "POST",
+	// 			url: url,
+	// 			data: {
+	// 				post_num_now: postNumNow,
+	// 				post_num_add: postNumAdd,
+	// 				key: key,
+	// 				sections: sections,
+	// 				type: type,
+	// 				tags: tags
+	// 			},
+	// 			success: function(response) {
+	// 				jQuery(".p-artworks").append(response);
+	// 				documentHeight = jQuery(document).height();
+	// 				postNumNow += postNumAdd;
+	// 				flag = false;
+	// 			}
+	// 		});
+	// 	}
+	// 	jQuery(window).on("scroll", function() {
+	// 		let scrollPosition = windowsHeight + jQuery(window).scrollTop();
+	// 		if (scrollPosition >= documentHeight - footerHeight) {
+	// 			if (!flag) {
+	// 				flag = true;
+	// 				jQuery.ajax({
+	// 					type: "POST",
+	// 					url: url,
+	// 					data: {
+	// 						post_num_now: postNumNow,
+	// 						post_num_add: postNumAdd,
+	// 						key: key,
+	// 						sections: sections,
+	// 						type: type,
+	// 						tas: tags
+	// 					},
+	// 					success: function(response) {
+	// 						jQuery(".p-artworks").append(response);
+	// 						documentHeight = jQuery(document).height();
+	// 						postNumNow += postNumAdd;
+	// 						flag = false;
+	// 					}
+	// 				});
+	// 			}
+	// 		}
+	// 	});
+	// });
+
+	jQuery(function() {
+		let artworkCard = jQuery('.js-artworks__card');
+		let $modalFilter = jQuery('.js-artworks__modal-filter');
+		let $modalCloseButton = jQuery('.js-artworks__modal-close-button');
+		artworkCard.click(function () {
+			const url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().find('.p-artworks__modal').attr('display', 'true');
+			jQuery("html").addClass("overflow-hidden");
+		});
+		$modalFilter.click(function () {
+			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().parent().attr('display', 'false');
+			jQuery("html").removeClass("overflow-hidden");
+		});
+		$modalCloseButton.click(function () {
+			let url = window.location.origin + window.location.pathname + jQuery(this).parent().attr('name');
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().parent().parent().attr('display', 'false');
+			jQuery("html").removeClass("overflow-hidden");
+		});
+	});
+
+	jQuery(function() {
+		let artworkCard = jQuery('.js-artworks__card-exhibitor');
+		let $modalFilter = jQuery('.js-artworks__modal-filter-exhibitor');
+		let $modalCloseButton = jQuery('.js-artworks__modal-close-button-exhibitor');
+		let exhibitorID = jQuery('.p-exhibitors').attr('id')
+		artworkCard.click(function () {
+			const url = window.location.origin + "/artworks/" + jQuery(this).parent().attr('name');
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().find('.p-artworks__modal').attr('display', 'true');
+			jQuery("html").addClass("overflow-hidden");
+		});
+		$modalFilter.click(function () {
+			let url = window.location.origin + `/exhibitors/${exhibitorID}/`;
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().parent().attr('display', 'false');
+			jQuery("html").removeClass("overflow-hidden");
+		});
+		$modalCloseButton.click(function () {
+			let url = window.location.origin + `/exhibitors/${exhibitorID}/`;
+			url = url.substring(0, url.lastIndexOf('/') + 1)
+			window.history.replaceState({}, '', url);
+			jQuery(this).parent().parent().parent().attr('display', 'false');
+			jQuery("html").removeClass("overflow-hidden");
+		});
+	});
 })();
+

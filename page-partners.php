@@ -79,30 +79,6 @@
 							</div>
 						<?php endif; ?>
 						<?php
-							if(have_rows('assisting')):
-						?>
-							<div class="p-partners__special">
-								<?php if ($currentLang != 'en_US') : ?>
-								<h2>助成</h2>
-								<?php else: ?>
-								<h2>Supports</h2>
-								<?php endif; ?>
-								<ul>
-									<?php
-										while(have_rows('assisting')): the_row();
-											$logo = get_sub_field('assisting_logo')['url'];
-											$link = get_sub_field('assisting_link');
-									?>
-									<li>
-										<a href="<?php echo $link; ?>">
-											<img src="<?php echo $logo; ?>" alt="">
-										</a>
-									</li>
-									<?php endwhile; ?>
-								</ul>
-							</div>
-						<?php endif; ?>
-						<?php
 							if(have_rows('special_repeat')):
 						?>
 							<div class="p-partners__special">
@@ -159,6 +135,30 @@
 							</div>
 						<?php endif; ?>
 						<?php
+							if(have_rows('localpartner')):
+						?>
+							<div class="p-partners__sponsored">
+								<?php if ($currentLang != 'en_US') : ?>
+								<h2>ローカルパートナー</h2>
+								<?php else: ?>
+								<h2>Local Partners</h2>
+								<?php endif; ?>
+								<ul>
+									<?php
+										while(have_rows('localpartner')): the_row();
+											$logo = get_sub_field('partner_localpartner');
+											$link = get_sub_field('localpartner_url');
+									?>
+									<li>
+										<a href="<?php echo $link; ?>">
+											<img src="<?php echo $logo["url"]; ?>" alt="">
+										</a>
+									</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
+						<?php
 							if(have_rows('media_repeat')):
 						?>
 							<div class="p-partners__media">
@@ -170,12 +170,12 @@
 								<ul class="p-partners__list">
 									<?php
 										while(have_rows('media_repeat')): the_row();
-											$logo = wp_get_attachment_image_src(get_sub_field('media_logo'), 'full');
+											$logo = get_sub_field('media_logo_middle');
 											$link = get_sub_field('media_link');
 									?>
 									<li>
 										<a href="<?php echo $link; ?>">
-											<img src="<?php echo $logo[0]; ?>" alt="">
+											<img src="<?php echo $logo["url"]; ?>" alt="">
 										</a>
 									</li>
 									<?php endwhile; ?>
@@ -187,19 +187,19 @@
 						?>
 							<div class="p-partners__museum">
 								<?php if ($currentLang != 'en_US') : ?>
-								<h2>Institutional Partners</h2>
+								<h2>特別協力美術館・博物館</h2>
 								<?php else: ?>
 								<h2>Special Support Museum</h2>
 								<?php endif; ?>
 								<ul class="p-partners__list">
 									<?php
 										while(have_rows('museum_repeat')): the_row();
-											$logo = wp_get_attachment_image_src(get_sub_field('museum_logo'), 'full');
+											$logo = get_sub_field('museum_logo_middle');
 											$link = get_sub_field('museum_link');
 									?>
 									<li>
 										<a href="<?php echo $link; ?>">
-											<img src="<?php echo $logo[0]; ?>" alt="">
+											<img src="<?php echo $logo["url"]; ?>" alt="">
 										</a>
 									</li>
 									<?php endwhile; ?>
@@ -218,12 +218,36 @@
 								<ul class="p-partners__list">
 									<?php
 										while(have_rows('fair_repeat')): the_row();
-											$logo = wp_get_attachment_image_src(get_sub_field('fair_logo'), 'full');
+											$logo = get_sub_field('fair_logo_middle');
 											$link = get_sub_field('fair_link');
 									?>
 									<li>
 										<a href="<?php echo $link; ?>">
-											<img src="<?php echo $logo[0]; ?>" alt="">
+											<img src="<?php echo $logo["url"]; ?>" alt="">
+										</a>
+									</li>
+									<?php endwhile; ?>
+								</ul>
+							</div>
+						<?php endif; ?>
+						<?php
+							if(have_rows('assisting')):
+						?>
+							<div class="p-partners__special">
+								<?php if ($currentLang != 'en_US') : ?>
+								<h2>助成</h2>
+								<?php else: ?>
+								<h2>Supports</h2>
+								<?php endif; ?>
+								<ul>
+									<?php
+										while(have_rows('assisting')): the_row();
+											$logo = get_sub_field('assisting_logo')['url'];
+											$link = get_sub_field('assisting_link');
+									?>
+									<li>
+										<a href="<?php echo $link; ?>">
+											<img src="<?php echo $logo; ?>" alt="">
 										</a>
 									</li>
 									<?php endwhile; ?>

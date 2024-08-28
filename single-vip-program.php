@@ -17,10 +17,12 @@
 					<a href="<?php echo home_url('vip'); ?>"><span>VIP-PROGRAM</span></a>
 				</div>
 				<div class="p-vip__aply-side">
-					<?php if ($is_finished): ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
-					<?php else: ?>
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
+					<?php if (!empty($entry["entry_url"])): ?>
+						<?php if ($is_finished): ?>
+							<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished"><?php echo $entry["entry_finished_label"]; ?></a>
+						<?php else: ?>
+							<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply"><?php echo $entry["entry_label"]; ?></a>
+						<?php endif; ?>
 					<?php endif; ?>
 				</div>
 			</div>
@@ -83,14 +85,16 @@
 					</div>
 					<?php endif; ?>
 					<?php echo $contents; ?>
-					<?php if ($is_finished): ?>
-					<div class="ly__center">
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
-					</div>
-					<?php else: ?>
+					<?php if (!empty($entry["entry_url"])): ?>
+						<?php if ($is_finished): ?>
 						<div class="ly__center">
-						<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
-					</div>
+							<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply-finished padding-x-115"><?php echo $entry["entry_finished_label"]; ?></a>
+						</div>
+						<?php else: ?>
+							<div class="ly__center">
+							<a href="<?php echo $entry["entry_url"]; ?>" class="p-vip__aply padding-x-115"><?php echo $entry["entry_label"]; ?></a>
+						</div>
+						<?php endif; ?>
 					<?php endif; ?>
 				</div>
 			</div>

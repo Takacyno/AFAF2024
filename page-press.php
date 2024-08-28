@@ -5,6 +5,7 @@
 	$title = $press[ 'title' ];
 	$pdf = $press[ 'pdf' ];
 	$filePath = get_stylesheet_directory_uri() . '/downloads';
+	// $Path = get_field( 'logo' );
 ?>
 
 <main class="p-press">
@@ -48,6 +49,7 @@
 							<ul>
 								<li>
 									<a href="<?php echo $filePath; ?>/ARTFAIRASIAFUKUOKA-logokit2024-2.zip" target="_blank">
+									<!-- <a href="<?php echo get_site_url(); ?>/wp-content/uploads/2024/07/ARTFAIRASIAFUKUOKA-logokit2024-2.zip" target="_blank"> -->
 										<?php if ($currentLang != 'en_US') : ?>
 										<span>ロゴキット</span>
 										<?php else: ?>
